@@ -30,6 +30,13 @@ struct ListDelete: View {
     }
 }
 
+// onDelete, onMove, onInset
+
+// These three functions only work on views that implement the DynamicViewContent
+// protocol. Currently, the only view that conforms to the DynamicViewContent
+// protocol is the ForEach view. So these functions are only available on a
+// ForEach view, not a List view.
+
 struct ListDelete_Previews: PreviewProvider {
     static var previews: some View {
         ListDelete()
