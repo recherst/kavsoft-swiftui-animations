@@ -33,6 +33,9 @@ struct NavigationBarHidden: View {
                 .padding(.top, 70)
             }
             .navigationBarTitle(Text("Navigation Views"))
+            // Notice the navigationBarHidden modifier is INSIDE the NavigationView.
+            // Also notice that at this time, you have to supply a navigationBarTitle
+            // for the nav bar to hide.
             .navigationBarHidden(isHidden)
             .edgesIgnoringSafeArea(.bottom)
         }
