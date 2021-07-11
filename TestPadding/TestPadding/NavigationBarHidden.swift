@@ -34,7 +34,7 @@ struct NavigationBarHidden: View {
             }
             .navigationBarTitle(Text("Navigation Views"))
             .navigationBarHidden(isHidden)
-            edgesIgnoringSafeArea(.bottom)
+            .edgesIgnoringSafeArea(.bottom)
         }
     }
 }
