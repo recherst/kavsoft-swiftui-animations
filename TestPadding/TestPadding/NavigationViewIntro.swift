@@ -37,6 +37,9 @@ struct NavigationViewIntro: View {
     }
 }
 
+// The navigationBarTitle goes INSIDE the NavigationView, not on it. Notice the default style
+// of the title is large
+
 struct NavigationViewIntro_Previews: PreviewProvider {
     static var previews: some View {
         NavigationViewIntro()
