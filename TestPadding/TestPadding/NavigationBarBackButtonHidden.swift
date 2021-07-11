@@ -22,7 +22,9 @@ struct NavigationBarBackButtonHidden: View {
                     Image("NavBarBackButtonHidden")
 
                     // Use NavigationLink to navigate to a new screen.
-                    NavigationLink("Go To Detail", destination: BackButtonHiddenDetail())
+//                    NavigationLink("Go To Detail", destination: BackButtonHiddenDetail())
+
+                    NavigationLink("Go To Detail", destination: CustomBackButton())
 
                     Spacer()
                 }
