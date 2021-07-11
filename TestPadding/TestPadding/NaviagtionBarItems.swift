@@ -16,7 +16,7 @@ struct NaviagtionBarItems: View {
                 Text("NavigationView")
                 Text("Navigation Bar Items")
                     .foregroundColor(.gray)
-                Image("NavBarItems")
+//                Image("NavBarItems")
                 Text("You can add navigation bar buttons to the leading or trailing (or both ) sides of a navigation bar.")
                     .frame(maxWidth: .infinity)
                     .padding()
