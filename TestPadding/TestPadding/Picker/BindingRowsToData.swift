@@ -1,5 +1,5 @@
 //
-//  RowWithImages.swift
+//  BindingRowsToData.swift
 //  TestPadding
 //
 //  Created by 刘勇刚 on 2021/7/13.
@@ -7,50 +7,51 @@
 
 import SwiftUI
 
-struct RowWithImages: View {
+struct BindingRowsToData: View {
     @State private var youTuberName = "Mark"
+    var youtubers = ["Sean", "Chris", "Mark", "Scott", "Paul"]
+
     var body: some View {
         VStack(spacing: 20) {
             Text("Picker")
                 .font(.largeTitle)
-            Text("Rows with Images")
+            Text("Binding to Data")
                 .font(.title)
                 .foregroundColor(.gray)
+            Text("Use a ForEach with your Picker view to populate it with data.")
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(Color("AccentColorDark"))
+                .foregroundColor(Color.white)
+
             Text("Who do you want to watch today?")
-                .padding(.top)
+                .padding(.bottom, 0)
 
             Picker(selection: $youTuberName, label: Text("")) {
-                Row1(name: "Sean")
-                Row1(name: "Chris")
-                Row1(name: "Mark")
-                Row1(name: "Scott")
-                Row1(name: "Paul")
+                ForEach(youtubers, id: \.self) { name in
+                    Row(name: name)
+                }
             }
-            .foregroundColor(Color.white)
-            .padding(.horizontal)
-            .background(Color("AccentColorDark"))
-            .cornerRadius(15)
-            .shadow(radius: 20)
             .labelsHidden()
         }
+        .font(.title)
     }
 }
 
-private struct Row1: View {
+struct Row: View {
     var name: String
+
     var body: some View {
         HStack {
             Image(systemName: "person.fill")
-                .padding(.trailing)
-                .foregroundColor(Color.red)
             Text(name)
         }
         .tag(name)
     }
 }
 
-struct RowWithImages_Previews: PreviewProvider {
+struct BindingRowsToData_Previews: PreviewProvider {
     static var previews: some View {
-        RowWithImages()
+        BindingRowsToData()
     }
 }
