@@ -11,7 +11,8 @@ import SwiftUI
 struct TestPaddingApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            NavigationWithListNoNavBar()
         }
     }
 }
