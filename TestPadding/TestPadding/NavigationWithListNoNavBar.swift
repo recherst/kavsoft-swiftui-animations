@@ -18,6 +18,7 @@ struct NavigationWithListNoNavBar: View {
                         .font(.title)
                 ) {
                     ForEach(books, id: \.self) { book in
+                        /*
                         NavigationLink(
                             destination: BookDetail(bookItem: book),
                             label: {
@@ -25,6 +26,15 @@ struct NavigationWithListNoNavBar: View {
                                     .font(Font.system(size: 24))
                                     .padding()
                             })
+                        */
+                        NavigationLink(
+                            destination: BookDetailNoBack(bookItem: book),
+                            label: {
+                                Text(book)
+                                    .font(Font.system(size: 24))
+                                    .padding()
+                            }
+                        )
                     }
                 }
             }
