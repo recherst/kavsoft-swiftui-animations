@@ -12,7 +12,7 @@ struct TestPaddingApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            NavigationWithListNoNavBar()
+            Scroll_Horizontally()
         }
     }
 }
