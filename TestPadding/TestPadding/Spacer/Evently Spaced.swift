@@ -2,7 +2,7 @@
 //  Evently Spaced.swift
 //  TestPadding
 //
-//  Created by 刘勇刚 on 2021/7/6.
+//  Created by RecherJ on 2021/7/6.
 //
 
 import SwiftUI

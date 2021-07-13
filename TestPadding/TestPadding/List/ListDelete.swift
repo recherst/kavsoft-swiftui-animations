@@ -2,7 +2,7 @@
 //  ListDelete.swift
 //  TestPadding
 //
-//  Created by 刘勇刚 on 2021/7/11.
+//  Created by RecherJ on 2021/7/11.
 //
 
 import SwiftUI
