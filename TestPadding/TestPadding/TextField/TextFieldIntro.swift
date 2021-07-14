@@ -33,7 +33,7 @@ struct TextFieldIntro: View {
             Text("TextFieldStyle")
                 .foregroundColor(.gray)
 
-            Text("By Default, TextFields have a plain TextFieldStyle that has no visual content to be seen.")
+            Text("By default, TextFields have a plain TextFieldStyle that has no visual content to be seen.")
                 .frame(maxWidth: .infinity)
                 .padding()
                 .background(Color.orange)
