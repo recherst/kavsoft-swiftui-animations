@@ -30,7 +30,7 @@ struct CustomFonts: View {
                     .padding()
                     .font(.title)
                     .background(Color.green)
-                    .foregroundColor(.white)                                                                                
+                    .foregroundColor(.white)
                 Text("Avenir Next")
                     .font(Font.custom("Avenir Next", size: 26))
                 Text("Gill Sans")
