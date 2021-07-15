@@ -11,7 +11,8 @@ import SwiftUI
 struct SwiftUIViewsMasteryDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            CircularShapeTrimOutline()
         }
     }
 }
