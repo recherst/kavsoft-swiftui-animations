@@ -12,7 +12,7 @@ struct SwiftUIViewsMasteryDemoApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            CircularShapeTrimOutline()
+            TrimSolidShape()
         }
     }
 }
