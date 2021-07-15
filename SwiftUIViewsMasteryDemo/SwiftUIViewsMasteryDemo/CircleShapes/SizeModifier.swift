@@ -2,7 +2,7 @@
 //  SizeModifier.swift
 //  SwiftUIViewsMasteryDemo
 //
-//  Created by 刘勇刚 on 2021/7/14.
+//  Created by RecherJ on 2021/7/14.
 //
 
 import SwiftUI
