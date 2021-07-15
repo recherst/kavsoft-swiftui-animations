@@ -15,7 +15,7 @@ struct ColorIntroduction: View {
             Text("Colors are Views")
                 .font(.title)
                 .foregroundColor(.gray)
-            Text("You can treat colors as views with their own frames and modifiers")
+            Text("You can treat colors as views with their own frames and modifiers.")
                 .frame(maxWidth: .infinity)
                 .padding()
                 .background(Color.yellow)
