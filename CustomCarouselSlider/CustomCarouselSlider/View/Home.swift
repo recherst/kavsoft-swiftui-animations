@@ -70,6 +70,9 @@ struct Home: View {
                         .fontWeight(.bold)
                         .padding(.top, 20)
                         .padding(.bottom)
+
+                    // Page control from UIKit
+                    PageControl(maxPages: trips.count, currentPage: index)
                 }
                 .padding(.top)
                 .padding(.horizontal, 10)
@@ -91,6 +94,11 @@ struct Home: View {
             }
             .padding()
         }
+    }
+
+    /// Getting index...
+    var index: Int {
+        trips.firstIndex { $0.id == selectedTab.id } ?? 0
     }
 }
 
