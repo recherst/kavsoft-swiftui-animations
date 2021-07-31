@@ -1,4 +1,4 @@
-# kavsoft.dev-samples
+# kavsoft-samples
 
 <img src="Screenshots/swiftui-badge.jpg" style="zoom:80%;" />
 
