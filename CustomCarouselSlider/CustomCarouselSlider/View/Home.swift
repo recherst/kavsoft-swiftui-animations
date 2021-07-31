@@ -10,6 +10,11 @@ import SwiftUI
 struct Home: View {
     // To capture the current tab
     @State var selectedTab: Trip = trips[0]
+
+    // Disabling bounce...
+    init() {
+        UIScrollView.appearance().bounces = false
+    }
     var body: some View {
         ZStack {
             // To get screen size for image...
@@ -69,7 +74,7 @@ struct Home: View {
                         .font(.title)
                         .fontWeight(.bold)
                         .padding(.top, 20)
-                        .padding(.bottom)
+                        .padding(.bottom, 18)
 
                     // Page control from UIKit
                     PageControl(maxPages: trips.count, currentPage: index)
@@ -77,7 +82,11 @@ struct Home: View {
                 .padding(.top)
                 .padding(.horizontal, 10)
                 .padding(.bottom, 5)
-                .background(Color.white.cornerRadius(10))
+                .background(
+                    Color.white
+                        .clipShape(CustomShape())
+                        .cornerRadius(10)   
+                )
                 .padding(.horizontal, 20)
 
                 Button(action: {}, label: {
