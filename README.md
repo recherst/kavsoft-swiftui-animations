@@ -1,7 +1,7 @@
 # kavsoft-examples
 
 <img src="Screenshots/swiftui-badge.jpg" style="zoom:80%;" />
-
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
  
 
 ## Introduction
