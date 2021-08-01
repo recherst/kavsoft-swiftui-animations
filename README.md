@@ -6,7 +6,8 @@
 
 ## Introduction
 
-All demos in this repo were written by SwiftUI 2.0. The only purpose of this repo I created is just for learning SwiftUI and comminications. All of Business incomes and Copyrights belong to Kavsoft at [Home|Kavsoft](https://kavsoft.dev) .
+All demos in this repo were written by SwiftUI 2.0. The only purpose of this repo I created is just for learning SwiftUI and comminications. All of Business incomes and Copyrights belong to Kavsoft at [Home|Kavsoft](https://kavsoft.dev).
+
 Kindly welcome to become a patron to support them! ❤️
 
 ## Example apps
