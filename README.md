@@ -18,7 +18,7 @@ All demos in this repo are made by SwiftUI 2.0. I created this for learning Swif
 
 - Custom Carousel Slider
 
-  Reference resoure: [Custom carousel Slider|Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Custom_Carousel_Slider)
+  Reference resoure: [Custom Carousel Slider|Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Custom_Carousel_Slider)
 
   <img src="Screenshots/custom-carousel-slider.gif" alt="carousel-slider" style="zoom:80%;" />
 
