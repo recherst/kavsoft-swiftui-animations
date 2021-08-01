@@ -2,7 +2,7 @@
 //  PhotoEditorApp.swift
 //  PhotoEditor
 //
-//  Created by 刘勇刚 on 2021/8/1.
+//  Created by recherst on 2021/8/1.
 //
 
 import SwiftUI
