@@ -24,6 +24,41 @@ struct DrawingScreen: View {
                             rect: size
                         )
                         // Custom texts
+
+                        // Display text boxes
+                        ForEach(model.textBoxes) { textBox in
+                            Text(
+                                model.textBoxes[model.currentIndex].id == textBox.id && model.addNewBox
+                                    ? ""
+                                    : textBox.text
+                            )
+                            // You can also include text size in model
+                            // and can use those text sizes in these
+                            // text boxes...
+                            .font(.system(size: 30))
+                            .fontWeight((textBox.isBold ? .bold : .none))
+                            .foregroundColor(textBox.textColor)
+                            .offset(textBox.offset)
+                            .gesture(
+                                DragGesture()
+                                    .onChanged({ value in
+                                        let current = value.translation
+                                        // Add with last offset
+                                        let lastOffset = textBox.lastOffset
+                                        let newTranslation = CGSize(
+                                            width: lastOffset.width + current.width,
+                                            height: lastOffset.height + current.height
+                                        )
+
+                                        model.textBoxes[getIndex(textBox: textBox)].offset = newTranslation
+                                    })
+                                    .onEnded({ value in
+                                        // Save the last offset for exact drag position
+                                        model.textBoxes[getIndex(textBox: textBox)].lastOffset = value.translation
+                                    })
+                            )
+
+                        }
                     }
                 )
             }
@@ -35,11 +70,28 @@ struct DrawingScreen: View {
                 })
             }
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button(action: {}, label: {
+                Button(action: {
+                    // Create one new box
+                    model.textBoxes.append(TextBox())
+
+                    // Update index
+                    model.currentIndex = model.textBoxes.count - 1
+
+                    withAnimation {
+                        model.addNewBox.toggle()
+                    }
+                    // Closing the tool bar
+                    model.toolPicker.setVisible(false, forFirstResponder: model.canvas)
+                    model.canvas.resignFirstResponder()
+                }, label: {
                     Image(systemName: "plus")
                 })
             }
         })
+    }
+
+    func getIndex(textBox: TextBox) -> Int {
+        model.textBoxes.firstIndex { $0.id == textBox.id } ?? 0
     }
 }
 
