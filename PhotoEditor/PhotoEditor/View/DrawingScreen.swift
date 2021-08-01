@@ -13,7 +13,12 @@ struct DrawingScreen: View {
     var body: some View {
         ZStack {
             GeometryReader { geometry -> AnyView in
-                let size = geometry.frame(in: .global).size
+                let rect = geometry.frame(in: .global)
+                DispatchQueue.main.async {
+                    if model.rect == .zero {
+                        model.rect = rect
+                    }
+                }
                 return AnyView(
                     ZStack {
                         // UIKit Pencil Kit Drawing View
@@ -21,7 +26,7 @@ struct DrawingScreen: View {
                             canvas: $model.canvas,
                             imageData: $model.imageData,
                             toolPicker: $model.toolPicker,
-                            rect: size
+                            rect: rect.size
                         )
                         // Custom texts
 
@@ -57,6 +62,16 @@ struct DrawingScreen: View {
                                         model.textBoxes[getIndex(textBox: textBox)].lastOffset = value.translation
                                     })
                             )
+                            .onLongPressGesture {
+                                // Closing the toobar
+                                model.toolPicker.setVisible(false, forFirstResponder: model.canvas)
+                                model.canvas.resignFirstResponder()
+
+                                model.currentIndex = getIndex(textBox: textBox)
+                                withAnimation {
+                                    model.addNewBox = true
+                                }
+                            }
 
                         }
                     }
@@ -65,9 +80,9 @@ struct DrawingScreen: View {
         }
         .toolbar(content: {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button(action: {}, label: {
+                Button(action: model.saveImage) {
                     Text("Save")
-                })
+                }
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {

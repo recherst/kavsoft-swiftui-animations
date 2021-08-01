@@ -53,7 +53,7 @@ struct Home: View {
 
                 // TextField
                 TextField("Type here...", text: $model.textBoxes[model.currentIndex].text)
-                    .font(.system(size: 35))
+                    .font(.system(size: 35, weight: model.textBoxes[model.currentIndex].isBold ? .bold : .regular))
                     .colorScheme(.dark)
                     .foregroundColor(model.textBoxes[model.currentIndex].textColor)
                     .padding()
@@ -61,10 +61,11 @@ struct Home: View {
                 // Add and cancel button
                 HStack {
                     Button(action: {
+                        // toggle the isAdded
+                        model.textBoxes[model.currentIndex].isAdded = true
+                        // Closing the view
                         model.toolPicker.setVisible(true, forFirstResponder: model.canvas)
                         model.canvas.becomeFirstResponder()
-                        
-                        // Closing the view
                         withAnimation {
                             model.addNewBox = false
                         }
@@ -83,8 +84,18 @@ struct Home: View {
                     }
                 }
                 .overlay(
-                    ColorPicker("", selection: $model.textBoxes[model.currentIndex].textColor)
-                        .labelsHidden()
+                    HStack(spacing: 15) {
+                        ColorPicker("", selection: $model.textBoxes[model.currentIndex].textColor)
+                            .labelsHidden()
+
+                        Button(action: {
+                            model.textBoxes[model.currentIndex].isBold.toggle()
+                        }, label: {
+                            Text(model.textBoxes[model.currentIndex].isBold ? "Normal" : "Bold")
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                        })
+                    }
                 )
                 .frame(maxHeight: .infinity, alignment: .top)
             }
@@ -92,6 +103,13 @@ struct Home: View {
         // Show image picker to pick image
         .sheet(isPresented: $model.showImagePicker) {
             ImagePicker(showPicker: $model.showImagePicker, imageData: $model.imageData)
+        }
+        .alert(isPresented: $model.showAlert) {
+            Alert(
+                title: Text("Message"),
+                message: Text(model.message),
+                dismissButton: .destructive(Text("OK"))
+            )
         }
     }
 }

@@ -20,4 +20,5 @@ struct TextBox: Identifiable {
     
     // You can add whatever properties here
     // I'm simply stopping on this
+    var isAdded: Bool = false
 }
