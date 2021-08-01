@@ -16,9 +16,8 @@ struct Home: View {
         NavigationView {
             VStack {
                 if let imageFile = UIImage(data: model.imageData) {
-                    Image(uiImage: imageFile)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
+                    DrawingScreen()
+                        .environmentObject(model)
                     // Setting cancel button if image selected
                         .toolbar(content: {
                             ToolbarItem(placement: .navigationBarLeading) {
