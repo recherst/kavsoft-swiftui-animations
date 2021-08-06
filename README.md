@@ -3,7 +3,7 @@
 <img src="Screenshots/swiftui-badge.jpg" style="zoom:80%;" />
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
- 
+
 
 ## Introduction
 
@@ -33,9 +33,11 @@ Kindly welcome to become a patron to support them! ❤️
 
   <img src="Screenshots/photo-editor.gif" style="zoom:80%;" />
 
+- Spotify App UI
 
+  Reference resource: [Spotify App UI|kavsoft](https://kavsoft.dev/SwiftUI_2.0/Spotify_App_UI)
 
-
+  <img src="Screenshots/spotify-ui.gif" alt="spotify-ui" style="zoom:80%;" />
 
 
 
