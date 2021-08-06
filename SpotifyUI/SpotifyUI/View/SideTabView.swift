@@ -10,7 +10,7 @@ import SwiftUI
 struct SideTabView: View {
     @State var selectedTab = "house.fill"
     @State var volume: CGFloat = 0.4
-    @State var showSideBar = true
+    @State var showSideBar = false
 
     var body: some View {
         VStack {
@@ -95,7 +95,7 @@ struct SideTabView: View {
         .offset(x: showSideBar ? 0 : -100)
         // Reclaiming the spacing by using negative spacing
         // If you want to move the view along with tab bar
-        //.padding(.trailing, showSideBar ? 0 : -100)
+        .padding(.trailing, showSideBar ? 0 : -100)
         .zIndex(1)
     }
 }
