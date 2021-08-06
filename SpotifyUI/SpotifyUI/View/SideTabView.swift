@@ -34,7 +34,7 @@ struct SideTabView: View {
             .frame(height: rect.height / 2.3)
             .padding(.top)
 
-            Spacer(minLength: 50)
+            Spacer(minLength: rect.height < 750 ? 30 : 50)
 
             Button(action: {
                 // Checking and increasing volume
@@ -61,7 +61,7 @@ struct SideTabView: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
             }
-            .padding(.vertical, 20)
+            .padding(.vertical, rect.height < 750 ? 10 : 20)
 
             Button(action: {
                 // Checking and decreasing volume
@@ -85,7 +85,7 @@ struct SideTabView: View {
                     .background(Color.black)
                     .shadow(radius: 5)
             })
-            .padding(.top, 30)
+            .padding(.top, rect.height < 750 ? 15 : 30)
             .padding(.bottom, safeArea.bottom == 0 ? 15 : 0)
             .offset(x: showSideBar ? 0 : 100)
         }
