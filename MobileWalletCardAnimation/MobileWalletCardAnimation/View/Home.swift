@@ -35,6 +35,14 @@ struct Home: View {
                     // To Avoid this were reversing the arary
                     ForEach(cards.indices.reversed(), id: \.self) { index in
                         CardView(card: cards[index])
+                        // Displaying first three, other all will be hidden
+                        // You can use ScrollView to explore all cards
+                        // Scaling
+                            .scaleEffect(index == 0 ? 1 : 0.9)
+                        // Rotation
+                            .rotationEffect(Angle(degrees: index == 1 ? -15 : (index == 2 ? 15 : 0)))
+                            .offset(y: index == 1 ? 60 : (index == 2 ? -60 : 0))
+                        // Since we applied rotation so we need change y in order to get x Axis
                     }
                 }
                 // rotating all cards
@@ -42,6 +50,7 @@ struct Home: View {
                 // Since were rotating so height will be the width
                 // -30 will be horizontal padding
                 .frame(height: rect.width - 30)
+                .scaleEffect(0.9)
                 .padding(.top, 20)
             }
             .padding()
