@@ -38,8 +38,14 @@ Kindly welcome to become a patron to support them! ❤️
   Reference resource: [Spotify App UI|kavsoft](https://kavsoft.dev/SwiftUI_2.0/Spotify_App_UI)
 
   <img src="Screenshots/spotify-ui.gif" alt="spotify-ui" style="zoom:80%;" />
+  
+- Mobile Wallet Card Animation
 
+  Reference resource: [Mobile Wallet Card Animation|kavsoft](https://kavsoft.dev/SwiftUI_2.0/Wallet_Card_Animation)
 
+  <img src="Screenshots/mobile-wallet-card-animation.gif" alt="mobile-wallet-card-animation" style="zoom:80%;" />
+
+  
 
 
 
