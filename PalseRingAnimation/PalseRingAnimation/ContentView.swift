@@ -22,6 +22,9 @@ struct ContentView_Previews: PreviewProvider {
 
 struct Home: View {
     @State var startAnimation = false
+    @State var pulse1 = false
+    @State var pulse2 = false
+
     var body: some View {
         VStack {
             // Nav bar...
@@ -49,6 +52,12 @@ struct Home: View {
             .background(Color.white)
 
             ZStack {
+                Circle()
+                    .stroke(Color.gray.opacity(0.6))
+                    .frame(width: 130, height: 130)
+                    .scaleEffect(pulse1 ? 3.3 : 0)
+                    .opacity(pulse1 ? 0 : 1)
+
                 Circle()
                     .fill(Color.white)
                     .frame(width: 130, height: 130)
@@ -83,6 +92,15 @@ struct Home: View {
     func animationView() {
         withAnimation(Animation.linear(duration: 1.7).repeatForever(autoreverses: false)) {
             startAnimation.toggle()
+        }
+
+        // It will start next round 0.1s eariler
+        withAnimation(
+            Animation.linear(duration: 1.7)
+                .delay(-0.1)
+                .repeatForever(autoreverses: false)
+        ) {
+            pulse1.toggle()
         }
     }
 }
