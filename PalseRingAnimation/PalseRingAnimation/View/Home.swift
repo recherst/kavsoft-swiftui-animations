@@ -29,17 +29,26 @@ struct Home: View {
                         .foregroundColor(.black)
                 })
 
-                Text("NearBy Search")
+                Text(finishAnimation ? "\(peoples.count) people NearBy" : "NearBy Search")
                     .font(.title2)
                     .fontWeight(.bold)
+                    .animation(.none)
 
                 Spacer()
 
                 Button(action: verifyAndAddPeople, label: {
-                    Image(systemName: "plus")
-                        .font(.system(size: 22, weight: .semibold))
-                        .foregroundColor(.black)
+                    // Show refresh button if finish animation toggle
+                    if finishAnimation {
+                        Image(systemName: "arrow.clockwise")
+                            .font(.system(size: 22, weight: .semibold))
+                            .foregroundColor(.black)
+                    } else {
+                        Image(systemName: "plus")
+                            .font(.system(size: 22, weight: .semibold))
+                            .foregroundColor(.black)
+                    }
                 })
+                .animation(.none)
             }
             .padding()
             .padding(.top, safeArea.top)
@@ -99,6 +108,51 @@ struct Home: View {
 
             }
             .frame(maxHeight: .infinity)
+
+            if finishAnimation {
+                VStack {
+                    // Pull up indicator
+                    Capsule()
+                        .fill(Color.gray.opacity(0.7))
+                        .frame(width: 50, height: 4)
+                        .padding(.vertical, 10)
+                    ScrollView(.horizontal, showsIndicators: false, content: {
+                        HStack(spacing: 15) {
+                            // Since we're only locating first 5 people in pulse animation
+                            // So show all people here
+                            ForEach(peoples) { people in
+                                VStack(spacing: 15) {
+                                    Image(people.image)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 100, height: 100)
+                                        .clipShape(Circle())
+                                    Text(people.name)
+                                        .font(.title2)
+                                        .fontWeight(.bold)
+
+                                    Button(action: {}, label: {
+                                        Text("Choose")
+                                            .fontWeight(.semibold)
+                                            .padding(.vertical, 10)
+                                            .padding(.horizontal, 40)
+                                            .background(Color.blue)
+                                            .foregroundColor(.white)
+                                            .cornerRadius(10)
+                                    })
+                                }
+                                .padding(.horizontal)
+                            }
+                        }
+                        .padding()
+                        .padding(.bottom, safeArea.bottom)
+                    })
+                }
+                .background(Color.white)
+                .cornerRadius(25)
+                // bottom slide
+                .transition(.move(edge: .bottom))
+            }
         }
         .ignoresSafeArea()
         .background(Color.black.opacity(0.05).ignoresSafeArea())
@@ -125,6 +179,15 @@ struct Home: View {
                 startAnimation = false
                 pulse1 = false
                 pulse2 = false
+            }
+
+            // Check if animation finished
+            // If so reset all
+            if !finishAnimation {
+                withAnimation {
+                    foundPeople.removeAll()
+                }
+                animationView()
             }
         }
     }
