@@ -59,6 +59,12 @@ struct Home: View {
                     .opacity(pulse1 ? 0 : 1)
 
                 Circle()
+                    .stroke(Color.gray.opacity(0.6))
+                    .frame(width: 130, height: 130)
+                    .scaleEffect(pulse2 ? 3.3 : 0)
+                    .opacity(pulse2 ? 0 : 1)
+
+                Circle()
                     .fill(Color.white)
                     .frame(width: 130, height: 130)
                     .shadow(color: Color.black.opacity(0.07), radius: 5, x: 5, y: 5)
@@ -101,6 +107,18 @@ struct Home: View {
                 .repeatForever(autoreverses: false)
         ) {
             pulse1.toggle()
+        }
+
+        // 2nd pulse animation
+        // will start 0.5 delay
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            withAnimation(
+                Animation.linear(duration: 1.7)
+                    .delay(-0.1)
+                    .repeatForever(autoreverses: false)
+            ) {
+                pulse2.toggle()
+            }
         }
     }
 }
