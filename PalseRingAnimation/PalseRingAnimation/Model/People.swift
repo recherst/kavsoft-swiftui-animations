@@ -25,6 +25,7 @@ var peoples = [
 
 // Random Offsets for top 5 people
 var firstFiveOffsets: [CGSize] = [
+    // You can change the position of user views by changing the offsets here
     CGSize(width: 100, height: 100),
     CGSize(width: -100, height: -100),
     CGSize(width: -50, height: 130),
