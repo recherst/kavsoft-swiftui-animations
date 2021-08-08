@@ -49,7 +49,7 @@ Kindly welcome to become a patron to support them! ❤️
 
   Reference resource: [Pulse Ring Animation|kavsoft](https://kavsoft.dev/SwiftUI_2.0/Pulse_Ring_Animation)
 
-  <img src="/Users/liuyonggang/Documents/GitHub/kavsoft.dev-samples/Screenshots/palse-ring-animation.gif" alt="palse-ring-animation" style="zoom:80%;" />
+  <img src="Screenshots/palse-ring-animation.gif" alt="palse-ring-animation" style="zoom:80%;" />
 
   
 
