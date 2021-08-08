@@ -25,6 +25,11 @@ struct Home: View {
     @State var pulse1 = false
     @State var pulse2 = false
 
+    // Found People
+    // Max people will be 5
+    // remaining all showing in bottomsheet
+    @State var foundPeople: [People] = []
+
     var body: some View {
         VStack {
             // Nav bar...
@@ -41,7 +46,7 @@ struct Home: View {
 
                 Spacer()
 
-                Button(action: {}, label: {
+                Button(action: verifyAndAddPeople, label: {
                     Image(systemName: "plus")
                         .font(.system(size: 22, weight: .semibold))
                         .foregroundColor(.black)
@@ -82,6 +87,18 @@ struct Home: View {
                         .trim(from: 0, to: 0.4)
                         .stroke(Color.blue, lineWidth: 1.4)
                         .rotationEffect(Angle(degrees: -180))
+
+                    // Showing found people
+                    ForEach(foundPeople) { people in
+                        Image(people.image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 50, height: 50)
+                            .clipShape(Circle())
+                            .padding()
+                            .background(Color.white.clipShape(Circle()))
+                            .offset(people.offset)
+                    }
                 }
                 .frame(width: 70, height: 70)
                 .rotationEffect(Angle(degrees: startAnimation ? 360 : 0))
@@ -92,6 +109,20 @@ struct Home: View {
         .background(Color.black.opacity(0.05).ignoresSafeArea())
         .onAppear {
             animationView()
+        }
+    }
+
+    func verifyAndAddPeople() {
+        if foundPeople.count < 5 {
+            // Adding people
+            withAnimation {
+                var people = peoples[foundPeople.count]
+                // Setting custom offset for top five found people
+                people.offset = firstFiveOffsets[foundPeople.count]
+                foundPeople.append(people)
+            }
+        } else {
+
         }
     }
 

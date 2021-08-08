@@ -22,3 +22,12 @@ var peoples = [
     People(image: "pic4", name: "Bill"),
     People(image: "pic5", name: "Jeff")
 ]
+
+// Random Offsets for top 5 people
+var firstFiveOffsets: [CGSize] = [
+    CGSize(width: 100, height: 100),
+    CGSize(width: -100, height: -100),
+    CGSize(width: -50, height: 130),
+    CGSize(width: 50, height: -130),
+    CGSize(width: 120, height: -50),
+]
