@@ -51,6 +51,12 @@ Kindly welcome to become a patron to support them! ❤️
 
   <img src="Screenshots/palse-ring-animation.gif" alt="palse-ring-animation" style="zoom:80%;" />
 
+- Food App UI - Complex UI
+
+  Reference resource: [Food App UI - Complex UI|kavsoft](https://kavsoft.dev/SwiftUI_2.0/Food_App_UI)
+
+  <img src="Screenshots/food-app-ui.gif" alt="food-app-ui" style="zoom:80%;" />
+
   
 
 
