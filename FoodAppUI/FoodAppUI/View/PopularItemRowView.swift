@@ -24,7 +24,7 @@ struct PopularItemRowView: View {
             Image(item.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: rect.width / 2.5, height: rect.width / 2.5)
+                .frame(width: rect.width / 3, height: rect.width / 3)
                 .padding(.top, 6)
 
             Text(item.title)
@@ -45,7 +45,8 @@ struct PopularItemRowView: View {
             .fontWeight(.bold)
             .padding(.top, 8)
         }
-        .padding()
+        .padding(.horizontal, 30)
+        .padding(.vertical)
         .background(Color.white)
         .cornerRadius(25)
         // Shadows
