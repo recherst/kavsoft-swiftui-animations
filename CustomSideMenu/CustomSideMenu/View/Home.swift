@@ -46,11 +46,26 @@ struct Home_Previews: PreviewProvider {
 struct HomePage: View {
     var body: some View {
         NavigationView {
-            Text("Home")
-                .font(.largeTitle)
-                .fontWeight(.heavy)
-                .foregroundColor(.primary)
-                .navigationTitle("Home")
+            VStack(alignment: .leading, spacing: 20) {
+                Image("pic")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: rect.width - 50, height: 400)
+                    .cornerRadius(20)
+
+                VStack(alignment: .leading, spacing: 5, content: {
+                    Text("Jenna Ezarik")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.primary)
+
+                    Text("iJustine's Sider, YouTuber, Techie...")
+                        .font(.caption)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.gray)
+                })
+            }
+            .navigationTitle("Home")
         }
     }
 }
