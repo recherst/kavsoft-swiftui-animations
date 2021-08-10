@@ -23,8 +23,17 @@ struct MainView: View {
                 Color.white
                     .opacity(0.5)
                     .cornerRadius(showMenu ? 15 : 0)
+                    .shadow(color: Color.black.opacity(0.07), radius: 5, x: 5, y: 0)
                     .offset(x: showMenu ? -25 : 0)
                     .padding(.vertical, 30)
+
+                Color.white
+                    .opacity(0.4)
+                    .cornerRadius(showMenu ? 15 : 0)
+                    .shadow(color: Color.black.opacity(0.07), radius: 5, x: 5, y: 0)
+                    .offset(x: showMenu ? -50 : 0)
+                    .padding(.vertical, 60)
+
                 Home(selectedTab: $selectedTab)
                     .cornerRadius(showMenu ? 15 : 0)
             }
@@ -38,8 +47,29 @@ struct MainView: View {
                         showMenu.toggle()
                     }
                 }, label: {
-                    Text("Button")
+
+                    // Animted drawer button
+                    VStack(spacing: 5) {
+                        Capsule()
+                            .fill(showMenu ? Color.white : Color.primary)
+                            .frame(width: 30, height: 3)
+                            // Rotating
+                            .rotationEffect(Angle(degrees: showMenu ? -50 : 0))
+                            .offset(x: showMenu ? 2 : 0, y: showMenu ? 9 : 0)
+                        VStack(spacing: 5) {
+                            Capsule()
+                                .fill(showMenu ? Color.white : Color.primary)
+                                .frame(width: 30, height: 3)
+                            // Moving up when clicked
+                            Capsule()
+                                .fill(showMenu ? Color.white : Color.primary)
+                                .frame(width: 30, height: 3)
+                                .offset(y: showMenu ? -8 : 0)
+                        }
+                        .rotationEffect(Angle(degrees: showMenu ? 50 : 0))
+                    }
                 })
+                .padding()
 
                 ,alignment: .topLeading
             )
