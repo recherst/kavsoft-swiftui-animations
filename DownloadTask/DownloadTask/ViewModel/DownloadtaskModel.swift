@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import SwiftUI
 
-class DownloadTaskModel: NSObject, ObservableObject, URLSessionDownloadDelegate {
+class DownloadTaskModel: NSObject, ObservableObject, URLSessionDownloadDelegate, UIDocumentInteractionControllerDelegate {
     
     @Published var downloadURL: URL!
 
@@ -35,6 +35,7 @@ class DownloadTaskModel: NSObject, ObservableObject, URLSessionDownloadDelegate 
             return
         }
         // Valid URL
+        downloadProgress = 0
         withAnimation { showDownloadProgress = true }
 
         // Download task
@@ -53,7 +54,42 @@ class DownloadTaskModel: NSObject, ObservableObject, URLSessionDownloadDelegate 
 
     // Implementing URLSession Functions
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-        print(location)
+        // Since it will download it as temporay data
+        // so we're going to save it in app document directory and showing it in document controller
+        guard let url = downloadTask.originalRequest?.url else {
+            reportError(error: "Something went wrong please try again later")
+            return
+        }
+
+        // diretory path
+        let directoryPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+
+        // Creating one for storing file
+        // Destination URL
+        // Get the mp4
+        let destinationURL = directoryPath.appendingPathComponent(url.lastPathComponent)
+
+        // if already file is there removing that
+        try? FileManager.default.removeItem(at: destinationURL)
+        do {
+            // Copying temp file to directory
+            try FileManager.default.copyItem(at: location, to: destinationURL)
+            // If success
+            print("success")
+            // closing progress view
+            DispatchQueue.main.async {
+                withAnimation { self.showDownloadProgress = false }
+
+                // presenting the file with the help of document interaction controller from UIKit
+                let controller = UIDocumentInteractionController(url: destinationURL)
+
+                // it needs a delegate
+                controller.delegate = self
+                controller.presentPreview(animated: true)
+            }
+        } catch {
+            reportError(error: "Please try again later!!!")
+        }
     }
 
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
@@ -69,5 +105,10 @@ class DownloadTaskModel: NSObject, ObservableObject, URLSessionDownloadDelegate 
     // Cancel task
     func cacelTask() {
         
+    }
+
+    // Sub functions for presenting view
+    func documentInteractionControllerViewControllerForPreview(_ controller: UIDocumentInteractionController) -> UIViewController {
+        return UIApplication.shared.windows.first!.rootViewController!
     }
 }
