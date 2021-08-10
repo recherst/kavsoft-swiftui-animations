@@ -42,7 +42,7 @@ struct Home: View {
         .preferredColorScheme(.light)
         .alert(isPresented: $downloadModel.showAlert, content: {
             Alert(title: Text("Message"), message: Text(downloadModel.alertMsg), dismissButton: .destructive(Text("OK"), action: {
-                
+                downloadModel.showDownloadProgress = false
             }))
         })
         .overlay(
@@ -62,6 +62,6 @@ struct Home_Previews: PreviewProvider {
     }
 }
 
-// sample URL
+// Sample URL
 // For testing
 let url = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"

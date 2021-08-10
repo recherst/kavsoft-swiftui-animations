@@ -34,17 +34,26 @@ class DownloadTaskModel: NSObject, ObservableObject, URLSessionDownloadDelegate,
             reportError(error: "Invalid URL!!!")
             return
         }
-        // Valid URL
-        downloadProgress = 0
-        withAnimation { showDownloadProgress = true }
 
-        // Download task
-        // Since we're going to get the progress as well as location of file so we're using delegate
-        let seesion = URLSession(configuration: .default, delegate: self, delegateQueue: nil)
+        // Presenting downloading the same file again
+        let directoryPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        if FileManager.default.fileExists(atPath: directoryPath.appendingPathComponent(validURL.lastPathComponent).path) {
+            print("yes file found")
 
-        downloadTaskSession = seesion.downloadTask(with: validURL)
-        downloadTaskSession.resume()
-        
+            let controller = UIDocumentInteractionController(url: directoryPath.appendingPathComponent(validURL.lastPathComponent))
+        } else {
+            print("no file found")
+            // Valid URL
+            downloadProgress = 0
+            withAnimation { self.showDownloadProgress = true }
+
+            // Download task
+            // Since we're going to get the progress as well as location of file so we're using delegate
+            let seesion = URLSession(configuration: .default, delegate: self, delegateQueue: nil)
+
+            downloadTaskSession = seesion.downloadTask(with: validURL)
+            downloadTaskSession.resume()
+        }
     }
 
     func reportError(error: String) {
@@ -57,11 +66,13 @@ class DownloadTaskModel: NSObject, ObservableObject, URLSessionDownloadDelegate,
         // Since it will download it as temporay data
         // so we're going to save it in app document directory and showing it in document controller
         guard let url = downloadTask.originalRequest?.url else {
-            reportError(error: "Something went wrong please try again later")
+            DispatchQueue.main.async {
+                self.reportError(error: "Something went wrong please try again later")
+            }
             return
         }
 
-        // diretory path
+        // Diretory path
         let directoryPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
 
         // Creating one for storing file
@@ -76,7 +87,7 @@ class DownloadTaskModel: NSObject, ObservableObject, URLSessionDownloadDelegate,
             try FileManager.default.copyItem(at: location, to: destinationURL)
             // If success
             print("success")
-            // closing progress view
+            // Closing progress view
             DispatchQueue.main.async {
                 withAnimation { self.showDownloadProgress = false }
 
@@ -88,7 +99,9 @@ class DownloadTaskModel: NSObject, ObservableObject, URLSessionDownloadDelegate,
                 controller.presentPreview(animated: true)
             }
         } catch {
-            reportError(error: "Please try again later!!!")
+            DispatchQueue.main.async {
+                self.reportError(error: "Please try again later!!!")
+            }
         }
     }
 
@@ -102,9 +115,27 @@ class DownloadTaskModel: NSObject, ObservableObject, URLSessionDownloadDelegate,
         }
     }
 
+    // error
+    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+        DispatchQueue.main.async {
+            if let error = error {
+                withAnimation {
+                    self.showDownloadProgress = true
+                }
+                self.reportError(error: error.localizedDescription)
+                return
+            }
+        }
+    }
+
     // Cancel task
     func cacelTask() {
-        
+        if let task = downloadTaskSession, task.state == .running {
+            // Cancel
+            downloadTaskSession.cancel()
+            // Closing view
+            withAnimation { self.showDownloadProgress = false }
+        }
     }
 
     // Sub functions for presenting view
