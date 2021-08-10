@@ -26,7 +26,7 @@ struct TabButton: View {
             }
             .foregroundColor(selectedtab == title ? Color("blue") : .white)
             .padding(.vertical, 12)
-            .padding(.horizontal, 20)
+            .padding(.horizontal, 10)
             .background(
                 ZStack {
                     if selectedtab == title {
