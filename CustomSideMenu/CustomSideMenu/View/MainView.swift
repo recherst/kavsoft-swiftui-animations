@@ -16,7 +16,9 @@ struct MainView: View {
             Color("blue")
                 .ignoresSafeArea()
             // Side menu
-            SideMenu(selectedTab: $selectedTab)
+            ScrollView(rect.height < 750 ? .vertical : .init(), showsIndicators: false, content: {
+                SideMenu(selectedTab: $selectedTab)
+            })
 
             ZStack {
                 // Two background cards
