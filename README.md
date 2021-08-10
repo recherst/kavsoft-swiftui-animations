@@ -57,11 +57,11 @@ Kindly welcome to become a patron to support them! ❤️
 
   <img src="Screenshots/food-app-ui.gif" alt="food-app-ui" style="zoom:80%;" />
 
-  
+- SwiftUI URL Session Download Task
 
+  Reference resource: [SwiftUI URL Session Download Task](https://kavsoft.dev/SwiftUI_2.0/Download_Task)
 
-
-
+  <img src="Screenshots/swiftui-url-session-download-task.gif" alt="swiftui-url-session-download-task" style="zoom:80%;" />
 
 
 
