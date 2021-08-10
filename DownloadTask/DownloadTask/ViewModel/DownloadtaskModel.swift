@@ -41,6 +41,8 @@ class DownloadTaskModel: NSObject, ObservableObject, URLSessionDownloadDelegate,
             print("yes file found")
 
             let controller = UIDocumentInteractionController(url: directoryPath.appendingPathComponent(validURL.lastPathComponent))
+            controller.delegate = self
+            controller.presentPreview(animated: true)
         } else {
             print("no file found")
             // Valid URL
