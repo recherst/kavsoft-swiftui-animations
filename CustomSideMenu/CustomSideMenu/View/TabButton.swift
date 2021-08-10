@@ -14,19 +14,33 @@ struct TabButton: View {
     // For hero animation slide
     var animation: Namespace.ID
     var body: some View {
-        Button(action: {}, label: {
-            HStack(spacing: 10, content: {
+        Button(action: {
+            withAnimation(.spring()) { selectedtab = title }
+        }, label: {
+            HStack(spacing: 15) {
                 Image(systemName: image)
                     .font(.title2)
+                    .frame(width: 30)
                 Text(title)
                     .fontWeight(.semibold)
-            })
+            }
             .foregroundColor(selectedtab == title ? Color("blue") : .white)
             .padding(.vertical, 12)
             .padding(.horizontal, 20)
             .background(
-                Color.white
-                    .opacity(selectedtab == title ? 1 : 0)
+                ZStack {
+                    if selectedtab == title {
+                        Color.white
+                            .opacity(selectedtab == title ? 1 : 0)
+                            .clipShape(
+                                CustomCorners(
+                                    corners: [.topRight, .bottomRight],
+                                    radius: 10
+                                )
+                            )
+                            .matchedGeometryEffect(id: "TAB", in: animation)
+                    }
+                }
             )
         })
     }

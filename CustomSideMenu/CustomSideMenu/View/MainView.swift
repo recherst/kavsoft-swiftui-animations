@@ -42,8 +42,12 @@ struct MainView: View {
                 })
 
                 // Tab buttons
-                VStack(spacing: 0) {
+                VStack(alignment: .leading, spacing: 10) {
                     TabButton(image: "house", title: "Home", selectedtab: $selectedTab, animation: animation)
+                    TabButton(image: "clock.arrow.circlepath", title: "History", selectedtab: $selectedTab, animation: animation)
+                    TabButton(image: "bell.badge", title: "Notifications", selectedtab: $selectedTab, animation: animation)
+                    TabButton(image: "gearshape.fill", title: "Settings", selectedtab: $selectedTab, animation: animation)
+                    TabButton(image: "questionmark.circle", title: "Help", selectedtab: $selectedTab, animation: animation)
                 }
                 .padding(.leading, -15)
                 .padding(.top, 50)
