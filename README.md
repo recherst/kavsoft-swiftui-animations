@@ -59,13 +59,12 @@ Kindly welcome to become a patron to support them! ❤️
 
 - SwiftUI URL Session Download Task
 
-  Reference resource: [SwiftUI URL Session Download Task](https://kavsoft.dev/SwiftUI_2.0/Download_Task)
+  Reference resource: [SwiftUI URL Session Download Task|Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Download_Task)
 
   <img src="Screenshots/swiftui-url-session-download-task.gif" alt="swiftui-url-session-download-task" style="zoom:80%;" />
 
+- Animated Navigation Menu
 
+  Reference resource: [Animated Navigation Menu|Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Navigation_Menu)
 
-
-
-
-
+  <img src="Screenshots/custom-side-menu.gif" alt="custom-side-menu" style="zoom:80%;" />
