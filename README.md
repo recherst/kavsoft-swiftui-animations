@@ -68,3 +68,11 @@ Kindly welcome to become a patron to support them! ❤️
   Reference resource: [Animated Navigation Menu|Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Navigation_Menu)
 
   <img src="Screenshots/custom-side-menu.gif" alt="custom-side-menu" style="zoom:80%;" />
+
+- ScrollView Offset
+
+  Reference resource: [ScrollView Offset|Kavsoft](https://kavsoft.dev/SwiftUI_2.0/ScrollView_Offset)
+
+  <img src="Screenshots/scrollview-offset.gif" alt="scrollview-offset" style="zoom:80%;" />
+
+  
