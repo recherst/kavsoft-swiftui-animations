@@ -24,14 +24,25 @@ struct RecentRowView: View {
                     profileData.showProfile.toggle()
                 }
             }, label: {
-                Image(recent.profile)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    // Matched Geometry Effect
-                    // Giving unique ID that is from UUID from profile model
-                    .matchedGeometryEffect(id: recent.id, in: animation)
-                    .frame(width: 60, height: 60)
-                    .clipShape(Circle())
+                ZStack {
+                    // Without matched geometry effect simply showing image
+                    Image(recent.profile)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 60, height: 60)
+                        .clipShape(Circle())
+                    
+                    if !profileData.showProfile {
+                        Image(recent.profile)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            // Matched Geometry Effect
+                            // Giving unique ID that is from UUID from profile model
+                            .matchedGeometryEffect(id: recent.id, in: animation)
+                            .frame(width: 60, height: 60)
+                            .clipShape(Circle())
+                    }
+                }
             })
             // It decreased the highlight color
             .buttonStyle(PlainButtonStyle())

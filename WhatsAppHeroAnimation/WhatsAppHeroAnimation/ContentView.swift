@@ -10,7 +10,6 @@ import SwiftUI
 struct ContentView: View {
     // Animation Namespace
     @Namespace var animation
-
     // StateObject
     @StateObject var profileData = ProfileDetailModel()
 
