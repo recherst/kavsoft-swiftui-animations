@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 import Combine
 
 class ProfileDetailModel: ObservableObject {
@@ -16,4 +17,7 @@ class ProfileDetailModel: ObservableObject {
 
     // To show big image
     @Published var showEnlargedImage = false
+
+    // Drag to close
+    @Published var offset: CGFloat = 0
 }
