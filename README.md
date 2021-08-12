@@ -75,4 +75,11 @@ Kindly welcome to become a patron to support them! ❤️
 
   <img src="Screenshots/scrollview-offset.gif" alt="scrollview-offset" style="zoom:80%;" />
 
+- WhatsApp Hero Animation
+
+  Reference resource: [WhatsApp Hero Animation|Kavsoft](https://kavsoft.dev/SwiftUI_2.0/WhatsApp_Hero_Animation)
+
+  <img src="Screenshots/whats-app-hero-animation.gif" alt="whats-app-hero-animation" style="zoom:80%;" />
+
   
+
