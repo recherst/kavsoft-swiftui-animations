@@ -10,6 +10,10 @@ import Combine
 
 class ProfileDetailModel: ObservableObject {
     @Published var showProfile = false
+
     // Storing the selected profile
     @Published var selectedProfile: Profile!
+
+    // To show big image
+    @Published var showEnlargedImage = false
 }
