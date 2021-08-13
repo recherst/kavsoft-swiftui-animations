@@ -7,6 +7,6 @@
 
 import SwiftUI
 
-let Appkey = "4ydrqp2tryd3"
+let APIKey = "4ydrqp2tryd3"
 
 //let path = "https://github.com/GetStream/stream-chat-swift.git"

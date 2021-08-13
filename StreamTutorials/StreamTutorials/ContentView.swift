@@ -8,9 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var streamData = StreamViewModel()
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            Login()
+                .navigationTitle("Login")
+        }
+        .alert(isPresented: $streamData.error, content: {
+            Alert(title: Text(streamData.errorMsg))
+        })
+        .overlay(
+            ZStack {
+                // Loading screen
+
+
+            }
+        )
+        .environmentObject(streamData)
     }
 }
 
