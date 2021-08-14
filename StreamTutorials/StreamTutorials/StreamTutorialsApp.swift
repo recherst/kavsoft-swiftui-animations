@@ -25,7 +25,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     @AppStorage("log_Status") var logStatus = false
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        let config = ChatClientConfig(apiKeyString: APIKey)
+        let config = ChatClientConfig(apiKey: APIKey(APIKEY))
         // If user already logged in
         if logStatus {
             ChatClient.shared = ChatClient(config: config, tokenProvider: .development(userId: storedUser))
