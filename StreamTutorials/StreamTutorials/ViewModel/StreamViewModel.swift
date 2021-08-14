@@ -30,12 +30,10 @@ class StreamViewModel: ObservableObject {
 
     func logInUser() {
         // Logging in user
-        withAnimation {
-            isLoading = true
-        }
+        withAnimation { isLoading = true }
 
-        let config = ChatClientConfig(apiKey: APIKey(APIKEY))
-        ChatClient.shared = ChatClient(config: config, tokenProvider: .guest(userId: userName))
+        let config = ChatClientConfig(apiKeyString: APIKEY)
+        ChatClient.shared = ChatClient(config: config, tokenProvider: .development(userId: userName))
         ChatClient.shared.currentUserController().reloadUserIfNeeded { err in
 
             withAnimation { self.isLoading = false }
@@ -58,7 +56,7 @@ class StreamViewModel: ObservableObject {
         if channels == nil {
             // Filter
             let filter = Filter<ChannelListFilterScope>.equal("type", to: "messaging")
-            let request = ChatClient.shared.channelListController(query: _ChannelListQuery<NoExtraData>(filter: filter))
+            let request = ChatClient.shared.channelListController(query: .init(filter: filter))
             request.synchronize { err in
                 if let error = err {
                     self.errorMsg = error.localizedDescription
