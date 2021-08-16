@@ -85,5 +85,5 @@ Kindly welcome to become a patron to support them! ❤️
 
   Reference resource: [Dribble Loading Screen|Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Dribbble_Loading_Screen)
 
-  <img src="/Users/liuyonggang/Documents/GitHub/kavsoft-examples/Screenshots/dribble-loading-screen.gif" alt="dribble-loading-screen" style="zoom:80%;" />
+  <img src="Screenshots/dribble-loading-screen.gif" alt="dribble-loading-screen" style="zoom:80%;" />
 
