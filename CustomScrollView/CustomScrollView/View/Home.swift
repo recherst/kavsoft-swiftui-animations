@@ -63,6 +63,8 @@ struct Home: View {
                         .frame(width: 0, height: 0)
                     )
                     .padding()
+                    // Scaling
+                    .scaleEffect(getScale)
                     // Getting offset and moving the view
                     .offset(getOffset)
 
@@ -155,6 +157,16 @@ struct Home: View {
         size.width = offset > 0 ? (offset * 1.5 <= (screenWidth - titleOffset) ? offset * 1.5 : (screenWidth - titleOffset)) : 0
         size.height = offset > 0 ? (offset < 75 ? -offset : -75) : 0
         return size
+    }
+
+    var getScale: CGFloat {
+        if offset > 0 {
+            let screenWidth = UIScreen.main.bounds.width
+            let progress = 1 - (getOffset.width / screenWidth)
+            return progress >= 0.9 ? progress : 0.9
+        } else {
+            return 1
+        }
     }
 }
 
