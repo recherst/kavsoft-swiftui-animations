@@ -141,29 +141,28 @@ struct Home: View {
                         FriendRowView(friend: friend)
                     }
                 }
-            })
-            .padding(.top, 10)
-            .padding(.top, searchQuery == "" ? titleBarheight : 90)
-            // Get offset by using geometry reader
-            .overlay(
-                GeometryReader { geometry -> Color in
-                    let minY = geometry.frame(in: .global).minY
-                    DispatchQueue.main.async {
-                        // To get original offset
-                        // ie from 0
-                        // just minus start offset
-                        if startOffset == 0 {
-                            startOffset = minY
+                .padding(.top, 10)
+                .padding(.top, searchQuery == "" ? titleBarheight : 90)
+                // Get offset by using geometry reader
+                .overlay(
+                    GeometryReader { geometry -> Color in
+                        let minY = geometry.frame(in: .global).minY
+                        DispatchQueue.main.async {
+                            // To get original offset
+                            // ie from 0
+                            // just minus start offset
+                            if startOffset == 0 {
+                                startOffset = minY
+                            }
+                            offset = startOffset - minY
                         }
-                        offset = startOffset - minY
-                        print(offset)
+                        return Color.clear
                     }
-                    return Color.clear
-                }
-                .frame(width: 0, height: 0)
+                    .frame(width: 0, height: 0)
 
-                ,alignment: .top
-            )
+                    ,alignment: .top
+                )
+            })
         }
     }
 
