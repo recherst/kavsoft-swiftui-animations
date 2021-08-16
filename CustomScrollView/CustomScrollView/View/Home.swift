@@ -75,7 +75,7 @@ struct Home: View {
             ScrollView(showsIndicators: false, content: {
                 VStack(spacing: 15) {
                     ForEach(friends) { friend in
-                        
+                        FriendRowView(friend: friend)
                     }
                 }
             })
