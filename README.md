@@ -87,3 +87,8 @@ Kindly welcome to become a patron to support them! ❤️
 
   <img src="Screenshots/dribble-loading-screen.gif" alt="dribble-loading-screen" style="zoom:80%;" />
 
+- Custom ScrollView Animation
+
+  Reference resource: [Custom ScrollView Animation|Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Custom_ScrollView_Animation)
+
+  <img src="Screenshots/custom-scroll-view-animation.gif" alt="custom-scroll-view-animation" style="zoom:80%;" />
