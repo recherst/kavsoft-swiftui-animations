@@ -27,31 +27,31 @@ Kindly welcome to become a patron to support them! ❤️
 
 - Photo Editor
 
-  Reference resource: [Photo Editor|kavsoft](https://kavsoft.dev/SwiftUI_2.0/Photo_Editor)
+  Reference resource: [Photo Editor|Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Photo_Editor)
 
   <img src="https://raw.githubusercontent.com/recherst/img-hosting/main/imgs/photo-editor.gif" style="zoom:80%;" />
 
 - Spotify App UI
 
-  Reference resource: [Spotify App UI|kavsoft](https://kavsoft.dev/SwiftUI_2.0/Spotify_App_UI)
+  Reference resource: [Spotify App UI|Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Spotify_App_UI)
 
   <img src="https://raw.githubusercontent.com/recherst/img-hosting/main/imgs/spotify-ui.gif" style="zoom:80%;" />
   
 - Mobile Wallet Card Animation
 
-  Reference resource: [Mobile Wallet Card Animation|kavsoft](https://kavsoft.dev/SwiftUI_2.0/Wallet_Card_Animation)
+  Reference resource: [Mobile Wallet Card Animation|Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Wallet_Card_Animation)
 
   <img src="https://raw.githubusercontent.com/recherst/img-hosting/main/imgs/mobile-wallet-card-animation.gif" style="zoom:80%;" />
 
 - Pulse Ring Animation
 
-  Reference resource: [Pulse Ring Animation|kavsoft](https://kavsoft.dev/SwiftUI_2.0/Pulse_Ring_Animation)
+  Reference resource: [Pulse Ring Animation|Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Pulse_Ring_Animation)
 
   <img src="https://raw.githubusercontent.com/recherst/img-hosting/main/imgs/palse-ring-animation.gif" style="zoom:80%;" />
 
 - Food App UI - Complex UI
 
-  Reference resource: [Food App UI - Complex UI|kavsoft](https://kavsoft.dev/SwiftUI_2.0/Food_App_UI)
+  Reference resource: [Food App UI - Complex UI|Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Food_App_UI)
 
   <img src="https://raw.githubusercontent.com/recherst/img-hosting/main/imgs/food-app-ui.gif" style="zoom:80%;" />
 
@@ -91,3 +91,8 @@ Kindly welcome to become a patron to support them! ❤️
 
   <img src="https://raw.githubusercontent.com/recherst/img-hosting/main/imgs/custom-scroll-view-animation.gif" style="zoom:80%;" />
 
+- Animated Loading Screen
+
+  Reference resource: [Animated Loading Screen|Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Loading_Screen)
+
+  <img src="https://raw.githubusercontent.com/recherst/img-hosting/main/imgs/animated-loading-screen.gif" style="zoom:80%;" />
