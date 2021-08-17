@@ -23,9 +23,7 @@ Kindly welcome to become a patron to support them! ❤️
 
   Reference resoure: [Custom Carousel Slider|Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Custom_Carousel_Slider)
 
-  <img src="Screenshots/custom-carousel-slider.gif" alt="carousel-slider" style="zoom:80%;" />
-
-  
+  <img src="https://raw.githubusercontent.com/recherst/img-hosting/main/imgscustom-carousel-slider.gif" alt="custom-carousel-slider" style="zoom:80%;" />
 
 - Photo Editor
 
