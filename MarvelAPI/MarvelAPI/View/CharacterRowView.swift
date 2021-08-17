@@ -16,6 +16,7 @@ struct CharacterRowView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 150, height: 150)
+                .cornerRadius(8)
 
             VStack(alignment: .leading, spacing: 8, content: {
                 Text(character.name)
@@ -27,10 +28,23 @@ struct CharacterRowView: View {
                     .foregroundColor(.gray)
                     .lineLimit(4)
                     .multilineTextAlignment(.leading)
+
+                // Links
+                HStack(spacing: 10) {
+                    ForEach(character.urls, id: \.self) { url in
+                        NavigationLink(
+                            destination: WebView(url: extractURL(data: url))
+                                .navigationTitle(extractURLType(data: url)),
+                            label: {
+                                Text(extractURLType(data: url))
+                            })
+                    }
+                }
             })
 
             Spacer(minLength: 0)
         }
+        .padding(.horizontal)
     }
 
     func extractImage(data: [String: String]) -> URL {
@@ -38,6 +52,16 @@ struct CharacterRowView: View {
         let path = data["path"] ?? ""
         let ext = data["extension"] ?? ""
         return URL(string: "\(path).\(ext)")!
+    }
+
+    func extractURL(data: [String: String]) -> URL {
+        let url = data["url"] ?? ""
+        return URL(string: url)!
+    }
+
+    func extractURLType(data: [String: String]) -> String {
+        let type = data["type"] ?? ""
+        return type.capitalized
     }
 }
 
