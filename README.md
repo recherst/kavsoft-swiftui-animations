@@ -96,3 +96,9 @@ Kindly welcome to become a patron to support them! ❤️
   Reference resource: [Animated Loading Screen|Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Loading_Screen)
 
   <img src="https://raw.githubusercontent.com/recherst/img-hosting/main/imgs/animated-loading-screen.gif" style="zoom:80%;" />
+
+- Marvel API
+
+  Reference resource: [Marvel API|Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Marvel_API)
+
+  <img src="https://raw.githubusercontent.com/recherst/img-hosting/main/imgs/marvel-api.gif" style="zoom:80%;" />
