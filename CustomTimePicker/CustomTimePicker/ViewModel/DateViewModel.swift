@@ -24,4 +24,30 @@ class DateViewModel: ObservableObject {
     // Angle
     @Published var angle: Double = 0
 
+    func generateTime() {
+        let format = DateFormatter()
+        format.dateFormat = "HH:mm"
+
+        let correctHourValue = symbol == "AM" ? hour : hour + 12
+
+        let date = format.date(from: "\(correctHourValue):\(minites)")
+        self.selectedDate = date!
+
+        withAnimation {
+            showPicker.toggle()
+            changeToMin = false
+        }
+    }
+
+    func setTime() {
+        let calender = Calendar.current
+        // 24 Hrs
+        hour = calender.component(.hour, from: selectedDate)
+        hour = calender.component(.minute, from: selectedDate)
+
+        minites = calender.component(.minute, from: selectedDate)
+
+        angle = Double(hour * 30)
+    }
+
 }

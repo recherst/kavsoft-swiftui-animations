@@ -21,6 +21,7 @@ struct TimeSlider: View {
                     .frame(width: 40, height: 40)
                     .offset(x: width - 50)
                     .rotationEffect(Angle(degrees: dateModel.angle))
+                    // Changing on gesture
                     .gesture(
                         DragGesture()
                             .onChanged(onChanged(value:))
@@ -58,6 +59,7 @@ struct TimeSlider: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
         }
+        .frame(height: 300)
     }
 
     func onChanged(value: DragGesture.Value) {
@@ -87,7 +89,6 @@ struct TimeSlider: View {
             // Update picker to minites
             dateModel.hour = Int(dateModel.angle / 30)
             withAnimation {
-                
                 // Set to minite value
                 dateModel.angle = Double(dateModel.minites * 6)
                 dateModel.changeToMin = true
