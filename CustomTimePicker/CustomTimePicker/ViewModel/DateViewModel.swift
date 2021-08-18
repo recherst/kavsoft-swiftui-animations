@@ -43,7 +43,9 @@ class DateViewModel: ObservableObject {
         let calender = Calendar.current
         // 24 Hrs
         hour = calender.component(.hour, from: selectedDate)
-        hour = calender.component(.minute, from: selectedDate)
+        symbol = hour <= 12 ? "AM" : "PM"
+        hour = hour == 0 ? 12 : hour
+        hour = hour <= 12 ? hour : hour - 12
 
         minites = calender.component(.minute, from: selectedDate)
 
