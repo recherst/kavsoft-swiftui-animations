@@ -21,4 +21,7 @@ class DateViewModel: ObservableObject {
     // AM or PM
     @Published var symbol = "AM"
 
+    // Angle
+    @Published var angle: Double = 0
+
 }
