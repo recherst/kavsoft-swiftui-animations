@@ -108,3 +108,9 @@ Kindly welcome to become a patron to support them! ❤️
   Reference resource: [Custom Time Picker | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Custom_Time_Picker)
 
   <img src="https://raw.githubusercontent.com/recherst/img-hosting/main/imgs/custom-time-picker.gif" style="zoom:80%;" />
+  
+- Liquid Swipe
+
+  Reference resource: [Liquid Swipe | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Liquid_Swipe)
+
+  <img src="https://raw.githubusercontent.com/recherst/img-hosting/main/imgs/liquid-swipe.gif" style="zoom:80%;" />

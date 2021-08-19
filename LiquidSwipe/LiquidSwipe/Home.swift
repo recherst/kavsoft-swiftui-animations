@@ -11,6 +11,8 @@ struct Home: View {
     // Liquid swipe offset
     @State var offset: CGSize = .zero
 
+    @State var showHome = false
+
     var body: some View {
         ZStack {
             Color("bg")
@@ -47,17 +49,41 @@ struct Home: View {
                                     }
                                 })
                                 .onEnded({ value in
+                                    let screen = UIScreen.main.bounds
                                     withAnimation(.spring()) {
-                                        offset = .zero
+                                        // Validating
+                                        if -offset.width > screen.width / 2 {
+                                            // Remove view
+                                            offset.width = -screen.height
+                                            showHome.toggle()
+                                        } else {
+                                            offset = .zero
+                                        }
                                     }
                                 })
                         )
-                        .offset(y: 65)
+                        .offset(x: 15, y: 58)
+                        // Hide while draging start
+                        .opacity(offset == .zero ? 1 : 0)
 
                     , alignment: .topTrailing
                 )
-
                 .padding(.trailing)
+
+            if showHome {
+                Text("Welcome To Home!!!")
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                    .onTapGesture {
+                        // Reset view
+                        // Just for tutorial
+                        // Custimize for your own
+                        withAnimation(.spring()) {
+                            offset = .zero
+                            showHome.toggle()
+                        }
+                    }
+            }
         }
     }
 }
@@ -72,6 +98,11 @@ struct Home_Previews: PreviewProvider {
 struct LiquidSwipe: Shape {
     // Get offset value
     var offset: CGSize
+    // Animating path
+    var animatableData: CGSize.AnimatableData {
+        get { return offset.animatableData }
+        set { offset.animatableData = newValue }
+    }
     func path(in rect: CGRect) -> Path {
         return Path { path in
             // When user moves left
