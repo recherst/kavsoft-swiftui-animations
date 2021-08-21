@@ -20,7 +20,10 @@ struct CustomTabBar: View {
             
         }
         .padding()
-        .background(Color.white)
+        .background(
+            Color.white
+                .clipShape(TabCurve())
+        )
         .cornerRadius(30)
         .padding(.horizontal)
     }
@@ -44,7 +47,8 @@ struct TabBarButton: View {
                     selectedTab = image
                 }
             }, label: {
-                Image(systemName: image)
+                // Fill the color if it' selected
+                Image(systemName: "\(image)\(selectedTab == image ? ".fill" : "")")
                     .font(.system(size: 25, weight: .semibold))
                     .foregroundColor(Color("TabSelected"))
                     // Lift view
