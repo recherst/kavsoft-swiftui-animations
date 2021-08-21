@@ -101,13 +101,13 @@ Kindly welcome to become a patron to support them! ❤️
 
   Reference resource: [Marvel API | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Marvel_API)
 
-  <img src="https://raw.githubusercontent.com/recherst/img-hosting/main/imgs/marvel-api.gif" style="zoom:80%;" />
+  <img src="https://raw.githubusercontent.com/recherst/image-host/main/imgs/marvel-api.gif" />
   
 - Custom Time Picker
 
   Reference resource: [Custom Time Picker | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Custom_Time_Picker)
 
-  <img src="https://raw.githubusercontent.com/recherst/img-hosting/main/imgs/custom-time-picker.gif" style="zoom:80%;" />
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/custom-time-picker.gif)
   
 - Liquid Swipe
 
