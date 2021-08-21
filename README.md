@@ -119,6 +119,6 @@ Kindly welcome to become a patron to support them! ❤️
 
   Reference resource: [Shoe Animation Challenge | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Shoe_Animation_Challenge)
 
-  <img src="https://raw.githubusercontent.com/recherst/image-host/main/imgs/shoe-animation-challenge.gif" style="zoom:95%;" />
+  <img src="https://raw.githubusercontent.com/recherst/image-host/main/imgs/shoe-animation-challenge.gif" />
 
   
