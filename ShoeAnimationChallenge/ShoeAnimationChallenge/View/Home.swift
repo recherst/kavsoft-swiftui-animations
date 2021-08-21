@@ -9,6 +9,9 @@ import SwiftUI
 
 struct Home: View {
     @StateObject var homeData = HomeViewModel()
+
+    // Moving image to Top like hero animation
+    @Namespace var animation
     var body: some View {
         ZStack(alignment: .bottom) {
             // Home view
@@ -27,6 +30,17 @@ struct Home: View {
                             .padding()
                             .background(Color.purple)
                             .clipShape(Circle())
+                            .overlay(
+                                Text("\(homeData.cartItems)")
+                                    .font(.caption)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.white)
+                                    .padding(10)
+                                    .background(Color("orange"))
+                                    .clipShape(Circle())
+                                    .offset(x: 15, y: -10)
+                                    .opacity(homeData.cartItems != 0 ? 1 : 0)
+                            )
                     })
                 }
                 .overlay(
@@ -85,11 +99,64 @@ struct Home: View {
             // Blur when cart is opened
             .blur(radius: homeData.showCart ? 50 : 0)
 
-            AddToCart()
+            AddToCart(animation: animation)
+                // Hide view when shoe is not selected
+                // like Bottom Sheet
+                // Also close when animation started
+                .offset(y: homeData.showCart ? (homeData.startAnimation ? 500 : 0) : 500)
                 .environmentObject(homeData)
+
+            // Animation
+            if homeData.startAnimation {
+                VStack {
+                    Spacer()
+
+                    ZStack {
+                        // Circle animation effect
+                        Color.white
+                            .frame(
+                                width: homeData.shoeAnimation ? 100 : rect.width * 1.3,
+                                height: homeData.shoeAnimation ? 100 : rect.width * 1.3
+                            )
+                            .clipShape(Circle())
+                            .opacity(homeData.shoeAnimation ? 1 : 0)
+                        Image("shoe")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .matchedGeometryEffect(id: "SHOE", in: animation)
+                            .frame(width: 80, height: 80)
+                    }
+                    .offset(y: homeData.saveCart ? 70 : -120)
+                    // Scale effect
+                    .scaleEffect(homeData.saveCart ? 0.6 : 1)
+                    .onAppear(perform: homeData.performAnimations)
+
+                    if !homeData.saveCart {
+                        Spacer()
+                    }
+
+                    Image(systemName: "bag\(homeData.addItemToCart ? ".fill" : "")")
+                        .font(.title)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(homeData.addItemToCart ? Color.purple : Color("orange"))
+                        .clipShape(Circle())
+                        .offset(y: homeData.showBag ? -50 : 300)
+                }
+                // Set external view width to screen width
+                .frame(width: rect.width)
+                // Move view down
+                .offset(y: homeData.endAnimation ? 500 : 0)
+            }
         }
         .ignoresSafeArea(.all, edges: .bottom)
         .background(Color.black.opacity(0.04).ignoresSafeArea())
+        // Listen to end animation and revert to back all
+        .onChange(of: homeData.endAnimation, perform: { value in
+            if homeData.endAnimation {
+                homeData.resetAll()
+            }
+        })
     }
 }
 
@@ -102,13 +169,18 @@ struct Home_Previews: PreviewProvider {
 // Add to cart view
 struct AddToCart: View {
     @EnvironmentObject var homeData: HomeViewModel
+    var animation: Namespace.ID
+
     var body: some View {
         VStack {
             HStack(spacing: 15) {
-                Image("shoe")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .padding(.horizontal)
+                if !homeData.startAnimation {
+                    Image("shoe")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .matchedGeometryEffect(id: "SHOE", in: animation)
+                }
+
                 VStack(alignment: .trailing, spacing: 10) {
                     Text("Air Max Exosense 'Atomic Powder'")
                         .fontWeight(.semibold)
@@ -128,10 +200,10 @@ struct AddToCart: View {
                 .font(.callout)
                 .fontWeight(.semibold)
                 .foregroundColor(.gray)
-                .padding(.top, 10)
+                .padding(.vertical)
 
             // Sizes
-            let colums = Array(repeating: GridItem(.flexible(), spacing: 12), count: 4)
+            let colums = Array(repeating: GridItem(.flexible(), spacing: 8), count: 4)
 
             LazyVGrid(columns: colums, alignment: .leading, spacing: 15, content: {
                 ForEach(sizes, id: \.self) { size in
@@ -146,13 +218,18 @@ struct AddToCart: View {
                             .padding(.vertical)
                             .frame(maxWidth: .infinity)
                             .background(homeData.selectedSize == size ? Color("orange") : Color.black.opacity(0.06))
-                            .cornerRadius(15)
+                            .cornerRadius(10)
                     })
                 }
             })
+            .padding(.top)
 
             // Add to cart button
-            Button(action: {}, label: {
+            Button(action: {
+                withAnimation(.easeInOut(duration: 0.7)) {
+                    homeData.startAnimation.toggle()
+                }
+            }, label: {
                 Text("Add to cart")
                     .fontWeight(.bold)
                     .foregroundColor(homeData.selectedSize == "" ? .black : .white)
@@ -166,7 +243,7 @@ struct AddToCart: View {
             .padding(.top)
         }
         .padding()
-        .background(Color.white)
+        .background(Color.white.clipShape(CustomCorner(corners: [.topLeft, .topRight], radius: 35)))
     }
 }
 
