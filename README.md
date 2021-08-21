@@ -114,3 +114,11 @@ Kindly welcome to become a patron to support them! ❤️
   Reference resource: [Liquid Swipe | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Liquid_Swipe)
 
   <img src="https://raw.githubusercontent.com/recherst/img-hosting/main/imgs/liquid-swipe.gif" style="zoom:80%;" />
+
+- Shoe Animation Challenge
+
+  Reference resource: [Shoe Animation Challenge | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Shoe_Animation_Challenge)
+
+  <img src="https://raw.githubusercontent.com/recherst/image-host/main/imgs/shoe-animation-challenge.gif" style="zoom:95%;" />
+
+  
