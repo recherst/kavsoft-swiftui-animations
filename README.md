@@ -1,4 +1,4 @@
-# kavsoft-examples
+# kavsoft-swiftui-animations
 
 ![](https://raw.githubusercontent.com/recherst/img-hosting/main/imgs/swiftui-badge.jpg)
 
