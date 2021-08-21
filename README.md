@@ -121,4 +121,9 @@ Kindly welcome to become a patron to support them! ❤️
 
   <img src="https://raw.githubusercontent.com/recherst/image-host/main/imgs/shoe-animation-challenge.gif" />
 
-  
+- Animated Curved Tab Bar
+
+  Reference resource: [Animated Curved Tab Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Curved_Tabbar)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/animated-curved-tab-bar.gif)
+
