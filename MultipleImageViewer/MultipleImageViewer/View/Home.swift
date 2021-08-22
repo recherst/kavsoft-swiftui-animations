@@ -10,6 +10,11 @@ import SwiftUI
 struct Home: View {
     @StateObject var homeData = HomeViewModel()
 
+    // SwiftUI has bug in page tab bar
+    init() {
+        UIScrollView.appearance().bounces = false
+    }
+
     var body: some View {
         ScrollView {
             // Tweet view
@@ -51,6 +56,14 @@ struct Home: View {
             .padding()
             .frame(maxWidth: .infinity, alignment: .leading)
         }
+        .overlay(
+            // Image view
+            ZStack {
+                if homeData.showImageViewer {
+                    ImageView()
+                }
+            }
+        )
         // Set environment object
         .environmentObject(homeData)
     }

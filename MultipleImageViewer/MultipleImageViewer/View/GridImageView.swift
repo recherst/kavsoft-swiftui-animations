@@ -14,9 +14,9 @@ struct GridImageView: View {
     var body: some View {
         Button(action: {
             withAnimation(.easeInOut) {
-                homeData.selectedImages = homeData.allImages
                 // For page tab view automatic scrolling
                 homeData.selectedImageID = homeData.allImages[index]
+                homeData.showImageViewer.toggle()
             }
         }, label: {
             ZStack {

@@ -13,7 +13,7 @@ class HomeViewModel: ObservableObject {
     @Published var allImages: [String] = ["image1", "image2", "image3", "image4", "image5", "image6"]
 
     // Properties for image viewer
-    @Published var selectedImages: [String] = []
+    @Published var showImageViewer = false
 
     @Published var selectedImageID: String = ""
 }
