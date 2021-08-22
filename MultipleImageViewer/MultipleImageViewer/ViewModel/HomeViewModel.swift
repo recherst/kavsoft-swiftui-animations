@@ -16,6 +16,41 @@ class HomeViewModel: ObservableObject {
     @Published var showImageViewer = false
 
     @Published var selectedImageID: String = ""
+
+    @Published var imageViewerOffset: CGSize = .zero
+
+    // BG opacity
+    @Published var bgOpacity: Double = 1
+
+    func onChange(value: CGSize) {
+        // Update offset
+        imageViewerOffset = value
+
+        // Calculate opacity
+        let halfHeight = UIScreen.main.bounds.height / 2
+        let progress = imageViewerOffset.height / halfHeight
+
+        withAnimation(.default) {
+            bgOpacity = Double(1 - (progress < 0 ? -progress : progress))
+        }
+    }
+
+    func onEnd(value: DragGesture.Value) {
+        withAnimation(.easeInOut) {
+            var translation = value.translation.height
+            if translation < 0 {
+                translation = -translation
+            }
+            if translation < 250 {
+                imageViewerOffset = .zero
+                bgOpacity = 1
+            } else {
+                showImageViewer.toggle()
+                imageViewerOffset = .zero
+                bgOpacity = 1
+            }
+        }
+    }
 }
 
 

@@ -60,6 +60,10 @@ struct Home: View {
             // Image view
             ZStack {
                 if homeData.showImageViewer {
+                    Color.black
+                        .opacity(homeData.bgOpacity)
+                        .ignoresSafeArea()
+
                     ImageView()
                 }
             }
