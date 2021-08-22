@@ -21,8 +21,27 @@ struct ImageView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .tag(image)
+                            .scaleEffect(homeData.selectedImageID == image ? (homeData.imageScale > 1 ? homeData.imageScale : 1) : 1)
                             // Move only image for smooth animation
                             .offset(y: homeData.imageViewerOffset.height)
+                            .gesture(
+                                // Magnify gesture
+                                MagnificationGesture()
+                                    .onChanged({ value in
+                                        homeData.imageScale = value
+                                    })
+                                    .onEnded({ _ in
+                                        withAnimation(.spring()) {
+                                            homeData.imageScale = 1
+                                        }
+                                    })
+                                    // Double to zoom
+                                    .simultaneously(with: TapGesture(count: 2).onEnded({ _ in
+                                        withAnimation {
+                                            homeData.imageScale = homeData.imageScale > 1 ? 1 : 4
+                                        }
+                                    }))
+                            )
                     }
                 })
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))

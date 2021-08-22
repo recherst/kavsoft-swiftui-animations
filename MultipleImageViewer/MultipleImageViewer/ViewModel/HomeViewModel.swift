@@ -22,6 +22,9 @@ class HomeViewModel: ObservableObject {
     // BG opacity
     @Published var bgOpacity: Double = 1
 
+    // Scale
+    @Published var imageScale: CGFloat = 1
+
     func onChange(value: CGSize) {
         // Update offset
         imageViewerOffset = value
