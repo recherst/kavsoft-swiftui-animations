@@ -132,3 +132,9 @@ Kindly welcome to become a patron to support them! ❤️
   Reference resource: [Multiple Image Viewer | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Multiple_Image_Viewer)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/multiple-image-viewer.gif)
+  
+- Vertical Page Tab View
+
+  Reference resource: [Vertical Page Tab View | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Vertical_Page_TabView)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/vertical-page-tab-view.gif)
