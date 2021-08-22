@@ -127,3 +127,8 @@ Kindly welcome to become a patron to support them! ❤️
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/animated-curved-tab-bar.gif)
 
+- Multiple Image Viewer
+
+  Reference resource: [Multiple Image Viewer | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Multiple_Image_Viewer)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/multiple-image-viewer.gif)
