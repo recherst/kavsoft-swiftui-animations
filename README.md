@@ -157,6 +157,6 @@ Kindly welcome to become a patron to support them! ❤️
 
 -  Movie Booking App UI
 
-  Video resoure: [ Movie Booking App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Movie_Booking_App)
+   Video resoure: [ Movie Booking App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Movie_Booking_App)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/movie-booking-app-ui.gif)
