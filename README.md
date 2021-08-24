@@ -154,9 +154,9 @@ Kindly welcome to become a patron to support them! ❤️
   Video resoure: [Walkthrought Screens | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/WalkThrough_Screens)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/walkthrough-screen.gif)
+  
+- Movie Booking App UI
 
--  Movie Booking App UI
-
-   Video resoure: [ Movie Booking App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Movie_Booking_App)
+  Video resoure: [ Movie Booking App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Movie_Booking_App)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/movie-booking-app-ui.gif)
