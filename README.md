@@ -149,6 +149,12 @@ Kindly welcome to become a patron to support them! ❤️
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/vertical-page-tab-view.gif)
 
-  
+- Walkthrought Screens
+
+  Video resoure: [Walkthrought Screens | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/WalkThrough_Screens)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/walkthrough-screen.gif)
+
+
 
 ​	
