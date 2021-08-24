@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BookingView: View {
+    @Environment(\.presentationMode) var presentationMode
+
     @State var bookedSeats: [Int] = [1, 10, 25, 30, 45, 59, 60]
     @State var selectedSeats: [Int] = []
     @State var date = Date()
@@ -16,7 +18,9 @@ struct BookingView: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false, content: {
             HStack {
-                Button(action: {}, label: {
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }, label: {
                     Image(systemName: "chevron.left")
                         .font(.title2)
                         .foregroundColor(.white)
