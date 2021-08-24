@@ -10,7 +10,7 @@ import SwiftUI
 struct FooterView: View {
     var body: some View {
         NavigationLink(
-            destination: Text("Destination"),
+            destination: BookingView(),
             label: {
                 Text("Buy Ticket")
                     .fontWeight(.bold)

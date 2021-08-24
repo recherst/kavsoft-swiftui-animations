@@ -10,6 +10,8 @@ import SwiftUI
 struct BookingView: View {
     @State var bookedSeats: [Int] = [1, 10, 25, 30, 45, 59, 60]
     @State var selectedSeats: [Int] = []
+    @State var date = Date()
+    @State var selectedTime = "11:30"
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: false, content: {
@@ -129,8 +131,69 @@ struct BookingView: View {
                     .foregroundColor(.white)
             }
             .padding(.top, 25)
+
+            HStack {
+                Text("Date:")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+
+                Spacer()
+
+                DatePicker("", selection: $date, displayedComponents: .date)
+                    .labelsHidden()
+            }
+            .padding()
+            .padding(.top)
+
+            ScrollView(.horizontal, showsIndicators: false, content: {
+                HStack(spacing: 15) {
+                    ForEach(time, id: \.self) { timing in
+                        Text(timing)
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                            .padding(.vertical)
+                            .padding(.horizontal, 30)
+                            .background(Color("button").opacity(selectedTime == timing ? 1 : 0.2))
+                            .cornerRadius(10)
+                            .onTapGesture {
+                                selectedTime = timing
+                            }
+                    }
+                }
+                .padding(.horizontal)
+            })
+
+            HStack(spacing: 15) {
+                VStack(alignment: .leading, spacing: 10, content: {
+                    Text("\(selectedSeats.count) Seats")
+                        .font(.caption)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+
+                    Text("$\(selectedSeats.count * 70)")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .foregroundColor(.yellow)
+                })
+                .frame(width: 100)
+
+                Button(action: {}, label: {
+                    Text("Buy Ticket")
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding(.vertical)
+                        .frame(maxWidth: .infinity)
+                        .background(Color("button"))
+                        .cornerRadius(15)
+                })
+            }
+            .padding()
+            .padding(.top, 20)
         })
         .background(Color("bg").ignoresSafeArea())
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
