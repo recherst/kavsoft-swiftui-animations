@@ -160,3 +160,9 @@ Kindly welcome to become a patron to support them! ❤️
   Video resoure: [ Movie Booking App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Movie_Booking_App)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/movie-booking-app-ui.gif)
+
+- Animated Header
+
+  Video resource: [Animated Header | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Header)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/animated-header.gif)
