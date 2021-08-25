@@ -55,11 +55,13 @@ struct HeaderView: View {
         }
         .padding(.horizontal)
         .padding(.vertical, 8)
-        .background(scheme == .dark ? Color.black : Color.white)
+        .background(
+            (scheme == .dark ? Color.black : Color.white)
+                .ignoresSafeArea(.all, edges: .top)
+        )
         // Divider
         .overlay(
             Divider()
-
             , alignment: .bottom
         )
     }

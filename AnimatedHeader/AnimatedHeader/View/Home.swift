@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct Home: View {
+    @StateObject var headerData = HeaderViewModel()
+    init() {
+        UIScrollView.appearance().bounces = false
+    }
     var body: some View {
         ZStack(alignment: .top, content: {
             // Header view
             HeaderView()
                 .zIndex(1)
+                .offset(y: headerData.headerOffset)
 
             // Video view
             ScrollView(.vertical, showsIndicators: false, content: {
@@ -48,8 +53,68 @@ struct Home: View {
                     }
                 }
                 .padding(.top, 75)
+                .overlay(
+                    // Geometry reader for getting offset value
+                    GeometryReader { reader -> Color in
+                        let minY = reader.frame(in: .global).minY
+                        DispatchQueue.main.async {
+                            // Store initial MinY value
+                            if headerData.startMinY == 0 {
+                                headerData.startMinY = minY
+                            }
+                            // Get exact offset value by subtracting current from start
+                            let offset = headerData.startMinY - minY
+
+                            if offset > headerData.offset {
+                                print("Top")
+                                // Same clear bottom offset
+                                headerData.bottomScrollOffset = 0
+                                // If top, hide header view
+                                if headerData.topScrollOffset == 0 {
+                                    // Store initially to subtract the maxOffset
+                                    headerData.topScrollOffset = offset
+                                }
+
+                                let progress = (headerData.topScrollOffset + maxOffset) - offset
+                                // All conditions were going to use ternary operator
+                                // becuase if we use if else while swiping fast it ignore some conditions
+                                let offsetCondition = (headerData.topScrollOffset + maxOffset) >= maxOffset && maxOffset - progress <= maxOffset
+
+                               let headerOffset = offsetCondition ? -(maxOffset - progress) : -maxOffset
+                                print(headerOffset)
+                                headerData.headerOffset = headerOffset
+                            }
+
+                            if offset < headerData.offset {
+                                print("Bottom")
+                                // If bottom, revelating header view
+                                // Clear topScrollValue and set bottom
+                                headerData.topScrollOffset = 0
+                                if headerData.bottomScrollOffset == 0 {
+                                    headerData.bottomScrollOffset = offset
+                                }
+
+                                // Move if little bit of screen is swiped down for eg 40 offset
+                                withAnimation(.easeOut(duration: 0.25)) {
+                                    let headerOffset = headerData.headerOffset
+                                    headerData.headerOffset = headerData.bottomScrollOffset >= offset + 40 ? 0 : (headerOffset != maxOffset ? 0 : -headerOffset)
+                                }
+                            }
+
+                            headerData.offset = offset
+                        }
+                        return Color.clear
+                    }
+                    .frame(height: 0)
+
+                    , alignment: .top
+                )
             })
         })
+    }
+
+    var maxOffset: CGFloat {
+        headerData.startMinY + (edges?.top ?? 0) + 10
     }
 }
 
