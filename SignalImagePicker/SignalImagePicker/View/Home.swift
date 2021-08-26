@@ -9,6 +9,8 @@ import SwiftUI
 
 struct Home: View {
     @State var message = ""
+    @StateObject var imagePicker = ImagePickerViewModel()
+    
     var body: some View {
         NavigationView {
             // Sample signal chat view
@@ -17,32 +19,80 @@ struct Home: View {
 
                 }
 
-                HStack(spacing: 15) {
-                    Button(action: {}, label: {
-                        Image(systemName: "plus")
-                            .font(.title2)
-                            .foregroundColor(.gray)
-                    })
+                VStack {
+                    HStack(spacing: 15) {
+                        Button(action: imagePicker.openImagePicker, label: {
+                            Image(systemName: imagePicker.showImagePicker ? "xmark" : "plus")
+                                .font(.title2)
+                                .foregroundColor(.gray)
+                        })
 
-                    TextField("New Message", text: $message)
-                        .padding(.vertical, 10)
-                        .padding(.horizontal)
-                        .background(Color.primary.opacity(0.06))
-                        .clipShape(Capsule())
+                        TextField("New Message", text: $message, onEditingChanged: { opened in
+                            if opened && imagePicker.showImagePicker {
+                                // Close picker
+                                withAnimation {
+                                    imagePicker.showImagePicker.toggle()
+                                }
+                            }
+                        })
+                            .padding(.vertical, 10)
+                            .padding(.horizontal)
+                            .background(Color.primary.opacity(0.06))
+                            .clipShape(Capsule())
 
-                    Button(action: {}, label: {
-                        Image(systemName: "camera")
-                            .font(.title2)
-                            .foregroundColor(.gray)
-                    })
+                        Button(action: {}, label: {
+                            Image(systemName: "camera")
+                                .font(.title2)
+                                .foregroundColor(.gray)
+                        })
 
-                    Button(action: {}, label: {
-                        Image(systemName: "mic")
-                            .font(.title2)
-                            .foregroundColor(.gray)
+                        Button(action: {}, label: {
+                            Image(systemName: "mic")
+                                .font(.title2)
+                                .foregroundColor(.gray)
+                        })
+                    }
+                    .padding(.horizontal)
+                    .padding(.bottom, 4)
+
+                    ScrollView(.horizontal, showsIndicators: false, content: {
+                        HStack(spacing: 15) {
+                            // Images
+                            ForEach(imagePicker.fetchedPhotos) { photo in
+                                ThumbnailView(photo: photo)
+                            }
+                            // More or give access button
+                            if imagePicker.libraryStatus == .denied || imagePicker.libraryStatus == .limited {
+                                VStack(spacing: 10) {
+                                    Text(imagePicker.libraryStatus == .denied ? "Allow Access For Photos" : "Select More Photos")
+                                        .foregroundColor(.gray)
+
+                                    Button(action: {
+                                        // Go to settings
+                                        UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
+                                    }, label: {
+                                        Text(imagePicker.libraryStatus == .denied ? "Allow Access" : "Select More")
+                                            .foregroundColor(.white)
+                                            .fontWeight(.bold)
+                                            .padding(.vertical, 10)
+                                            .padding(.horizontal)
+                                            .background(Color.blue)
+                                            .cornerRadius(5)
+                                    })
+                                }
+                                .frame(width: 150)
+                            }
+                        }
+                        .padding()
                     })
+                    // Showing when button clicked
+                    .frame(height: imagePicker.showImagePicker ? 200 : 0)
+                    .background(
+                        Color.primary.opacity(0.04)
+                            .ignoresSafeArea(.all, edges: .bottom)
+                    )
+                    .opacity(imagePicker.showImagePicker ? 1 : 0)
                 }
-                .padding(.horizontal)
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -97,11 +147,35 @@ struct Home: View {
         // Colors will not work on navigation bar
         // But use accent color to change
         .accentColor(.primary)
+        .onAppear(perform: imagePicker.Setup)
     }
 }
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Home()
+    }
+}
+
+
+struct ThumbnailView: View {
+    var photo: Asset
+    var body: some View {
+        ZStack(alignment: .bottomTrailing, content: {
+            Image(uiImage: photo.image)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 150, height: 150)
+                .cornerRadius(10)
+
+            // If its video
+            // Display video icon
+            if photo.asset.mediaType == .video {
+                Image(systemName: "video.fill")
+                    .font(.title2)
+                    .foregroundColor(.white)
+                    .padding(8)
+            }
+        })
     }
 }
