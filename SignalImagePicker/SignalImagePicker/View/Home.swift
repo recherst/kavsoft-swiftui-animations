@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct Home: View {
     @State var message = ""
@@ -60,6 +61,10 @@ struct Home: View {
                             // Images
                             ForEach(imagePicker.fetchedPhotos) { photo in
                                 ThumbnailView(photo: photo)
+                                    .onTapGesture {
+                                        imagePicker.extractPreviewData(asset: photo.asset)
+                                        imagePicker.showPreview.toggle()
+                                    }
                             }
                             // More or give access button
                             if imagePicker.libraryStatus == .denied || imagePicker.libraryStatus == .limited {
@@ -148,6 +153,44 @@ struct Home: View {
         // But use accent color to change
         .accentColor(.primary)
         .onAppear(perform: imagePicker.Setup)
+        .sheet(isPresented: $imagePicker.showPreview, onDismiss: {
+            // Clear content
+            imagePicker.selectedVideoPreview = nil
+            imagePicker.selectedImagePreview = nil
+        }, content: {
+            PreviewView()
+                .environmentObject(imagePicker)
+        })
+    }
+}
+
+// Preview view
+struct PreviewView: View {
+    @EnvironmentObject var imagePicker: ImagePickerViewModel
+    var body: some View {
+        // For top button
+        NavigationView {
+            ZStack {
+                if imagePicker.selectedVideoPreview != nil {
+                    VideoPlayer(player: AVPlayer(playerItem: AVPlayerItem(asset: imagePicker.selectedVideoPreview)))
+                }
+
+                if imagePicker.selectedImagePreview != nil {
+                    Image(uiImage: imagePicker.selectedImagePreview)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                }
+            }
+            .ignoresSafeArea(.all, edges: .bottom)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar(content: {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {}, label: {
+                        Text("Send")
+                    })
+                }
+            })
+        }
     }
 }
 

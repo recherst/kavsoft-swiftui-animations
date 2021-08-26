@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Photos
+import AVKit
 
 class ImagePickerViewModel: NSObject, ObservableObject, PHPhotoLibraryChangeObserver {
 
@@ -18,6 +19,11 @@ class ImagePickerViewModel: NSObject, ObservableObject, PHPhotoLibraryChangeObse
     @Published var fetchedPhotos: [Asset] = []
     // To get updates
     @Published var allPhotos: PHFetchResult<PHAsset>!
+
+    // Preview
+    @Published var showPreview = false
+    @Published var selectedImagePreview: UIImage!
+    @Published var selectedVideoPreview: AVAsset!
 
     func openImagePicker() {
         // Close keyboard if opened
@@ -71,7 +77,7 @@ class ImagePickerViewModel: NSObject, ObservableObject, PHPhotoLibraryChangeObse
                 if !self.allPhotos.contains(asset) {
                     // If its not there
                     // get image and append it to array
-                    self.getImage(from: asset) { image in
+                    self.getImage(from: asset, size: CGSize(width: 150, height: 150)) { image in
                         DispatchQueue.main.async {
                             self.fetchedPhotos.append(Asset(asset: asset, image: image))
                         }
@@ -113,7 +119,7 @@ class ImagePickerViewModel: NSObject, ObservableObject, PHPhotoLibraryChangeObse
 
         fetchedResults.enumerateObjects { asset, index, _ in
             // Get image from asset
-            self.getImage(from: asset) { image in
+            self.getImage(from: asset, size: CGSize(width: 150, height: 150)) { image in
                 // Append it to array
                 // Why we store asset?
                 // To get full image for sending
@@ -123,7 +129,7 @@ class ImagePickerViewModel: NSObject, ObservableObject, PHPhotoLibraryChangeObse
     }
 
     // Use completion handlers to recive objects
-    func getImage(from asset: PHAsset, completion: @escaping (UIImage) -> ()) {
+    func getImage(from asset: PHAsset, size: CGSize, completion: @escaping (UIImage) -> ()) {
 
         // To cache image in memory
         let imageManager = PHCachingImageManager()
@@ -143,6 +149,32 @@ class ImagePickerViewModel: NSObject, ObservableObject, PHPhotoLibraryChangeObse
             completion(resizedImage)
         }
     }
-    
+
+    // Open image or video
+    func extractPreviewData(asset: PHAsset) {
+        let manager = PHCachingImageManager()
+        if asset.mediaType == .image {
+            // Extract image
+            getImage(from: asset, size: PHImageManagerMaximumSize) { image in
+                DispatchQueue.main.async {
+                    self.selectedImagePreview = image
+                }
+            }
+        }
+
+        if asset.mediaType == .video {
+            // Extract video
+            let videoManager = PHVideoRequestOptions()
+            videoManager.deliveryMode = .highQualityFormat
+
+            manager.requestAVAsset(forVideo: asset, options: videoManager) { videoAsset, _, _ in
+                guard let videoURL = videoAsset else { return }
+                DispatchQueue.main.async {
+                    self.selectedVideoPreview = videoURL
+                }
+            }
+        }
+    }
+
 }
 
