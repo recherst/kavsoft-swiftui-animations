@@ -166,3 +166,9 @@ Kindly welcome to become a patron to support them! ❤️
   Video resource: [Animated Header | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Header)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/animated-header.gif)
+  
+- Signal Messenger Custom Image/Video Picker
+
+  Video resource: [Signal Messenger Custom Image/Video Picker | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Signal_Image_Picker)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/signal-image-picker.gif)
