@@ -172,3 +172,9 @@ Kindly welcome to become a patron to support them! ❤️
   Video resource: [Signal Messenger Custom Image/Video Picker | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Signal_Image_Picker)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/signal-image-picker.gif)
+  
+- Swipeable Instagram Layout
+
+  Video resource: [Swipeable Instagram Layout | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Swipeable_Instagram_Layout)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/swipeable-instagram-layout.gif)
