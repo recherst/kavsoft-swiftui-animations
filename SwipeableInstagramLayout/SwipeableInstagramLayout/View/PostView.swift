@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PostView: View {
+    @Binding var offset: CGFloat
     var body: some View {
         ZStack {
             // Camera view
@@ -22,7 +23,9 @@ struct PostView: View {
 
                     Spacer()
 
-                    Button(action: {}, label: {
+                    Button(action: {
+                        offset = rect.width
+                    }, label: {
                         Image(systemName: "xmark")
                             .font(.title)
                     })

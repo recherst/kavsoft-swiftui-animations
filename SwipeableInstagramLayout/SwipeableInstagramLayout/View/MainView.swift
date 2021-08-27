@@ -15,7 +15,7 @@ struct MainView: View {
             let frame = reader.frame(in: .global)
             // Since there are three views
             ScrollableTabBar(tabs: ["", "", ""], rect: frame, offset: $offset) {
-                PostView()
+                PostView(offset: $offset)
 
                 Home(offset: $offset)
 
