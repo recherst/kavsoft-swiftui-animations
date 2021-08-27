@@ -13,77 +13,13 @@ Kindly welcome to become a patron to support them! ❤️
 
 ## Example apps
 
-- Scroll To Top Floating Action Button
+| [Scroll To Top Floating Action Button \| Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Scroll_To_Top)<br /><img src="https://raw.githubusercontent.com/recherst/image-host/main/imgs/scroll-to-top-floating-action-button.gif" /> | [Custom Carousel Slider \| Kavsoft ](https://kavsoft.dev/SwiftUI_2.0/Custom_Carousel_Slider)<br />![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/custom-carousel-slider.gif) | [Photo Editor \| Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Photo_Editor)<br />![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/photo-editor.gif) |
+| :----------------------------------------------------------: | ------------------------------------------------------------ | :----------------------------------------------------------: |
+| [Spotify App UI ](https://kavsoft.dev/SwiftUI_2.0/Spotify_App_UI)<br />![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/spotify-app-ui.gif) | [Mobile Wallet Card Animation \| Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Wallet_Card_Animation)<br />![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/moblie-wallet-card-animation.gif) | [Pulse Ring Animation \| Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Pulse_Ring_Animation)<br />![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/pulse-ring-animation.gif) |
+| [Food App UI - Complex UI \| Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Food_App_UI)<br />![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/food-app-ui.gif) | [SwiftUI URL Session Download Task \| Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Download_Task)<br />![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/swiftui-url-session-download-task.gif) | [Animated Navigation Menu \| Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Navigation_Menu)<br />![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/animated-navigation-menu.gif) |
+| [ScrollView Offset \| Kavsoft](https://kavsoft.dev/SwiftUI_2.0/ScrollView_Offset)<br />![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/scrollview-offset.gif) | [WhatsApp Hero Animation \| Kavsoft](https://kavsoft.dev/SwiftUI_2.0/WhatsApp_Hero_Animation)<br />![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/whatsapp-hero-animation.gif) | [Dribble Loading Screen \| Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Dribbble_Loading_Screen)<br />![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/dribble-loading-screen.gif) |
 
-  Video resoure: [Scroll To Top Floating Action Button | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Scroll_To_Top)
 
-  <img src="https://raw.githubusercontent.com/recherst/image-host/main/imgs/scroll-to-top-floating-action-button.gif" alt="scroll-to-top" />
-
-- Custom Carousel Slider
-
-  Video resoure: [Custom Carousel Slider | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Custom_Carousel_Slider)
-
-  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/custom-carousel-slider.gif)
-
-- Photo Editor
-
-  Video resoure: [Photo Editor | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Photo_Editor)
-
-  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/photo-editor.gif)
-
-- Spotify App UI
-
-  Video resoure: [Spotify App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Spotify_App_UI)
-
-  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/spotify-app-ui.gif)
-  
-- Mobile Wallet Card Animation
-
-  Video resoure: [Mobile Wallet Card Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Wallet_Card_Animation)
-
-  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/moblie-wallet-card-animation.gif)
-
-- Pulse Ring Animation
-
-  Video resoure: [Pulse Ring Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Pulse_Ring_Animation)
-
-  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/pulse-ring-animation.gif)
-
-- Food App UI - Complex UI
-
-  Video resoure: [Food App UI - Complex UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Food_App_UI)
-
-  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/food-app-ui.gif)
-
-- SwiftUI URL Session Download Task
-
-  Video resoure: [SwiftUI URL Session Download Task | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Download_Task)
-
-  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/swiftui-url-session-download-task.gif)
-
-- Animated Navigation Menu
-
-  Video resoure: [Animated Navigation Menu | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Navigation_Menu)
-
-  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/animated-navigation-menu.gif)
-
-- ScrollView Offset
-
-  Video resoure: [ScrollView Offset | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/ScrollView_Offset)
-
-  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/scrollview-offset.gif)
-
-- WhatsApp Hero Animation
-
-  Video resoure: [WhatsApp Hero Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/WhatsApp_Hero_Animation)
-
-  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/whatsapp-hero-animation.gif)
-
-- Dribble Loading Screen
-
-  Video resoure: [Dribble Loading Screen | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Dribbble_Loading_Screen)
-
-  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/dribble-loading-screen.gif)
 
 - Custom ScrollView Animation
 
