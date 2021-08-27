@@ -18,7 +18,7 @@ struct Home: View {
     var body: some View {
         // Instagram home view
         TabView(selection: $selectedTab) {
-            Text("Home")
+            FeedView()
                 .tag("House.fill")
             Text("Search")
                 .tag("magnifyingglass")
