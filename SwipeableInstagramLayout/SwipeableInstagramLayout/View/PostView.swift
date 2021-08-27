@@ -14,6 +14,7 @@ struct PostView: View {
             // Camera view
             // Will be implemented later
             Color.black
+            CameraView(offset: $offset)
             VStack {
                 HStack {
                     Button(action: {}, label: {
