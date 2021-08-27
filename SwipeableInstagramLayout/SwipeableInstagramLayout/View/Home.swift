@@ -12,13 +12,12 @@ struct Home: View {
     // To update for dark mode
     @Environment(\.colorScheme) var scheme
 
-    init() {
-        UITabBar.appearance().isHidden = true
-    }
+    @Binding var offset: CGFloat
+
     var body: some View {
         // Instagram home view
         TabView(selection: $selectedTab) {
-            FeedView()
+            FeedView(offset: $offset)
                 .tag("House.fill")
             Text("Search")
                 .tag("magnifyingglass")
@@ -77,13 +76,6 @@ struct TabBarButton: View {
                 .foregroundColor(selectedTab == image ? .primary : .gray)
 
         })
-    }
-}
-
-struct Home_Previews: PreviewProvider {
-    static var previews: some View {
-        Home()
-            .preferredColorScheme(.dark)
     }
 }
 

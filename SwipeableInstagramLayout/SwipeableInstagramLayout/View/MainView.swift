@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    @State var offset: CGFloat = 0
+    @State var offset: CGFloat = rect.width * 2
     var body: some View {
         // Scrollable Tabs...
         GeometryReader { reader in
@@ -17,9 +17,9 @@ struct MainView: View {
             ScrollableTabBar(tabs: ["", "", ""], rect: frame, offset: $offset) {
                 PostView()
 
-                Home()
+                Home(offset: $offset)
 
-                Color.blue
+                DirectView(offset: $offset)
             }
             .ignoresSafeArea()
         }

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct FeedView: View {
+    @Binding var offset: CGFloat
+
     var body: some View {
         VStack {
             HStack {
@@ -19,7 +21,9 @@ struct FeedView: View {
 
                 Spacer()
 
-                Button(action: {}, label: {
+                Button(action: {
+                    offset = rect.width * 2
+                }, label: {
                     Image(systemName: "paperplane")
                         .font(.title)
                         .foregroundColor(.primary)
@@ -74,11 +78,6 @@ struct FeedView: View {
     }
 }
 
-struct FeedView_Previews: PreviewProvider {
-    static var previews: some View {
-        Home()
-    }
-}
 
 struct PostCardView: View {
     var post: Post
