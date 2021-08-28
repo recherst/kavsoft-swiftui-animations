@@ -66,12 +66,15 @@ struct Home: View {
             }
 
             Color("pink")
-                .ignoresSafeArea(.all, edges: .all)
                 .overlay(
                     Text("\(data.selectedTime)")
                         .font(.system(size: 55, weight: .heavy))
                         .foregroundColor(.white)
                 )
+                // Decrease height for each count
+                .frame(height: UIScreen.main.bounds.height - data.timerHeightChange)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+                .ignoresSafeArea(.all, edges: .all)
                 .offset(y: data.timerViewOffset)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -79,6 +82,31 @@ struct Home: View {
             Color("bg")
                 .ignoresSafeArea(.all, edges: .all)
         )
+        // Timer functionality
+        .onReceive(Timer.publish(every: 1, on: .main, in: .common).autoconnect(), perform: { _ in
+            // Conditions
+            if data.time != 0 && data.selectedTime != 0 && data.buttonAnimation {
+                // Count timer
+                data.selectedTime -= 1
+
+                // Update height
+                let progressHeight = UIScreen.main.bounds.height / CGFloat(data.time)
+                let diff = data.time - data.selectedTime
+
+                withAnimation(.default) {
+                    data.timerHeightChange = CGFloat(diff) * progressHeight
+                }
+
+                if data.selectedTime == 0 {
+                    withAnimation(.default) {
+                        data.time = 0
+                        data.selectedTime = 0
+                        data.timerHeightChange = 0
+                        data.timerViewOffset = UIScreen.main.bounds.height
+                    }
+                }
+            }
+        })
     }
 }
 

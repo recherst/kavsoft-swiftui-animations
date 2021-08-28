@@ -17,4 +17,5 @@ class TimerData: ObservableObject {
 
     // TimerView Data
     @Published var timerViewOffset: CGFloat = UIScreen.main.bounds.height
+    @Published var timerHeightChange: CGFloat = 0
 }
