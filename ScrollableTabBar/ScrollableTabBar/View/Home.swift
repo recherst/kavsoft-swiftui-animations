@@ -6,10 +6,29 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct Home: View {
+    @State var offset: CGFloat = 0
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { reader in
+            let rect = reader.frame(in: .global)
+
+            ScrollableTabBar(tabs: tabs, rect: rect, offset: $offset) {
+                HStack(spacing: 0) {
+                    ForEach(image_URLs.indices, id: \.self) { index in
+                        WebImage(url: URL(string: image_URLs[index]))
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: rect.width)
+                            // Again bug so use cornerRadius
+                            .cornerRadius(0)
+
+                    }
+                }.ignoresSafeArea()
+            }
+        }
+        .ignoresSafeArea()
     }
 }
 
@@ -18,3 +37,5 @@ struct Home_Previews: PreviewProvider {
         Home()
     }
 }
+
+var tabs = ["Home", "Search", "Account"]

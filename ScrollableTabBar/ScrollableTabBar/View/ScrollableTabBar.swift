@@ -9,6 +9,7 @@ import SwiftUI
 
 // We're going to create our own view by using view builder
 struct ScrollableTabBar<Content: View>: UIViewRepresentable {
+
     // to store our SwiftUI View
     var content: Content
     // Get rect to calculate width and height of scrollview
@@ -31,11 +32,16 @@ struct ScrollableTabBar<Content: View>: UIViewRepresentable {
         self.tabs = tabs
     }
 
+    func makeCoordinator() -> Coordinator {
+        return ScrollableTabBar.Coordinator(parent: self)
+    }
+
     func makeUIView(context: Context) -> UIScrollView {
         setupScrollView()
         // Set content side
         scrollView.contentSize = CGSize(width: rect.width * CGFloat(tabs.count), height: rect.height)
         scrollView.addSubview(extractView())
+        scrollView.delegate = context.coordinator
         return scrollView
     }
 
@@ -56,6 +62,19 @@ struct ScrollableTabBar<Content: View>: UIViewRepresentable {
         let controller = UIHostingController(rootView: content)
         controller.view.frame = CGRect(x: 0, y: 0, width: rect.width * CGFloat(tabs.count), height: rect.height)
         return controller.view!
+    }
+
+    // Delegate function to get offset
+    class Coordinator: NSObject, UIScrollViewDelegate {
+        var parent: ScrollableTabBar
+
+        init(parent: ScrollableTabBar) {
+            self.parent = parent
+        }
+
+        func scrollViewDidScroll(_ scrollView: UIScrollView) {
+            parent.offset = scrollView.contentOffset.x
+        }
     }
 
 }
