@@ -190,3 +190,9 @@ Kindly welcome to become a patron to support them! ❤️
   Video resource: [Medium Sticky Footer Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Medium_Sticky_Footer)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/medium-sticky-footer-animation.gif)
+
+- Navigation Drawer
+
+  Video resource: [Navigation Drawer | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Navigation_Drawer)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/navigation-drawer.gif)
