@@ -48,7 +48,11 @@ struct Home: View {
                         data.buttonAnimation.toggle()
                     }
 
-                    // Delay 
+                    // Delay animation
+                    // After button goes down view is moving up
+                    withAnimation(.easeIn.delay(0.6)) {
+                        data.timerViewOffset = 0
+                    }
                 }, label: {
                     Circle()
                         .fill(Color("pink"))
