@@ -55,6 +55,8 @@ struct Home: View {
                     withAnimation(.easeIn.delay(0.6)) {
                         data.timerViewOffset = 0
                     }
+                    
+                    performNotifications()
                 }, label: {
                     Circle()
                         .fill(Color("pink"))
@@ -100,13 +102,7 @@ struct Home: View {
                 }
 
                 if data.selectedTime == 0 {
-                    withAnimation(.default) {
-                        data.time = 0
-                        data.selectedTime = 0
-                        data.timerHeightChange = 0
-                        data.timerViewOffset = UIScreen.main.bounds.height
-                        data.buttonAnimation = false
-                    }
+                    data.resetView()
                 }
             }
         })
@@ -120,6 +116,21 @@ struct Home: View {
             UNUserNotificationCenter.current().delegate = data
             
         })
+    }
+
+    func performNotifications() {
+        let content = UNMutableNotificationContent()
+        content.title = "Notification From Kavsoft"
+        content.body = "Timer has been finished!"
+
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(data.time), repeats: false)
+
+        let request = UNNotificationRequest(identifier: "TIMER", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request) { err in
+            if err != nil {
+                print(err!.localizedDescription)
+            }
+        }
     }
 }
 
