@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TabBar: View {
     @Binding var offset: CGFloat
+    @Binding var showCapsule: Bool
     @State var width: CGFloat = 0
     
     var body: some View {
@@ -23,15 +24,15 @@ struct TabBar: View {
 
                     Capsule()
                         .fill(Color("lightblue"))
-                        .frame(width: equalWidth - 15, height: 4)
-                        .offset(x: getOffset() + 7, y: 4)
+                        .frame(width: equalWidth - 15, height: showCapsule ? 40 : 4)
+                        .offset(x: getOffset() + 7, y: 2)
 
                     HStack(spacing: 0) {
                         ForEach(tabs.indices, id: \.self) { index in
                             Text(tabs[index])
                                 .font(.title2)
                                 .fontWeight(.bold)
-                                .foregroundColor(.white)
+                                .foregroundColor(showCapsule ? (indexfromOffset() == CGFloat(index) ? .black : .white) : .white)
                                 .frame(width: equalWidth, height: 40)
                                 .contentShape(Rectangle())
                                 .onTapGesture {
@@ -54,6 +55,12 @@ struct TabBar: View {
     func getOffset() -> CGFloat {
         let progress = offset / UIScreen.main.bounds.width
         return progress * width
+    }
+
+    func indexfromOffset() -> CGFloat {
+        let indexFloat = offset / UIScreen.main.bounds.width
+
+        return indexFloat.rounded(.toNearestOrAwayFromZero)
     }
 }
 

@@ -10,6 +10,8 @@ import SDWebImageSwiftUI
 
 struct Home: View {
     @State var offset: CGFloat = 0
+    @State var showCapsule = false
+
     var body: some View {
         GeometryReader { reader in
             let rect = reader.frame(in: .global)
@@ -32,9 +34,25 @@ struct Home: View {
         .ignoresSafeArea()
         .overlay(
             // Tab bar
-            TabBar(offset: $offset)
+            TabBar(offset: $offset, showCapsule: $showCapsule)
             
             , alignment: .top
+        )
+        .overlay(
+            // Enlarge capsule button
+            Button(action: {
+                withAnimation { showCapsule.toggle() }
+            }, label: {
+                Image(systemName: "fiberchannel")
+                    .font(.title2)
+                    .padding()
+                    .background(Color("lightblue"))
+                    .foregroundColor(.black)
+                    .clipShape(Circle())
+            })
+            .padding()
+
+            , alignment: .bottomTrailing
         )
     }
 }
