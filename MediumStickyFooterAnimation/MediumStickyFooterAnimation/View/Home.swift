@@ -100,9 +100,62 @@ struct Home: View {
                         .padding(.horizontal)
                         .padding(.top, 10)
                 }
+
+                // Featured content
+                Text("Featured")
+                    .font(.title)
+                    .fontWeight(.heavy)
+                    .foregroundColor(.primary)
+                    .padding(.horizontal)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+
+                // Feature rows
+                FeatureContent()
+                    .padding(.bottom)
+
             })
         }
         .ignoresSafeArea(.all, edges: .bottom)
+    }
+}
+
+struct FeatureContent: View {
+    var body: some View {
+        VStack(spacing: 15) {
+            HStack(spacing: 15) {
+                Image("featured1")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 70, height: 70)
+                    .cornerRadius(10)
+
+                Text("One of people's biggest fears is change. Whether someone isn't what you want them to be,")
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+
+            HStack(spacing: 15) {
+                Image("featured2")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 70, height: 70)
+                    .cornerRadius(10)
+
+                Text("I recently shot this amazing 370 Virtual Reality video for my YouTube channel with Surreal and directed by Lan Bui.")
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+
+            HStack(spacing: 15) {
+                Image("featured3")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 70, height: 70)
+                    .cornerRadius(10)
+
+                Text("10 years ago I couldn't have told you my plan on how to get here because this here didn't even exist yet.")
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .padding()
     }
 }
 
