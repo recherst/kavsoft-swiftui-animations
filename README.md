@@ -140,3 +140,7 @@ Kindly welcome to become a patron to support them! ❤️
 - [Custom Timer App | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Timer)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/custom-timer-app.gif)
+  
+- [Square Web UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/SquareSpace)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/square-web-ui.gif)
