@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct CustomTimerAppApp: App {
+    @StateObject var data = TimerData()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(data)
         }
     }
 }

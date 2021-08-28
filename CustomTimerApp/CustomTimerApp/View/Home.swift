@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct Home: View {
-    @StateObject var data = TimerData()
+    @EnvironmentObject var data: TimerData
     var body: some View {
         ZStack {
             VStack {
@@ -40,6 +41,7 @@ struct Home: View {
                 })
                 // Set to center
                 .offset(y: 40)
+                .opacity(data.buttonAnimation ? 0 : 1)
                 Spacer()
 
                 // Start button
@@ -103,9 +105,20 @@ struct Home: View {
                         data.selectedTime = 0
                         data.timerHeightChange = 0
                         data.timerViewOffset = UIScreen.main.bounds.height
+                        data.buttonAnimation = false
                     }
                 }
             }
+        })
+        .onAppear(perform: {
+            // Permission
+            UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .sound, .alert]) { _, _ in
+
+            }
+
+            // Set delegate for in - app notifications
+            UNUserNotificationCenter.current().delegate = data
+            
         })
     }
 }
