@@ -178,3 +178,9 @@ Kindly welcome to become a patron to support them! ❤️
   Video resource: [Swipeable Instagram Layout | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Swipeable_Instagram_Layout)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/swipeable-instagram-layout.gif)
+
+- Scrollable Tab Bar
+
+  Video resource: [Scrollable Tab Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Scrollable_Tab_Bar)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/scrollable-tab-bar.gif)
