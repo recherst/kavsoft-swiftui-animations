@@ -23,12 +23,19 @@ struct Home: View {
                             .frame(width: rect.width)
                             // Again bug so use cornerRadius
                             .cornerRadius(0)
+                            .overlay(Color.black.opacity(0.3))
 
                     }
                 }.ignoresSafeArea()
             }
         }
         .ignoresSafeArea()
+        .overlay(
+            // Tab bar
+            TabBar(offset: $offset)
+            
+            , alignment: .top
+        )
     }
 }
 

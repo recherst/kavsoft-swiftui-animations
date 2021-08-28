@@ -46,7 +46,22 @@ struct ScrollableTabBar<Content: View>: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: UIScrollView, context: Context) {
+        // Updating view
+        if uiView.contentOffset.x != offset {
+            // Animate
+            // The animation glitch is because it's updating on two times
+            // Remove Delegate while animating
+            uiView.delegate = nil
+            UIView.animate(withDuration: 0.4) {
+                uiView.contentOffset.x = offset
+            } completion: { finished in
+                if finished {
+                    uiView.delegate = context.coordinator
+                }
+            }
 
+            uiView.setContentOffset(CGPoint(x: offset, y: 0), animated: true)
+        }
     }
 
     // Set up ScrollView
