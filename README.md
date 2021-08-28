@@ -184,3 +184,9 @@ Kindly welcome to become a patron to support them! ❤️
   Video resource: [Scrollable Tab Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Scrollable_Tab_Bar)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/scrollable-tab-bar.gif)
+  
+- Medium Sticky Footer Animation
+
+  Video resource: [Medium Sticky Footer Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Medium_Sticky_Footer)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/medium-sticky-footer-animation.gif)
