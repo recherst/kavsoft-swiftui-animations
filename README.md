@@ -136,3 +136,7 @@ Kindly welcome to become a patron to support them! ❤️
 - [Navigation Drawer | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Navigation_Drawer)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/navigation-drawer.gif)
+  
+- [Custom Timer App | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Timer)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/custom-timer-app.gif)
