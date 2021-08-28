@@ -24,8 +24,18 @@ struct Home: View {
             Drawer(animation: animation)
 
             // Main view
-            TabView {
-                Text("Home")
+            TabView(selection: $menuData.selectedMenu) {
+                Catalogue()
+                    .tag("Catalogue")
+                Orders()
+                    .tag("Your Orders")
+
+                Cart()
+                    .tag("Your Cart")
+
+                Favourites()
+                    .tag("Favourites")
+
             }
             .frame(width: UIScreen.main.bounds.width)
         }
