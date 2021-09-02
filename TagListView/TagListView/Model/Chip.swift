@@ -11,4 +11,6 @@ struct Chip: Identifiable {
 
     var id = UUID().uuidString
     var chipText: String
+    // To stop auto update
+    var isExceeded = false
 }
