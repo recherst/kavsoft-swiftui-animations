@@ -144,3 +144,7 @@ Kindly welcome to become a patron to support them! ❤️
 - [Square Web UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/SquareSpace)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/square-web-ui.gif)
+  
+- [Tag List View | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Chips)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/tag-list-view.gif)
