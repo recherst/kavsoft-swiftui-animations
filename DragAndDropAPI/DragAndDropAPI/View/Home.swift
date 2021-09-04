@@ -11,6 +11,9 @@ struct Home: View {
     @StateObject var pageData = PageViewModel()
     // Slide animation
     @Namespace var animation
+    // columns
+    let columns = Array(repeating: GridItem(.flexible(), spacing: 45), count: 2)
+
     var body: some View {
         VStack {
             // Custom Picker
@@ -84,7 +87,24 @@ struct Home: View {
             .cornerRadius(15)
             .padding(.top)
 
-            Spacer()
+            ScrollView {
+                // Tab with pages
+                LazyVGrid(columns: columns, spacing: 20, content: {
+                    ForEach(pageData.urls) { url in
+                        WebView(url: url.url)
+                            .frame(height: 200)
+                            .cornerRadius(15)
+                            .onDrag({
+                                // Set current page
+                                pageData.currentPage = url
+                                // Send Id for sample
+                                return NSItemProvider(contentsOf: URL(string: "\(url.id)")!)!
+                            })
+                            .onDrop(of: [.url], delegate: DropViewDelegate(page: url, pageData: pageData))
+                    }
+                })
+                .padding()
+            }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.black.ignoresSafeArea(.all, edges: .all))

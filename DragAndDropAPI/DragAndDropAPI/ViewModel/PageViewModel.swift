@@ -25,4 +25,7 @@ class PageViewModel: ObservableObject {
         Page(url: URL(string: "https://www.microsoft.com")!),
         Page(url: URL(string: "https://www.bing.com")!),
     ]
+
+    // Currently dragging page
+    @Published var currentPage: Page?
 }
