@@ -148,3 +148,9 @@ Kindly welcome to become a patron to support them! ❤️
 - [Tag List View | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Chips)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/tag-list-view.gif)
+  
+- [Shared Tab Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Shared_TabBar)
+
+  > HiddenTitleBarWindowStyle() modifier is not working on macOS 11.5.2 or higher
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/ezgif.com-optimize.gif)
