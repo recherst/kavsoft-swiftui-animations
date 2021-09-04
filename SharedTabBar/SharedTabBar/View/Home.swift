@@ -36,7 +36,7 @@ struct Home: View {
                     .tag("macOS")
                     .ignoresSafeArea(.all, edges: .all)
                 Color.pink
-                    .tag("Contac")
+                    .tag("Contact")
                     .ignoresSafeArea(.all, edges: .all)
             }
             #else

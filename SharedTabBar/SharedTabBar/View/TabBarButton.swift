@@ -32,7 +32,13 @@ struct TabBarButton: View {
             .frame(width: device == .iPhone ? (rect.width - 75) / 4 : 100, height: 55 + safeAreaBottom)
             .contentShape(Rectangle())
             // Bottom up effect
-            .background(Color("purple").offset(x: selectedTab == title ? 0 : device == .iPhone ? 100 : -100, y: selectedTab == title ? 0 : device == .iPhone ? 100 : 0))
+            .background(
+                Color("purple")
+                    .offset(
+                        x: selectedTab == title ? 0 : device == .iPhone ? 0 : -100,
+                        y: selectedTab == title ? 0 : device == .iPhone ? 100 : 0
+                    )
+            )
         })
         .buttonStyle(PlainButtonStyle())
     }
