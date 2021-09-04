@@ -10,7 +10,10 @@ import SwiftUI
 struct Home: View {
     // Hide TabBar
     init() {
+        // UITabBar is not available for macOS
+        #if os(iOS)
         UITabBar.appearance().isHidden = true
+        #endif
     }
     // SelectedTab
     @State var selectedTab = "SwiftUI"
@@ -20,6 +23,8 @@ struct Home: View {
 
     var body: some View {
         ZStack(alignment: .bottom, content: {
+            // Since TabBar hide option is not available so we can't use native TabBar in macOS
+            #if os(iOS)
             TabView(selection: $selectedTab) {
                 Color.red
                     .tag("SwiftUI")
@@ -34,6 +39,12 @@ struct Home: View {
                     .tag("Contac")
                     .ignoresSafeArea(.all, edges: .all)
             }
+            #else
+            ZStack {
+
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            #endif
             // Custom TabBar
             HStack(spacing: 0) {
                 Image("logo")
@@ -62,10 +73,37 @@ struct Home_Previews: PreviewProvider {
 
 extension View {
     var rect: CGRect {
+        #if os(iOS)
         return UIScreen.main.bounds
+        #else
+        return NSScreen.main!.visibleFrame
+        #endif
     }
 
     var safeAreaBottom: CGFloat {
-        UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 10
+        #if os(iOS)
+        return UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 10
+        #else
+        return 0
+        #endif
     }
+
+    // Get device type
+    var device: Device {
+        #if os(iOS)
+        if UIDevice.current.model.contains("iPad") {
+            return .iPad
+        } else {
+            return .iPhone
+        }
+        #else
+        return .macOS
+        #endif
+    }
+}
+
+enum Device {
+    case iPhone
+    case iPad
+    case macOS
 }

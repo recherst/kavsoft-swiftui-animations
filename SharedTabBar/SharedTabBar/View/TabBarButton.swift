@@ -29,10 +29,12 @@ struct TabBarButton: View {
             }
             .padding(.bottom, 8)
             // Total four tabs
-            .frame(width: (rect.width - 75) / 4, height: 55 + safeAreaBottom)
+            .frame(width: device == .iPhone ? (rect.width - 75) / 4 : 100, height: 55 + safeAreaBottom)
+            .contentShape(Rectangle())
             // Bottom up effect
             .background(Color("purple").offset(y: selectedTab == title ? 0 : 110))
         })
+        .buttonStyle(PlainButtonStyle())
     }
 }
 
