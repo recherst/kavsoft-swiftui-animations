@@ -10,8 +10,17 @@ import SwiftUI
 @main
 struct SharedTabBarApp: App {
     var body: some Scene {
+        // Hide window for only macOS
+        #if os(iOS)
         WindowGroup {
             ContentView()
         }
+        #else
+        WindowGroup {
+            ContentView()
+        }
+        .windowStyle(HiddenTitleBarWindowStyle())
+        .windowToolbarStyle(UnifiedCompactWindowToolbarStyle())
+        #endif
     }
 }

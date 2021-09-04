@@ -22,7 +22,7 @@ struct Home: View {
     @Environment(\.colorScheme) var scheme
 
     var body: some View {
-        ZStack(alignment: .bottom, content: {
+        ZStack(alignment: device == .iPhone ? .bottom : .leading, content: {
             // Since TabBar hide option is not available so we can't use native TabBar in macOS
             #if os(iOS)
             TabView(selection: $selectedTab) {
@@ -41,27 +41,39 @@ struct Home: View {
             }
             #else
             ZStack {
-
+                // Switch case for changing views
+                switch(selectedTab) {
+                case "SwiftUI": Color.red
+                case "Beginners": Color.blue
+                case "macOS": Color.yellow
+                case "Contact": Color.pink
+                default: Color.clear
+                }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             #endif
-            // Custom TabBar
-            HStack(spacing: 0) {
-                Image("logo")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 45, height: 45)
-                    .padding(.horizontal)
 
-                TabBarButton(image: "swift", title: "SwiftUI", selectedTab: $selectedTab)
-                TabBarButton(image: "book", title: "Beginners", selectedTab: $selectedTab)
-                TabBarButton(image: "laptopcomputer", title: "macOS", selectedTab: $selectedTab)
-                TabBarButton(image: "person.crop.circle.fill.badge.questionmark", title: "Contact", selectedTab: $selectedTab)
+            if device == .iPad || device == .macOS {
+                VStack(spacing: 10) {
+                    InsideTabBarItem(selectedTab: $selectedTab)
+
+                    Spacer()
+                }
+                .background(scheme == .dark ? Color.black : Color.white)
+            } else {
+                // Custom TabBar
+                HStack(spacing: 0) {
+                    InsideTabBarItem(selectedTab: $selectedTab)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(scheme == .dark ? Color.black : Color.white)
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .background(scheme == .dark ? Color.black : Color.white)
         })
-        .ignoresSafeArea(.all, edges: .bottom)
+        .ignoresSafeArea(.all, edges: device == .iPhone ? .bottom : .all)
+        .frame(
+            width: device == .iPad || device == .iPhone ? nil : rect.width / 1.6,
+            height: device == .iPad || device == .iPhone ? nil : rect.height - 150
+        )
     }
 }
 
@@ -84,7 +96,7 @@ extension View {
         #if os(iOS)
         return UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 10
         #else
-        return 0
+        return 10
         #endif
     }
 

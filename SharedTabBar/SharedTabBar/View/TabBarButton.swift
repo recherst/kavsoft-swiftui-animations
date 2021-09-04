@@ -17,7 +17,7 @@ struct TabBarButton: View {
         }, label: {
             VStack(spacing: 6) {
                 Image(systemName: image)
-                    .font(.system(size: 30))
+                    .font(.system(size: device == .iPhone ? 30 : 25))
                     // For Dark mode adoption
                     .foregroundColor(selectedTab == title ? .white : .primary)
 
@@ -32,7 +32,7 @@ struct TabBarButton: View {
             .frame(width: device == .iPhone ? (rect.width - 75) / 4 : 100, height: 55 + safeAreaBottom)
             .contentShape(Rectangle())
             // Bottom up effect
-            .background(Color("purple").offset(y: selectedTab == title ? 0 : 110))
+            .background(Color("purple").offset(x: selectedTab == title ? 0 : device == .iPhone ? 100 : -100, y: selectedTab == title ? 0 : device == .iPhone ? 100 : 0))
         })
         .buttonStyle(PlainButtonStyle())
     }
