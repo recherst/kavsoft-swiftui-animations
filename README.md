@@ -159,4 +159,6 @@ Kindly welcome to become a patron to support them! ❤️
 
   > `HiddenTitleBarWindowStyle` modifier is not working on macOS 11.5.2 or higher
 
-  
+- [Drag & Drop API | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Grid_Reordering)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/drag-drop-api.gif)
