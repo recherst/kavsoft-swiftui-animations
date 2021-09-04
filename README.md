@@ -157,6 +157,6 @@ Kindly welcome to become a patron to support them! ❤️
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/shared-tab-bar-macos.gif)
 
-  > HiddenTitleBarWindowStyle() modifier is not working on macOS 11.5.2 or higher
+  > `HiddenTitleBarWindowStyle` modifier is not working on macOS 11.5.2 or higher
 
   
