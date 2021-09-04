@@ -151,6 +151,12 @@ Kindly welcome to become a patron to support them! ❤️
   
 - [Shared Tab Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Shared_TabBar)
 
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/shared-tab-bar-iphone.gif)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/shared-tab-bar-ipad.gif)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/shared-tab-bar-macos.gif)
+
   > HiddenTitleBarWindowStyle() modifier is not working on macOS 11.5.2 or higher
 
-  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/ezgif.com-optimize.gif)
+  
