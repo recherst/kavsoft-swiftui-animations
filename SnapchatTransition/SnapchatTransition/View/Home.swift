@@ -49,7 +49,9 @@ struct Home: View {
             ScrollView {
                 LazyVGrid(columns: columns, content: {
                     ForEach(videos) { video in
-                        Text("Hello")
+                        VideoPlayerView(player: video.player)
+                            .cornerRadius(15)
+                            .frame(height: 280)
                     }
                 })
                 .padding()
