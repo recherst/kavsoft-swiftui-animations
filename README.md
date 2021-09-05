@@ -162,3 +162,7 @@ Kindly welcome to become a patron to support them! ❤️
 - [Drag & Drop API | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Grid_Reordering)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/drag-drop-api.gif)
+  
+- [Snapchat Transition | kavsoft](https://kavsoft.dev/SwiftUI_2.0/Snapchat_Transition)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/snapchat-transition.gif)
