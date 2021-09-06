@@ -166,3 +166,7 @@ Kindly welcome to become a patron to support them! ❤️
 - [Snapchat Transition | kavsoft](https://kavsoft.dev/SwiftUI_2.0/Snapchat_Transition)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/snapchat-transition.gif)
+  
+- [YouTube Mini Player | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/YouTube_Transition)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/youtube-mini-player.gif)
