@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct MiniPlayer: View {
+    // ScreenHeight
+    @EnvironmentObject var player: VideoPlayerViewModel
     var body: some View {
         VStack(spacing: 0) {
             // Video player
-            VideoPlayerView()
-                .frame(height: 250)
+            HStack {
+                VideoPlayerView()
+                    .frame(width: player.isMiniPlayer ? 150 : player.width, height: player.isMiniPlayer ? 70 : getFrame())
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(
+                VideoControls()
+            )
 
             GeometryReader { reader in
                 ScrollView {
@@ -53,12 +61,62 @@ struct MiniPlayer: View {
                     }
                     .padding()
                 }
+                .onAppear(perform: {
+                    player.height = reader.frame(in: .global).height + 250
+                })
             }
+            .background(Color.white)
+            .opacity(player.isMiniPlayer ? 0 : getOpacity())
+            .frame(height: player.isMiniPlayer ? 0 : nil)
         }
         .background(
             Color.white
                 .ignoresSafeArea()
+                .onTapGesture {
+                    withAnimation {
+                        player.width = UIScreen.main.bounds.width
+                        player.isMiniPlayer.toggle()
+                    }
+                }
         )
+    }
+
+    // Get frame and opacity while dragging
+    func getFrame() -> CGFloat {
+        let progress = player.offset / (player.height - 100)
+
+        if (1 - progress) <= 1.0 {
+            let videoHeight: CGFloat = (1 - progress) * 250
+
+            // Stop height at 70
+            if videoHeight <= 70 {
+                // Decrease with
+                let percent = videoHeight / 70
+                let videoWidth: CGFloat = percent * UIScreen.main.bounds.width
+                DispatchQueue.main.async {
+                    // Stop at 150
+                    if videoWidth >= 150 {
+                        player.width = videoWidth
+                    }
+                }
+                // Preview will have animation problems
+                DispatchQueue.main.async {
+                    player.width = UIScreen.main.bounds.width
+                }
+                return 70
+            }
+            return videoHeight
+        }
+
+        return 250
+    }
+
+    func getOpacity() -> Double {
+        let progress = player.offset / player.height
+        if progress <= 1 {
+            return Double(1 - progress)
+        }
+        return 1
     }
 }
 

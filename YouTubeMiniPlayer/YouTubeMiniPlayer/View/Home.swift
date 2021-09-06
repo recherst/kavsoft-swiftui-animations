@@ -10,6 +10,9 @@ import SwiftUI
 struct Home: View {
     @StateObject var player = VideoPlayerViewModel()
 
+    // Gesture state to avoid drag gesture glitches
+    @GestureState var gestureOffset: CGFloat = 0
+
     var body: some View {
         ZStack(alignment: .bottom, content: {
             ScrollView {
@@ -31,8 +34,40 @@ struct Home: View {
                 MiniPlayer()
                 // Move from button
                     .transition(.move(edge: .bottom))
+                    .offset(y: player.offset)
+                    .gesture(
+                        DragGesture()
+                            .updating($gestureOffset, body: { value, state, _ in
+                                state = value.translation.height
+                            })
+                            .onEnded(onEnded(value:))
+                    )
             }
         })
+        .onChange(of: gestureOffset, perform: { value in
+            onChanged()
+        })
+        .environmentObject(player)
+    }
+
+    func onChanged() {
+        if gestureOffset > 0 && !player.isMiniPlayer && player.offset + 70 <= player.height {
+            player.offset = gestureOffset
+        }
+    }
+
+    func onEnded(value: DragGesture.Value) {
+        withAnimation(.default) {
+            if !player.isMiniPlayer {
+                player.offset = 0
+                // Close view
+                if value.translation.height > UIScreen.main.bounds.height / 3 {
+                    player.isMiniPlayer = true
+                } else {
+                    player.isMiniPlayer = false
+                }
+            }
+        }
     }
 }
 
