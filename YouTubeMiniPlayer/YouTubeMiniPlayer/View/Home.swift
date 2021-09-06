@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct Home: View {
+    @StateObject var player = VideoPlayerViewModel()
+
     var body: some View {
         ZStack(alignment: .bottom, content: {
             ScrollView {
@@ -15,12 +17,21 @@ struct Home: View {
                     ForEach(videos) { video in
                         // Video card view
                         VideoCardView(video: video)
+                            .onTapGesture {
+                                withAnimation {
+                                    player.showPlayer.toggle()
+                                }
+                            }
                     }
                 }
             }
 
             // Video player view
-            MiniPlayer()
+            if player.showPlayer {
+                MiniPlayer()
+                // Move from button
+                    .transition(.move(edge: .bottom))
+            }
         })
     }
 }
