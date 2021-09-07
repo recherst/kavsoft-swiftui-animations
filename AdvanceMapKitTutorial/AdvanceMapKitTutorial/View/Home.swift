@@ -20,6 +20,41 @@ struct Home: View {
                 .ignoresSafeArea()
 
             VStack {
+                VStack(spacing: 0) {
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(.gray)
+
+                        TextField("Search", text: $mapData.searchText)
+                            .colorScheme(.light)
+                    }
+                    .padding(.vertical, 10)
+                    .padding(.horizontal)
+                    .background(Color.white)
+
+                    // Display results
+                    if !mapData.places.isEmpty && mapData.searchText != "" {
+                        ScrollView {
+                            VStack(spacing: 15) {
+                                ForEach(mapData.places) { place in
+                                    Text(place.placemark.name ?? "")
+                                        .foregroundColor(.black)
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                        .padding(.leading)
+                                        .onTapGesture {
+                                            mapData.selectPlace(place: place)
+                                        }
+
+                                    Divider()
+                                }
+                            }
+                            .padding(.top)
+                        }
+                        .background(Color.white)
+                    }
+                }
+                .padding()
+
                 Spacer()
 
                 VStack {
@@ -53,6 +88,15 @@ struct Home: View {
                 // Redirect user to Settings
                 UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
             }))
+        })
+        .onChange(of: mapData.searchText, perform: { value in
+            // Search places
+            let delay = 0.3
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                if value == mapData.searchText {
+                    self.mapData.searchQuery()
+                }
+            }
         })
     }
 }
