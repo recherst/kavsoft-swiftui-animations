@@ -186,3 +186,7 @@ Kindly welcome to become a patron to support them! ❤️
 - [Compositional Layout | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Compositional_Layout)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/compositional-layout.gif)
+  
+- [Text Shimmer | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Text_Shimmer)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/text-shimmer.gif)
