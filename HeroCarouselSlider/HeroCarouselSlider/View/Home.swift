@@ -63,7 +63,28 @@ struct Home: View {
             .padding(.top, 25)
             .padding(.horizontal, 30)
 
+            Button(action: resetViews, label: {
+                Image(systemName: "arrow.left")
+                    .font(.system(size: 20, weight: .semibold))
+                    .foregroundColor(.blue)
+                    .padding()
+                    .background(Color.white)
+                    .clipShape(Circle())
+                    .shadow(radius: 3)
+            })
+            .padding(.top, 35)
+
             Spacer()
+        }
+    }
+
+    // Rest views
+    func resetViews() {
+        for index in homeModel.cards.indices {
+            withAnimation(.spring()) {
+                homeModel.cards[index].offset = 0
+                homeModel.swipedCard = 0
+            }
         }
     }
 
@@ -78,6 +99,7 @@ struct Home: View {
         withAnimation {
             if -value.translation.width > width / 3 {
                 homeModel.cards[index].offset = -width
+                homeModel.swipedCard += 1
             } else {
                 homeModel.cards[index].offset = 0
             }
@@ -98,7 +120,7 @@ struct Home: View {
     // Get width and height for card
     func getCardHeight(index: Int) -> CGFloat {
         let height: CGFloat = 400
-        let cardHeight = index <= 2 ? CGFloat(index) * 35: 70
+        let cardHeight = index - homeModel.swipedCard <= 2 ? CGFloat(index - homeModel.swipedCard) * 35: 70
         return height - cardHeight
     }
 
@@ -112,7 +134,7 @@ struct Home: View {
 
     // Get offset
     func getCardOffset(index: Int) -> CGFloat {
-        return index <= 2 ? CGFloat(index) * 30 : 60
+        return index - homeModel.swipedCard <= 2 ? CGFloat(index - homeModel.swipedCard) * 30 : 60
     }
 }
 
