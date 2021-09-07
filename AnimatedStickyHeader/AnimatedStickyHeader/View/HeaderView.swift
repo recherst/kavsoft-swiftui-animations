@@ -22,7 +22,7 @@ struct HeaderView: View {
                         .foregroundColor(.primary)
                 })
 
-                Text("kavsoft Backery")
+                Text("Kavsoft Backery")
                     .font(.title)
                     .fontWeight(.bold)
             }
