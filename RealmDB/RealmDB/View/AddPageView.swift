@@ -24,11 +24,13 @@ struct AddPageView: View {
                 }
             }
             .listStyle(GroupedListStyle())
-            .navigationTitle("Add Data")
+            .navigationTitle(modelData.updateObject == nil ? "Add Data" : "Update")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {}, label: {
+                    Button(action: {
+                        modelData.addData(presentation: presentationMode)
+                    }, label: {
                         Text("Done")
                     })
                 }
@@ -42,6 +44,8 @@ struct AddPageView: View {
                 }
             }
         }
+        .onAppear(perform: modelData.setupInitialData)
+        .onDisappear(perform: modelData.deInitData)
     }
 }
 
