@@ -171,6 +171,6 @@ Kindly welcome to become a patron to support them! ❤️
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/youtube-mini-player.gif)
   
-- [Animated Sticky header | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Sticky_Header)
+- [Animated Sticky Header | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Sticky_Header)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/animated-sticky-header.gif)
