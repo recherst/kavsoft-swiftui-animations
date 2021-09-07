@@ -17,6 +17,7 @@ struct Layout2: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(width: (width / 3), height: 125)
                 .cornerRadius(4)
+                .modifier(ContextModifier(card: cards[0]))
 
             if cards.count >= 2 {
                 AnimatedImage(url: URL(string: cards[1].downloadUrl))
@@ -24,6 +25,7 @@ struct Layout2: View {
                     .aspectRatio(contentMode: .fill)
                     .frame(width: (width / 3), height: 125)
                     .cornerRadius(4)
+                    .modifier(ContextModifier(card: cards[1]))
             }
 
             if cards.count == 3 {
@@ -32,6 +34,7 @@ struct Layout2: View {
                     .aspectRatio(contentMode: .fill)
                     .frame(width: (width / 3), height: 125)
                     .cornerRadius(4)
+                    .modifier(ContextModifier(card: cards[2]))
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)

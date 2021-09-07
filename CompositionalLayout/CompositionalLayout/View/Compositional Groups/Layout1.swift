@@ -19,6 +19,7 @@ struct Layout1: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(width: (width - (width / 3) + 4), height: 250)
                 .cornerRadius(4)
+                .modifier(ContextModifier(card: cards[0]))
 
             VStack(spacing: 4) {
                 // 123 + 123 + 4 = 250
@@ -28,6 +29,7 @@ struct Layout1: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: (width / 3), height: 123)
                         .cornerRadius(4)
+                        .modifier(ContextModifier(card: cards[1]))
                 }
 
                 if cards.count == 3 {
@@ -36,6 +38,7 @@ struct Layout1: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: (width / 3), height: 123)
                         .cornerRadius(4)
+                        .modifier(ContextModifier(card: cards[2]))
                 }
             }
             .frame(maxHeight: .infinity, alignment: .top)
