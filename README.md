@@ -190,3 +190,7 @@ Kindly welcome to become a patron to support them! ❤️
 - [Text Shimmer | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Text_Shimmer)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/text-shimmer.gif)
+  
+- [Hero Carousel Slider | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Hero_Carousel)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/hero-carousel-slider.gif)
