@@ -23,7 +23,7 @@ struct Home: View {
                 Spacer()
 
                 VStack {
-                    Button(action: {}, label: {
+                    Button(action: mapData.focusLocation, label: {
                         Image(systemName: "location.fill")
                             .font(.title2)
                             .padding(10)
@@ -31,7 +31,7 @@ struct Home: View {
                             .clipShape(Circle())
                     })
 
-                    Button(action: {}, label: {
+                    Button(action: mapData.updateMapType, label: {
                         Image(systemName: mapData.mapType == .standard ? "network" : "map")
                             .font(.title2)
                             .padding(10)
