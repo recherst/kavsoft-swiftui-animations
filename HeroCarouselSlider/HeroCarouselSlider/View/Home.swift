@@ -11,69 +11,77 @@ var width = UIScreen.main.bounds.width
 
 struct Home: View {
     @EnvironmentObject var homeModel: CarouselViewModel
+    @Namespace var animation
 
     var body: some View {
-        VStack {
-            HStack {
-                Button(action: {}, label: {
-                    Image(systemName: "xmark")
-                        .font(.title2)
-                        .foregroundColor(.gray)
-                })
+        ZStack {
+            VStack {
+                HStack {
+                    Button(action: {}, label: {
+                        Image(systemName: "xmark")
+                            .font(.title2)
+                            .foregroundColor(.gray)
+                    })
 
-                Text("Health Tips")
-                    .fontWeight(.bold)
-                    .foregroundColor(.black)
-                    .padding(.leading)
+                    Text("Health Tips")
+                        .fontWeight(.bold)
+                        .foregroundColor(.black)
+                        .padding(.leading)
+
+                    Spacer()
+
+                }
+                .padding()
+
+                // Carousel
+                ZStack {
+                    ForEach(homeModel.cards.indices.reversed(), id: \.self) { index in
+                        HStack {
+                            CardView(card: homeModel.cards[index], animation: animation)
+                                .frame(
+                                    width: getCardWidth(index: index),
+                                    height: getCardHeight(index: index)
+                                )
+                                .offset(x: getCardOffset(index: index))
+                                .rotationEffect(.init(degrees: getCardRotation(index: index)))
+
+                            Spacer(minLength: 0)
+                        }
+                        .frame(height: 400)
+                        .contentShape(Rectangle())
+                        .offset(x: homeModel.cards[index].offset)
+                        .gesture(
+                            DragGesture(minimumDistance: 0)
+                                .onChanged({ value in
+                                    onChanged(value: value, index: index)
+                                })
+                                .onEnded({ value in
+                                    onEnd(value: value, index: index)
+                                })
+                        )
+                    }
+                }
+                .padding(.top, 25)
+                .padding(.horizontal, 30)
+
+                Button(action: resetViews, label: {
+                    Image(systemName: "arrow.left")
+                        .font(.system(size: 20, weight: .semibold))
+                        .foregroundColor(.blue)
+                        .padding()
+                        .background(Color.white)
+                        .clipShape(Circle())
+                        .shadow(radius: 3)
+                })
+                .padding(.top, 35)
 
                 Spacer()
-
             }
-            .padding()
 
-            // Carousel
-            ZStack {
-                ForEach(homeModel.cards.indices.reversed(), id: \.self) { index in
-                    HStack {
-                        CardView(card: homeModel.cards[index])
-                            .frame(
-                                width: getCardWidth(index: index),
-                                height: getCardHeight(index: index)
-                            )
-                            .offset(x: getCardOffset(index: index))
-                            .rotationEffect(.init(degrees: getCardRotation(index: index)))
-
-                        Spacer(minLength: 0)
-                    }
-                    .frame(height: 400)
-                    .contentShape(Rectangle())
-                    .offset(x: homeModel.cards[index].offset)
-                    .gesture(
-                        DragGesture(minimumDistance: 0)
-                            .onChanged({ value in
-                                onChanged(value: value, index: index)
-                            })
-                            .onEnded({ value in
-                                onEnd(value: value, index: index)
-                            })
-                    )
-                }
+            // Detail view
+            if homeModel.showCard {
+                DetailView(animation: animation)
             }
-            .padding(.top, 25)
-            .padding(.horizontal, 30)
-
-            Button(action: resetViews, label: {
-                Image(systemName: "arrow.left")
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(.blue)
-                    .padding()
-                    .background(Color.white)
-                    .clipShape(Circle())
-                    .shadow(radius: 3)
-            })
-            .padding(.top, 35)
-
-            Spacer()
         }
     }
 
