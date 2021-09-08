@@ -91,7 +91,7 @@ struct Home: View {
                             }
                         }
 
-                        Text("Spiliting With")
+                        Text("Spliting With")
                             .fontWeight(.bold)
                             .foregroundColor(.white)
                     }

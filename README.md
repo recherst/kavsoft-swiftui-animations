@@ -194,3 +194,7 @@ Kindly welcome to become a patron to support them! ❤️
 - [Hero Carousel Slider | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Hero_Carousel)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/hero-carousel-slider.gif)
+  
+- [Bill Split App | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Bill_Split)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/bill-split-app.gif)
