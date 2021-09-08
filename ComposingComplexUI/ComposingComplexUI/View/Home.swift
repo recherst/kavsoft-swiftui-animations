@@ -14,6 +14,8 @@ struct Home: View {
     // Server toggle Status
     @State var isServerOn = false
 
+    @State var isSmall = UIScreen.main.bounds.height < 750
+
     var body: some View {
         VStack {
 
@@ -76,7 +78,6 @@ struct Home: View {
             ZStack {
                 // World map
                 Image("world")
-//                    .renderingMode(.template)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: UIScreen.main.bounds.width - 40)
@@ -108,7 +109,7 @@ struct Home: View {
                 }
                 .offset(y: -20)
             }
-            .padding(.vertical, 25)
+            .padding(.vertical, isSmall ? 0 : 20)
 
             // Toggle button
             ZStack(alignment: Alignment(horizontal: .center, vertical: isServerOn ? .bottom : .top), content: {
@@ -159,6 +160,7 @@ struct Home: View {
                     }
                 }
             })
+            .padding(.bottom, isSmall ? 5 : 15)
             .frame(width: 130)
             .background(
                 ZStack {
@@ -178,7 +180,7 @@ struct Home: View {
                         .offset(y: 100)
                 }
             )
-            .padding(.bottom, 60)
+            .padding(.bottom, isSmall ? 10 : 60)
         }
         .background(
             LinearGradient(
