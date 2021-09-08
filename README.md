@@ -198,3 +198,7 @@ Kindly welcome to become a patron to support them! ❤️
 - [Bill Split App | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Bill_Split)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/bill-split-app.gif)
+  
+- [Composing Complex UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Complex_UI)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/composing-complex-ui.gif)
