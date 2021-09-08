@@ -83,7 +83,7 @@ struct Home: View {
 
                 VStack(spacing: 10) {
                     if isServerOn {
-                        Text(selected.name)
+                         Text(selected.name)
                             .fontWeight(.semibold)
                     }
 
@@ -160,6 +160,24 @@ struct Home: View {
                 }
             })
             .frame(width: 130)
+            .background(
+                ZStack {
+                    Rings(width: UIScreen.main.bounds.width / 2, isServerOn: $isServerOn)
+                        .offset(y: 70)
+
+                    Rings(width: UIScreen.main.bounds.width / 1.6, isServerOn: $isServerOn)
+                        .offset(y: 80)
+
+                    Rings(width: UIScreen.main.bounds.width / 1.2, isServerOn: $isServerOn)
+                        .offset(y: 90)
+
+                    Rings(width: UIScreen.main.bounds.width / 1.1, isServerOn: $isServerOn)
+                        .offset(y: 100)
+
+                    Rings(width: UIScreen.main.bounds.width, isServerOn: $isServerOn)
+                        .offset(y: 100)
+                }
+            )
             .padding(.bottom, 60)
         }
         .background(
@@ -178,5 +196,21 @@ struct Home: View {
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Home()
+    }
+}
+
+func getSize(index: Int) -> CGFloat {
+    // Different size based on index
+    if index < 10 && index > 50 {
+        return 3
+    }
+    if index >= 10 && index < 20 {
+        return 4
+    }
+
+    if index >= 40 && index <= 50 {
+        return 4
+    } else {
+        return 5
     }
 }
