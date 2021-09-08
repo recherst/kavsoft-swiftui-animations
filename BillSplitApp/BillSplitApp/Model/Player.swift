@@ -1,5 +1,5 @@
 //
-//  Player.swift
+//  Payer.swift
 //  BillSplitApp
 //
 //  Created by recherst on 2021/9/8.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Player: Identifiable {
+struct Payer: Identifiable {
     var id = UUID().uuidString
     var image: String
     var name: String
