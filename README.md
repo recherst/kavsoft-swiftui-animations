@@ -202,3 +202,7 @@ Kindly welcome to become a patron to support them! ❤️
 - [Composing Complex UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Complex_UI)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/composing-complex-ui.gif)
+  
+- [Animated Rating Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Rating_Bar)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/animated-rating-bar.gif)
