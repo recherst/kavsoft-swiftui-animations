@@ -206,3 +206,7 @@ Kindly welcome to become a patron to support them! ❤️
 - [Animated Rating Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Rating_Bar)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/animated-rating-bar.gif)
+  
+- [Parallax Carousel | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Parallax_Carousel)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/parallax-carousel.gif)
