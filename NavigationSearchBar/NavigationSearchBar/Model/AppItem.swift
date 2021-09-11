@@ -21,7 +21,7 @@ var apps = [
     AppItem(name: "Calendar"),
     AppItem(name: "Camera"),
     AppItem(name: "Clock"),
-    AppItem(name: "Facetime"),
+    AppItem(name: "FaceTime"),
     AppItem(name: "Health"),
     AppItem(name: "Mail"),
     AppItem(name: "Maps"),

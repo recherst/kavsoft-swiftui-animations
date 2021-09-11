@@ -8,21 +8,26 @@
 import SwiftUI
 
 struct Home: View {
+    // For search bar
+    @State var filteredItems = apps
     var body: some View {
         // App list view
-        ScrollView(.vertical, showIndicators: false) {
+        ScrollView(.vertical, showsIndicators: false, content: {
             VStack(spacing: 15) {
                 // Apps List
-                ForEach() {
-                    
+                ForEach(filteredItems) { item in
+                    // Card view
+                    CardView(item: item)
                 }
             }
-        }
+            .padding()
+        })
     }
 }
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Home()
+            .preferredColorScheme(.dark)
     }
 }
