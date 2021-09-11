@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Home: View {
     // For search bar
-    @State var filteredItems = apps
+    @Binding var filteredItems: [AppItem]
     var body: some View {
         // App list view
         ScrollView(.vertical, showsIndicators: false, content: {
@@ -27,7 +27,6 @@ struct Home: View {
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
-        Home()
-            .preferredColorScheme(.dark)
+        ContentView()
     }
 }

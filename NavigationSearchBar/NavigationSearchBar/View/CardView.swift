@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CardView: View {
     var item: AppItem
+    @State var show = false
     var body: some View {
         HStack(spacing: 15) {
             Image(item.name)
@@ -29,8 +30,10 @@ struct CardView: View {
                     Spacer(minLength: 10)
 
                     VStack {
-                        Button(action: {}, label: {
-                            Text("Get")
+                        Button(action: {
+                            show.toggle()
+                        }, label: {
+                            Text(show ? "Open" : "Get")
                                 .fontWeight(.heavy)
                                 .padding(.vertical, 8)
                                 .padding(.horizontal, 20)
