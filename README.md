@@ -210,3 +210,7 @@ Kindly welcome to become a patron to support them! ❤️
 - [Parallax Carousel | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Parallax_Carousel)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/parallax-carousel.gif)
+  
+- [Navigation Search Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Navigation_SearchBar)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/navigation-search-bar.gif)
