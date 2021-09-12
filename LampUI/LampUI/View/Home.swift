@@ -175,7 +175,7 @@ struct Home: View {
                     })
                     Spacer()
                     Button(action: {}, label: {
-                        Image(systemName: "pserson")
+                        Image(systemName: "person")
                             .font(.system(size: 24))
                             .foregroundColor(Color("yellow"))
                             .padding()

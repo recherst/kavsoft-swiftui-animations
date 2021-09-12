@@ -214,3 +214,7 @@ Kindly welcome to become a patron to support them! ❤️
 - [Navigation Search Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Navigation_SearchBar)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/navigation-search-bar.gif)
+  
+- [Complex App UI - Lamp UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Lamp_UI)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/lamp-ui.gif)
