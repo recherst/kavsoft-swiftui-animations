@@ -20,140 +20,146 @@ struct Home: View {
     @State var from: Date = Date()
     @State var to: Date = Date()
 
+    // For smaller device
+    @State var isSmall = UIScreen.main.bounds.width < 750
+
     var body: some View {
         VStack {
-            ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
-                Image("lamp")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
+            ScrollView(isSmall ? .vertical : .init(), showsIndicators: false, content: {
+                ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
+                    Image("lamp")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: isSmall ? 150 : nil, height: isSmall ? 150 : nil)
 
-                HStack {
-                    Button(action: {}, label: {
-                        Image(systemName: "chevron.left")
-                            .font(.title2)
-                            .foregroundColor(.black)
-                    })
+                    HStack {
+                        Button(action: {}, label: {
+                            Image(systemName: "chevron.left")
+                                .font(.title2)
+                                .foregroundColor(.black)
+                        })
 
-                    Spacer()
+                        Spacer()
 
-                    Button(action: {}, label: {
-                        Image(systemName: "gear")
-                            .font(.title2)
-                            .foregroundColor(.black)
-                    })
+                        Button(action: {}, label: {
+                            Image(systemName: "gear")
+                                .font(.title2)
+                                .foregroundColor(.black)
+                        })
+                    }
+                    .padding()
+                    .padding(.top, top)
                 }
-                .padding()
-                .padding(.top, top)
-            }
-            .padding(.bottom)
+                .padding(.bottom)
 
-            Text("Intensity")
-                .font(.title)
-                .fontWeight(.heavy)
-                .foregroundColor(.black)
-                .padding()
+                Text("Intensity")
+                    .font(.title)
+                    .fontWeight(.heavy)
+                    .foregroundColor(.black)
+                    .padding()
 
-            ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
-                ZStack {
-                    Circle()
-                        .fill(Color.gray.opacity(0.15))
-                        .frame(width: width, height: width)
-
+                ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
                     ZStack {
                         Circle()
-                            .fill(Color.white)
-                            .frame(width: width - 45, height: width - 45)
-                            // shadows
-                            .shadow(color: Color.black.opacity(0.15), radius: 5, x: 5, y: 5)
-                            .shadow(color: Color.black.opacity(0.15), radius: 5, x: -5, y: -5)
-                            // Also rotate
-                            .rotationEffect(.init(degrees: angle))
+                            .fill(Color.gray.opacity(0.15))
+                            .frame(width: width, height: width)
 
-                        Circle()
-                            .fill(Color("yellow"))
-                            .frame(width: 20, height: 20)
-                            // Move view left
-                            .offset(x: (width - 100) / 2)
-                            .rotationEffect(.init(degrees: angle))
-                            // Add gesture
-                            .gesture(
-                                DragGesture(minimumDistance: 0)
-                                    .onChanged(onChanged(value:))
+                        ZStack {
+                            Circle()
+                                .fill(Color.white)
+                                .frame(width: width - 45, height: width - 45)
+                                // shadows
+                                .shadow(color: Color.black.opacity(0.15), radius: 5, x: 5, y: 5)
+                                .shadow(color: Color.black.opacity(0.15), radius: 5, x: -5, y: -5)
+                                // Also rotate
+                                .rotationEffect(.init(degrees: angle))
 
-                            )
-                            // Rotate to start point
-                            .rotationEffect(.init(degrees: -210))
+                            Circle()
+                                .fill(Color("yellow"))
+                                .frame(width: 20, height: 20)
+                                // Move view left
+                                .offset(x: (width - 100) / 2)
+                                .rotationEffect(.init(degrees: angle))
+                                // Add gesture
+                                .gesture(
+                                    DragGesture(minimumDistance: 0)
+                                        .onChanged(onChanged(value:))
+
+                                )
+                                // Rotate to start point
+                                .rotationEffect(.init(degrees: -210))
+                        }
+
+                        // dots
+                        Dots()
                     }
 
-                    // dots
-                    Dots()
-                }
+                    HStack {
+
+                        Text("16°C")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .foregroundColor(.gray)
+
+                        Spacer()
+
+                        Text("28°C")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .foregroundColor(.gray)
+                    }
+                    .padding(.bottom, 30)
+                })
+                .padding()
+                .padding(.top)
 
                 HStack {
-
-                    Text("16°C")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .foregroundColor(.gray)
-
                     Spacer()
 
-                    Text("28°C")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .foregroundColor(.gray)
+                    HStack(spacing: 15) {
+                        Text("Power Saver")
+                            .font(.title)
+                            .fontWeight(.heavy)
+                            .foregroundColor(.black)
+
+                        Toggle("", isOn: $on)
+                            .labelsHidden()
+                            .toggleStyle(SwitchToggleStyle(tint: Color("yellow")))
+                    }
+                    .padding(.vertical)
+                    .padding(.horizontal, 20)
+                    .background(BlurView().cornerRadius(15))
                 }
-                .padding(.bottom, 30)
-            })
-            .padding()
-            .padding(.top)
+                .padding()
 
-            HStack {
-                Spacer()
-
-                HStack(spacing: 15) {
-                    Text("Power Saver")
+                VStack(alignment: .leading, spacing: 10, content: {
+                    Text("Schedule")
                         .font(.title)
                         .fontWeight(.heavy)
                         .foregroundColor(.black)
 
-                    Toggle("", isOn: $on)
-                        .labelsHidden()
-                        .toggleStyle(SwitchToggleStyle(tint: Color("yellow")))
-                }
-                .padding(.vertical)
-                .padding(.horizontal, 20)
-                .background(BlurView().cornerRadius(15))
-            }
-            .padding()
-
-            VStack(alignment: .leading, spacing: 10, content: {
-                Text("Schedule")
-                    .font(.title)
-                    .fontWeight(.heavy)
-                    .foregroundColor(.black)
-
-                Text("From")
-                    .font(.caption)
-                    .foregroundColor(.gray)
-
-                HStack(spacing: 15) {
-                    DatePicker("", selection: $from, displayedComponents: [.hourAndMinute])
-                        .labelsHidden()
-                        // For black color
-                        .accentColor(.black)
-
-                    Text("To")
+                    Text("From")
                         .font(.caption)
                         .foregroundColor(.gray)
 
-                    DatePicker("", selection: $to, displayedComponents: [.hourAndMinute])
-                        .labelsHidden()
-                        .accentColor(.black)
-                }
+                    HStack(spacing: 15) {
+                        DatePicker("", selection: $from, displayedComponents: [.hourAndMinute])
+                            .labelsHidden()
+                            // For black color
+                            .accentColor(.black)
+
+                        Text("To")
+                            .font(.caption)
+                            .foregroundColor(.gray)
+
+                        DatePicker("", selection: $to, displayedComponents: [.hourAndMinute])
+                            .labelsHidden()
+                            .accentColor(.black)
+                    }
+                })
+                .padding(.horizontal)
+                .frame(maxWidth: .infinity, alignment: .leading)
             })
-            .padding(.horizontal)
-            .frame(maxWidth: .infinity, alignment: .leading)
 
             ZStack {
                 HStack {
@@ -194,7 +200,7 @@ struct Home: View {
                 .offset(y: 10.0)
             }
             .padding(.horizontal)
-            .padding(.top, 25)
+            .padding(.top, isSmall ? 0 : 25)
             .padding(.bottom, top == 0 ? 15 : 0)
         }
         .ignoresSafeArea(.all, edges: .top)
