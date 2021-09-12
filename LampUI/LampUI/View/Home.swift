@@ -16,6 +16,10 @@ struct Home: View {
     @State var angle: Double = 0
 
     @State var on = true
+
+    @State var from: Date = Date()
+    @State var to: Date = Date()
+
     var body: some View {
         VStack {
             ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
@@ -122,6 +126,34 @@ struct Home: View {
                 .background(BlurView().cornerRadius(15))
             }
             .padding()
+
+            VStack(alignment: .leading, spacing: 10, content: {
+                Text("Schedule")
+                    .font(.title)
+                    .fontWeight(.heavy)
+                    .foregroundColor(.black)
+
+                Text("From")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+
+                HStack(spacing: 15) {
+                    DatePicker("", selection: $from, displayedComponents: [.hourAndMinute])
+                        .labelsHidden()
+                        // For black color
+                        .accentColor(.black)
+
+                    Text("To")
+                        .font(.caption)
+                        .foregroundColor(.gray)
+
+                    DatePicker("", selection: $to, displayedComponents: [.hourAndMinute])
+                        .labelsHidden()
+                        .accentColor(.black)
+                }
+            })
+            .padding(.horizontal)
+            .frame(maxWidth: .infinity, alignment: .leading)
 
             Spacer(minLength: 0)
         }
