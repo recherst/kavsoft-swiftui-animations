@@ -155,9 +155,61 @@ struct Home: View {
             .padding(.horizontal)
             .frame(maxWidth: .infinity, alignment: .leading)
 
-            Spacer(minLength: 0)
+            ZStack {
+                HStack {
+                    Button(action: {}, label: {
+                        Image(systemName: "house")
+                            .font(.system(size: 24))
+                            .foregroundColor(Color("yellow"))
+                            .padding()
+                            .background(Color.white)
+                            .clipShape(Circle())
+                            .shadow(color: Color.black.opacity(0.1), radius: 5, x: 5, y: 5)
+                            .shadow(color: Color.black.opacity(0.1), radius: 5, x: -5, y: -5)
+                    })
+                    Spacer()
+                    Button(action: {}, label: {
+                        Image(systemName: "pserson")
+                            .font(.system(size: 24))
+                            .foregroundColor(Color("yellow"))
+                            .padding()
+                            .background(Color.white)
+                            .clipShape(Circle())
+                            .shadow(color: Color.black.opacity(0.1), radius: 5, x: 5, y: 5)
+                            .shadow(color: Color.black.opacity(0.1), radius: 5, x: -5, y: -5)
+                    })
+                }
+
+                Button(action: {}, label: {
+                    Image(systemName: "plus")
+                        .font(.system(size: 24, weight: .heavy))
+                        .foregroundColor(Color("yellow"))
+                        .padding()
+                        .background(Color.white)
+                        .clipShape(Circle())
+                        .shadow(color: Color.black.opacity(0.1), radius: 5, x: 5, y: 5)
+                        .shadow(color: Color.black.opacity(0.1), radius: 5, x: -5, y: -5)
+                })
+                // Move view little down
+                .offset(y: 10.0)
+            }
+            .padding(.horizontal)
+            .padding(.top, 25)
+            .padding(.bottom, top == 0 ? 15 : 0)
         }
         .ignoresSafeArea(.all, edges: .top)
+        .background(
+            ZStack {
+                Color("yellow")
+
+                Color.white
+                    .clipShape(CustomShape())
+                // rotate view upside down
+                    .rotationEffect(.init(degrees: 180))
+
+            }
+            .ignoresSafeArea()
+        )
     }
 
     func onChanged(value: DragGesture.Value) {
