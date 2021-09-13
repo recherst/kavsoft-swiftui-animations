@@ -222,3 +222,7 @@ Kindly welcome to become a patron to support them! ❤️
 - [ECommerce App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/ECommerce)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/ecommerce-app-ui.gif)
+  
+- [Honey Comb Grid View | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/HoneyComb_Grid)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/honey-comb-grid-view.gif)

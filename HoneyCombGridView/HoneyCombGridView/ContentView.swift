@@ -31,7 +31,6 @@ struct Home: View {
     // So 2d array
     @State var rows: [[Date]] = []
 
-    //
     var width = UIScreen.main.bounds.width - 30
     var body: some View {
         ScrollView {
@@ -137,7 +136,6 @@ struct Home: View {
             if count == sampleData.count && !generated.isEmpty {
                 rows.append(generated)
                 generated.removeAll()
-
             }
         }
     }
@@ -162,7 +160,6 @@ struct Hexagon: Shape {
             path.addArc(tangent1End: pt4, tangent2End: pt5, radius: 15)
             path.addArc(tangent1End: pt5, tangent2End: pt6, radius: 15)
             path.addArc(tangent1End: pt6, tangent2End: pt1, radius: 15)
-
         }
     }
 }
