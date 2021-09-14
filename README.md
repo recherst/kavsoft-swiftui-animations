@@ -226,3 +226,7 @@ Kindly welcome to become a patron to support them! ❤️
 - [Honey Comb Grid View | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/HoneyComb_Grid)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/honey-comb-grid-view.gif)
+  
+- [Apple Music Animations | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Apple_Music)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/apple-music-animations.gif)
