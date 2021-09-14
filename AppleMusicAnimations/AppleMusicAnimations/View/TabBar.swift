@@ -11,6 +11,12 @@ struct TabBar: View {
     // Selected tab index
     // Default is third
     @State var current = 2
+
+    // Miniplayer properties
+    @State var expand = false
+
+    @Namespace var animation 
+
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
             TabView(selection: $current) {
@@ -36,7 +42,7 @@ struct TabBar: View {
                     }
             }
 
-            MiniPlayer()
+            MiniPlayer(animation: animation, expand: $expand)
         })
     }
 }
