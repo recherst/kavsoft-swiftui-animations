@@ -44,7 +44,7 @@ struct TabBar: View {
             }
 
             // Custom Tab Bar
-            HStack(spacing: 35) {
+            HStack(spacing: 0) {
                 ForEach(tabs, id: \.self) { image in
                     TabButton(image: image, selected: $currentTab, animation: animation)
 
