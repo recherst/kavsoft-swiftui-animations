@@ -234,3 +234,7 @@ Kindly welcome to become a patron to support them! ❤️
 - [App Store Animations | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/App_Store)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/app-store-animations.gif)
+  
+- [Salad App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Salad_App)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/salad-app-ui.gif)
