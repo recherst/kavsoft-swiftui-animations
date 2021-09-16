@@ -238,3 +238,7 @@ Kindly welcome to become a patron to support them! ❤️
 - [Salad App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Salad_App)
 
   ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/salad-app-ui.gif)
+  
+- [VPN App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/VPN_App)
+
+  ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/vpn-app-ui.gif)
