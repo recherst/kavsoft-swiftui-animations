@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CardView: View {
     @State var server: Server
+    var subtitle: String
+
     var body: some View {
         HStack(spacing: 15) {
             Image(server.flag)
@@ -16,9 +18,16 @@ struct CardView: View {
                 .frame(width: 45, height: 45)
                 .clipShape(Circle())
 
-            Text(server.name)
-                .font(.system(size: 22))
-                .foregroundColor(.black)
+            VStack(alignment: .leading, spacing: 4, content: {
+                Text(server.name)
+                    .font(.system(size: 22))
+                    .foregroundColor(.black)
+
+                if subtitle != "" {
+                    Text(subtitle)
+                        .foregroundColor(.gray)
+                }
+            })
 
             Spacer()
 

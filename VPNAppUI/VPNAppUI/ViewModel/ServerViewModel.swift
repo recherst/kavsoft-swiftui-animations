@@ -16,6 +16,7 @@ class ServerViewModel: ObservableObject {
         Server(name: "Germany", flag: "ge"),
         Server(name: "Singapore", flag: "si"),
     ]
+
     @Published var isConnected = false
     @Published var showSheet = false
 

@@ -90,9 +90,13 @@ struct Home: View {
 
                         Spacer()
 
-                        Button(action: {}, label: {
+                        Button(action: {
+                            withAnimation {
+                                serverData.showSheet.toggle()
+                            }
+                        }, label: {
                             // CardView
-                            CardView(server: serverData.currentServer)
+                            CardView(server: serverData.currentServer, subtitle: "")
                                 .background(BlurView())
                                 .clipShape(Capsule())
                                 .padding()
