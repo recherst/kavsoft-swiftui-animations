@@ -58,6 +58,11 @@ struct BottomSheet: View {
             Color.black
                 .opacity(serverData.showSheet ? 0.3 : 0)
                 .ignoresSafeArea()
+                .onTapGesture(perform: {
+                    withAnimation {
+                        serverData.showSheet.toggle()
+                    }
+                })
         )
     }
 }

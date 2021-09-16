@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CardView: View {
-    @State var server: Server
+    var server: Server
     var subtitle: String
 
     var body: some View {
