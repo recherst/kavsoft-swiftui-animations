@@ -14,6 +14,7 @@ struct CardView: View {
             Image(server.flag)
                 .resizable()
                 .frame(width: 45, height: 45)
+                .clipShape(Circle())
 
             Text(server.name)
                 .font(.system(size: 22))

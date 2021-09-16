@@ -47,15 +47,15 @@ struct Home: View {
             }
             .frame(height: UIScreen.main.bounds.height / 3.3)
             // Button
-            VStack {
-                ZStack(alignment: Alignment(horizontal: .center, vertical: .top), content: {
-                    LinearGradient(
-                        gradient: .init(colors: gradient1),
-                        startPoint: .top,
-                        endPoint: .bottom
-                    )
-                    .clipShape(CustomShape())
+            ZStack(alignment: Alignment(horizontal: .center, vertical: .top), content: {
+                LinearGradient(
+                    gradient: .init(colors: gradient1),
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+                .clipShape(CustomShape())
 
+                VStack {
                     Button(action: {
                         serverData.isConnected.toggle()
                     }, label: {
@@ -86,18 +86,22 @@ struct Home: View {
                     })
                     .offset(y: -65)
                     .padding(.bottom, -65)
-                })
-                .padding(.top, 60)
 
-                Spacer()
+                    Spacer()
 
-                Button(action: {}, label: {
-                    // CardView
-                    
-                })
+                    Button(action: {}, label: {
+                        // CardView
+                        CardView(server: serverData.currentServer)
+                            .background(BlurView())
+                            .clipShape(Capsule())
+                            .padding()
+                    })
 
-                Spacer()
-            }
+                    Spacer()
+                }
+
+            })
+            .padding(.top, 60)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(
