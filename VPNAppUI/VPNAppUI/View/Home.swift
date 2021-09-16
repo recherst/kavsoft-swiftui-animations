@@ -21,6 +21,8 @@ struct Home: View {
         Color("gradient4")
     ]
 
+    @StateObject var serverData = ServerViewModel()
+
     var body: some View {
         VStack {
             VStack {
@@ -37,47 +39,65 @@ struct Home: View {
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
 
-                Text("DISCONNECTED")
-                    .font(.title)
+                Text(serverData.isConnected ? "CONNECTED" : "DISCONNECTED")
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
                     .padding(.top, 5)
+                    .padding(.bottom, 20)
             }
             .frame(height: UIScreen.main.bounds.height / 3.3)
             // Button
-            ZStack(alignment: Alignment(horizontal: .center, vertical: .top), content: {
-                LinearGradient(
-                    gradient: .init(colors: gradient1),
-                    startPoint: .top,
-                    endPoint: .bottom
-                )
-                Button(action: {}, label: {
-                    VStack(spacing: 15) {
-                        Image(systemName: "power")
-                            .font(.system(size: 70))
-                            .foregroundColor(Color("power"))
-
-                        Text("START")
-                            .fontWeight(.bold)
-                            .foregroundColor(.black)
-                    }
-                    .padding(50)
-                    .background(
-                        LinearGradient(
-                            gradient: .init(colors: [Color("pgradient1"), Color("pgradient2")]),
-                            startPoint: .top,
-                            endPoint: .bottom
-                        )
+            VStack {
+                ZStack(alignment: Alignment(horizontal: .center, vertical: .top), content: {
+                    LinearGradient(
+                        gradient: .init(colors: gradient1),
+                        startPoint: .top,
+                        endPoint: .bottom
                     )
-                    .clipShape(Circle())
-                    .padding(15)
-                    .background(Color("power1").opacity(0.7))
-                    .clipShape(Circle())
-                    .padding(15)
-                    .background(Color("gradient2").opacity(0.7))
-                    .clipShape(Circle())
+                    .clipShape(CustomShape())
+
+                    Button(action: {
+                        serverData.isConnected.toggle()
+                    }, label: {
+                        VStack(spacing: 15) {
+                            Image(systemName: "power")
+                                .font(.system(size: 70))
+                                .foregroundColor(serverData.isConnected ? Color.red.opacity(0.6) : Color("power"))
+
+                            Text(serverData.isConnected ? "STOP" : "START")
+                                .fontWeight(.bold)
+                                .foregroundColor(.black)
+                        }
+                        .padding(50)
+                        .background(
+                            LinearGradient(
+                                gradient: .init(colors: [Color("pgradient1"), Color("pgradient2")]),
+                                startPoint: .top,
+                                endPoint: .bottom
+                            )
+                        )
+                        .clipShape(Circle())
+                        .padding(15)
+                        .background(Color("power1").opacity(0.7))
+                        .clipShape(Circle())
+                        .padding(15)
+                        .background(Color("gradient2").opacity(0.7))
+                        .clipShape(Circle())
+                    })
+                    .offset(y: -65)
+                    .padding(.bottom, -65)
                 })
-            })
+                .padding(.top, 60)
+
+                Spacer()
+
+                Button(action: {}, label: {
+                    // CardView
+                    
+                })
+
+                Spacer()
+            }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(
