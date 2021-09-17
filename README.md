@@ -33,7 +33,7 @@ Kindly welcome to become a patron to support them! ❤️
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/lamp-ui.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/ecommerce-app-ui.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/honey-comb-grid-view.gif) |
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/apple-music-animations.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/app-store-animations.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/salad-app-ui.gif) |
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/vpn-app-ui.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/pull-to-refresh.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/custom-nav-bar.gif) |
-| ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/curved-tabbar.gif) |                                                              |                                                              |
+| ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/curved-tabbar.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/login-ui-with-animation.gif) |                                                              |
 
 
 
@@ -160,4 +160,6 @@ Kindly welcome to become a patron to support them! ❤️
 - [Custom NavBar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/FB_NavBar)
 
 - [Curved TabBar | Kavsoft]()
+
+- [Login UI With Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Login_Animation)
 
