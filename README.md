@@ -37,129 +37,129 @@ Kindly welcome to become a patron to support them! ❤️
 
 
 
-- [Scroll To Top Floating Action Button | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Scroll_To_Top)
+1. [Scroll To Top Floating Action Button | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Scroll_To_Top)
 
-- [Custom Carousel Slider | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Custom_Carousel_Slider)
+2. [Custom Carousel Slider | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Custom_Carousel_Slider)
 
-- [Photo Editor | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Photo_Editor)
+3. [Photo Editor | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Photo_Editor)
 
-- [Spotify App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Spotify_App_UI)
+4. [Spotify App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Spotify_App_UI)
 
-- [Mobile Wallet Card Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Wallet_Card_Animation)
+5. [Mobile Wallet Card Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Wallet_Card_Animation)
 
-- [Pulse Ring Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Pulse_Ring_Animation)
+6. [Pulse Ring Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Pulse_Ring_Animation)
 
-- [Food App UI - Complex UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Food_App_UI)
+7. [Food App UI - Complex UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Food_App_UI)
 
-- [SwiftUI URL Session Download Task | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Download_Task)
+8. [SwiftUI URL Session Download Task | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Download_Task)
 
-- [Animated Navigation Menu | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Navigation_Menu)
+9. [Animated Navigation Menu | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Navigation_Menu)
 
-- [ScrollView Offset | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/ScrollView_Offset)
+10. [ScrollView Offset | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/ScrollView_Offset)
 
-- [WhatsApp Hero Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/WhatsApp_Hero_Animation)
+11. [WhatsApp Hero Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/WhatsApp_Hero_Animation)
 
-- [Dribble Loading Screen | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Dribbble_Loading_Screen)
+12. [Dribble Loading Screen | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Dribbble_Loading_Screen)
 
-- [Custom ScrollView Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Custom_ScrollView_Animation)
+13. [Custom ScrollView Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Custom_ScrollView_Animation)
 
-- [Animated Loading Screen | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Loading_Screen)
+14. [Animated Loading Screen | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Loading_Screen)
 
-- [Marvel API | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Marvel_API)
+15. [Marvel API | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Marvel_API)
 
-- [Animated Indicator | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Indicator)
+16. [Animated Indicator | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Indicator)
 
-  > It's not working on iOS 14.5 or higher
+    > It's not working on iOS 14.5 or higher
 
-- [Custom Time Picker | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Custom_Time_Picker)
+17. [Custom Time Picker | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Custom_Time_Picker)
 
-- [Liquid Swipe | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Liquid_Swipe)
+18. [Liquid Swipe | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Liquid_Swipe)
 
-- [Shoe Animation Challenge | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Shoe_Animation_Challenge)
+19. [Shoe Animation Challenge | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Shoe_Animation_Challenge)
 
-- [Animated Curved Tab Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Curved_Tabbar)
+20. [Animated Curved Tab Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Curved_Tabbar)
 
-- [Multiple Image Viewer | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Multiple_Image_Viewer)
+21. [Multiple Image Viewer | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Multiple_Image_Viewer)
 
-- [Vertical Page Tab View | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Vertical_Page_TabView)
+22. [Vertical Page Tab View | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Vertical_Page_TabView)
 
-  > It's not working on iOS 14.5 or higher
+    > It's not working on iOS 14.5 or higher
 
-- [Walkthrought Screens | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/WalkThrough_Screens)
+23. [Walkthrought Screens | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/WalkThrough_Screens)
 
-- [ Movie Booking App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Movie_Booking_App)
+24. [Movie Booking App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Movie_Booking_App)
 
-- [Animated Header | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Header)
+25. [Animated Header | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Header)
 
-- [Signal Messenger Custom Image/Video Picker | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Signal_Image_Picker)
+26. [Signal Messenger Custom Image/Video Picker | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Signal_Image_Picker)
 
-- [Swipeable Instagram Layout | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Swipeable_Instagram_Layout)
+27. [Swipeable Instagram Layout | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Swipeable_Instagram_Layout)
 
-- [Scrollable Tab Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Scrollable_Tab_Bar)
+28. [Scrollable Tab Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Scrollable_Tab_Bar)
 
-- [Medium Sticky Footer Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Medium_Sticky_Footer)
+29. [Medium Sticky Footer Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Medium_Sticky_Footer)
 
-- [Navigation Drawer | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Navigation_Drawer)
+30. [Navigation Drawer | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Navigation_Drawer)
 
-- [Custom Timer App | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Timer)
+31. [Custom Timer App | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Timer)
 
-- [Square Web UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/SquareSpace)
+32. [Square Web UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/SquareSpace)
 
-- [Tag List View | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Chips)
+33. [Tag List View | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Chips)
 
-- [Shared Tab Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Shared_TabBar)
+34. [Shared Tab Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Shared_TabBar)
 
-  > Also support iPadOS and macOS.
+    > Also support iPadOS and macOS.
 
-  > `HiddenTitleBarWindowStyle` modifier is not working on macOS 11.5.2 or higher.
+    > `HiddenTitleBarWindowStyle` modifier is not working on macOS 11.5.2 or higher.
 
-- [Drag & Drop API | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Grid_Reordering)
+35. [Drag & Drop API | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Grid_Reordering)
 
-- [Snapchat Transition | kavsoft](https://kavsoft.dev/SwiftUI_2.0/Snapchat_Transition)
+36. [Snapchat Transition | kavsoft](https://kavsoft.dev/SwiftUI_2.0/Snapchat_Transition)
 
-- [YouTube Mini Player | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/YouTube_Transition)
+37. [YouTube Mini Player | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/YouTube_Transition)
 
-- [Animated Sticky Header | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Sticky_Header)
+38. [Animated Sticky Header | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Sticky_Header)
 
-- [Realm DB | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Realm_DB)
+39. [Realm DB | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Realm_DB)
 
-- [Advance MapKit Tutorials | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Advance_MapKit)
+40. [Advance MapKit Tutorials | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Advance_MapKit)
 
-- [Compositional Layout | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Compositional_Layout)
+41. [Compositional Layout | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Compositional_Layout)
 
-- [Text Shimmer | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Text_Shimmer)
+42. [Text Shimmer | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Text_Shimmer)
 
-- [Hero Carousel Slider | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Hero_Carousel)
+43. [Hero Carousel Slider | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Hero_Carousel)
 
-- [Bill Split App | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Bill_Split)
+44. [Bill Split App | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Bill_Split)
 
-- [Composing Complex UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Complex_UI)
+45. [Composing Complex UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Complex_UI)
 
-- [Animated Rating Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Rating_Bar)
+46. [Animated Rating Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Rating_Bar)
 
-- [Parallax Carousel | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Parallax_Carousel)
+47. [Parallax Carousel | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Parallax_Carousel)
 
-- [Navigation Search Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Navigation_SearchBar)
+48. [Navigation Search Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Navigation_SearchBar)
 
-- [Complex App UI - Lamp UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Lamp_UI)
+49. [Complex App UI - Lamp UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Lamp_UI)
 
-- [ECommerce App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/ECommerce)
+50. [ECommerce App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/ECommerce)
 
-- [Honey Comb Grid View | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/HoneyComb_Grid)
+51. [Honey Comb Grid View | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/HoneyComb_Grid)
 
-- [Apple Music Animations | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Apple_Music)
+52. [Apple Music Animations | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Apple_Music)
 
-- [App Store Animations | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/App_Store)
+53. [App Store Animations | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/App_Store)
 
-- [Salad App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Salad_App)
+54. [Salad App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Salad_App)
 
-- [VPN App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/VPN_App)
+55. [VPN App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/VPN_App)
 
-- [Pull To Refresh | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Pull_To_Refresh)
+56. [Pull To Refresh | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Pull_To_Refresh)
 
-- [Custom NavBar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/FB_NavBar)
+57. [Custom NavBar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/FB_NavBar)
 
-- [Curved TabBar | Kavsoft]()
+58. [Curved TabBar | Kavsoft]()
 
-- [Login UI With Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Login_Animation)
+59. [Login UI With Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Login_Animation)
 
