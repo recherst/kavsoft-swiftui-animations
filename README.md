@@ -34,6 +34,7 @@ Kindly welcome to become a patron to support them! ❤️
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/apple-music-animations.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/app-store-animations.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/salad-app-ui.gif) |
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/vpn-app-ui.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/pull-to-refresh.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/custom-nav-bar.gif) |
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/curved-tabbar.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/login-ui-with-animation.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/parallax-effect.gif) |
+| ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/furniture-app-ui.gif) |                                                              |                                                              |
 
 
 
@@ -164,4 +165,6 @@ Kindly welcome to become a patron to support them! ❤️
 59. [Login UI With Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Login_Animation)
 
 60. [Parallax Effect | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Parallax_Effect)
+
+61. [Furniture App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Furnitures)
 
