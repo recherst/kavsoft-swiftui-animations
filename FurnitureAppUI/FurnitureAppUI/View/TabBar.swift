@@ -16,7 +16,7 @@ struct TabBar: View {
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
             TabView(selection: $current) {
-                Text("Home")
+                Home()
                     .tag("Home")
 
                 Text("Messages")
