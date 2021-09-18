@@ -11,12 +11,19 @@ struct Home: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false, content: {
             GeometryReader { reader in
-                Image("main")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .offset(y: -reader.frame(in: .global).minY)
-                    // Go to add parallax effect
-                    .frame(width: UIScreen.main.bounds.width, height: reader.frame(in: .global).minY + 480)
+                let minY = reader.frame(in: .global).minY
+
+                if minY > -480 {
+                    Image("main")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .offset(y: -minY)
+                        // Go to add parallax effect
+                        .frame(
+                            width: UIScreen.main.bounds.width,
+                            height: minY > 0 ? minY + 480 : 480
+                        )
+                }
             }
             .frame(height: 480)
 
