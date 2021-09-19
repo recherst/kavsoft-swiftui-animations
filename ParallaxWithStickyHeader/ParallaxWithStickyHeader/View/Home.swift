@@ -11,6 +11,8 @@ struct Home: View {
     let maxHeight = UIScreen.main.bounds.height / 2.3
     @State var show = false
 
+    // Row to grid animations
+    @State var colums = Array(repeating: GridItem(.flexible(), spacing: 15), count: 1)
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .top), content: {
             ScrollView(showsIndicators: false) {
@@ -23,7 +25,9 @@ struct Home: View {
 
                         if y < 0 {
                             // Toggle top sticky header
-                            show = true
+                            withAnimation(.linear) { show = true }
+                        } else {
+                            withAnimation(.linear) { show = false }
                         }
 
                         return AnyView(
@@ -37,12 +41,12 @@ struct Home: View {
                     .frame(height: maxHeight)
 
 
-                    VStack(spacing: 0) {
+                    LazyVGrid(columns: colums, spacing: 25, content: {
                         ForEach(albums, id: \.album_name) { album in
                             AlbumRow(album: album)
                         }
-                        .padding()
-                    }
+                    })
+                    .padding()
                     .background(Color.black)
                 }
             }
@@ -57,6 +61,7 @@ struct Home: View {
 
                 VStack(alignment: .leading, spacing: 4, content: {
                     Text("Now Playing")
+                        .font(.title2)
                         .fontWeight(.heavy)
 
                     Text("Lover - Taylor Swift")
@@ -72,9 +77,23 @@ struct Home: View {
                         .font(.title2)
                         .foregroundColor(.white)
                 })
+
+                Button(action: {
+                    if colums.count == 2 {
+                        colums.removeLast()
+                    } else {
+                        colums.append(GridItem(.flexible(), spacing: 15))
+                    }
+                }, label: {
+                    Image(systemName: colums.count == 2 ? "rectangle.grid.1x2" : "rectangle.3.offgrid")
+                        .font(.title2)
+                        .foregroundColor(.white)
+                })
             }
             .padding([.horizontal, .bottom])
             .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
+            .background(BlurView(style: .systemMaterialDark))
+            .opacity(show ? 1 : 0)
         })
         .ignoresSafeArea(.all, edges: .top)
     }
