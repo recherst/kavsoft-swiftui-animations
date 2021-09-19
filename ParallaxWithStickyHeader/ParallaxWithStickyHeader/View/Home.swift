@@ -43,11 +43,12 @@ struct Home: View {
 
                     LazyVGrid(columns: colums, spacing: 25, content: {
                         ForEach(albums, id: \.album_name) { album in
-                            AlbumRow(album: album)
+                            AlbumRow(album: album, colnums: $colums)
                         }
                     })
                     .padding()
                     .background(Color.black)
+                    .cornerRadius(15)
                 }
             }
 
