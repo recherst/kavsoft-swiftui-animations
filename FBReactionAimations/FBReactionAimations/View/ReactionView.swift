@@ -13,16 +13,23 @@ struct ReactionView: View {
     var body: some View {
         HStack(spacing: 15) {
             ForEach(reactions, id: \.self) { gif in
+                // Enlarge gif reaction
                 AnimatedImage(name: gif)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 40, height: 40)
+                    .frame(
+                        width: post.reaction == gif ? 100 : 40,
+                        height: post.reaction == gif ? 100 : 40
+                    )
+                    .clipShape(Circle())
+                    .padding(post.reaction == gif ? -30 : 0)
+                    // Move view up
+                    .offset(y: post.reaction == gif ? -50 : 0)
             }
         }
         .padding(.vertical, 10)
         .padding(.horizontal, 20)
-        .background(Color.white)
-        .clipShape(Capsule())
+        .background(Color.white.clipShape(Capsule()))
         .shadow(color: Color.black.opacity(0.15), radius: 5, x: -5, y: 5)
     }
 }
