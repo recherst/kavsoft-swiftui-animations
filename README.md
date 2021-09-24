@@ -168,7 +168,7 @@ Kindly welcome to become a patron to support them! ❤️
 
 61. [Furniture App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Furnitures)  Project: FurnitureAppUI
 
-62. [Parallax With Sticky Header | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Parallax_Sticky)
+62. [Parallax With Sticky Header | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Parallax_Sticky)  Project: ParallaxWithStickyHeader
 
-63. [FB Reaction Animations | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/FB_Reaction)
+63. [FB Reaction Animations | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/FB_Reaction)  Project: FBReactionAnimations
 
