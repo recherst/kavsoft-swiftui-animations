@@ -34,12 +34,52 @@ struct CartView: View {
                     }
                 }
             })
+
+            // Bottom view
+            VStack {
+                HStack {
+                    Text("Total")
+                        .fontWeight(.heavy)
+                        .foregroundColor(.gray)
+
+                    Spacer()
+                    // Calculate total price
+                    Text(calculateTotalPrice())
+                        .font(.title)
+                        .fontWeight(.heavy)
+                        .foregroundColor(.black)
+                }
+                .padding([.top, .horizontal])
+
+                Button(action: {}, label: {
+                    Text("Check out")
+                        .font(.title2)
+                        .fontWeight(.heavy)
+                        .foregroundColor(.white)
+                        .padding(.vertical)
+                        .frame(width: UIScreen.main.bounds.width - 30)
+                        .background(
+                            LinearGradient(gradient: .init(colors: [Color("lightblue"), Color("blue")]), startPoint: .leading, endPoint: .trailing)
+                        )
+                        .cornerRadius(15)
+                })
+            }
+            .background(Color.white)
         }
         .background(Color("gray").ignoresSafeArea())
     }
 
     func getIndex(item: Item) -> Int {
         cartData.items.firstIndex { item.id == $0.id } ?? 0
+    }
+
+    func calculateTotalPrice() -> String {
+        var price: Float = 0
+        cartData.items.forEach { item in
+            price += Float(item.quantity) * item.price
+        }
+
+        return getPrice(value: price)
     }
 }
 
