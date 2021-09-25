@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CartView: View {
+    @StateObject var cartData = CartViewModel()
     var body: some View {
         VStack {
             HStack(spacing: 20) {
@@ -26,9 +27,19 @@ struct CartView: View {
             }
             .padding()
 
-            Spacer(minLength: 0)
+            ScrollView(.vertical, showsIndicators: false, content: {
+                LazyVStack(spacing: 0) {
+                    ForEach(cartData.items) { item in
+                        ItemView(item: $cartData.items[getIndex(item: item)])
+                    }
+                }
+            })
         }
         .background(Color("gray").ignoresSafeArea())
+    }
+
+    func getIndex(item: Item) -> Int {
+        cartData.items.firstIndex { item.id == $0.id } ?? 0
     }
 }
 
