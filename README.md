@@ -35,6 +35,7 @@ Kindly welcome to become a patron to support them! ❤️
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/vpn-app-ui.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/pull-to-refresh.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/custom-nav-bar.gif) |
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/curved-tabbar.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/login-ui-with-animation.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/parallax-effect.gif) |
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/furniture-app-ui.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/parallax-with-sticky-header.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/fb-reaction-animations.gif) |
+| ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/cart-ui.gif) |                                                              |                                                              |
 
 
 
@@ -171,4 +172,6 @@ Kindly welcome to become a patron to support them! ❤️
 62. [Parallax With Sticky Header | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Parallax_Sticky)  Project: ParallaxWithStickyHeader
 
 63. [FB Reaction Animations | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/FB_Reaction)  Project: FBReactionAnimations
+
+64. [Cart UI | Kavsoft]()
 
