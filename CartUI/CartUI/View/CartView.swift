@@ -30,7 +30,7 @@ struct CartView: View {
             ScrollView(.vertical, showsIndicators: false, content: {
                 LazyVStack(spacing: 0) {
                     ForEach(cartData.items) { item in
-                        ItemView(item: $cartData.items[getIndex(item: item)])
+                        ItemView(item: $cartData.items[getIndex(item: item)], items: $cartData.items)
                     }
                 }
             })
