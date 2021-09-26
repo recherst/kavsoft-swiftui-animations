@@ -35,143 +35,145 @@ Kindly welcome to become a patron to support them! ❤️
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/vpn-app-ui.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/pull-to-refresh.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/custom-nav-bar.gif) |
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/curved-tabbar.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/login-ui-with-animation.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/parallax-effect.gif) |
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/furniture-app-ui.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/parallax-with-sticky-header.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/fb-reaction-animations.gif) |
-| ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/cart-ui.gif) |                                                              |                                                              |
+| ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/cart-ui.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/shop-app-ui.gif) |                                                              |
 
 
 
-1. [Scroll To Top Floating Action Button | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Scroll_To_Top)  Project: ScrollToTop
+1. [Scroll To Top Floating Action Button | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Scroll_To_Top)  Project: **ScrollToTop**
 
-2. [Custom Carousel Slider | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Custom_Carousel_Slider)  Project: CustomCarouselSlider
+2. [Custom Carousel Slider | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Custom_Carousel_Slider)  Project: **CustomCarouselSlider**
 
-3. [Photo Editor | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Photo_Editor)  Project: PhotoEditor
+3. [Photo Editor | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Photo_Editor)  Project: **PhotoEditor**
 
-4. [Spotify App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Spotify_App_UI)  Project: SpotifyUI
+4. [Spotify App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Spotify_App_UI)  Project: **SpotifyUI**
 
-5. [Mobile Wallet Card Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Wallet_Card_Animation)  Project: MobileWalletCardAnimation
+5. [Mobile Wallet Card Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Wallet_Card_Animation)  Project: **MobileWalletCardAnimation**
 
-6. [Pulse Ring Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Pulse_Ring_Animation) Project: PalseRingAnimation
+6. [Pulse Ring Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Pulse_Ring_Animation) Project: **PalseRingAnimation**
 
-7. [Food App UI - Complex UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Food_App_UI)  Project: FoodAppUI
+7. [Food App UI - Complex UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Food_App_UI)  Project: **FoodAppUI**
 
-8. [SwiftUI URL Session Download Task | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Download_Task)  Project: DownloadTask
+8. [SwiftUI URL Session Download Task | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Download_Task)  Project: **DownloadTask**
 
-9. [Animated Navigation Menu | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Navigation_Menu)  Project: CustomSideMenu
+9. [Animated Navigation Menu | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Navigation_Menu)  Project: **CustomSideMenu**
 
-10. [ScrollView Offset | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/ScrollView_Offset)  Project: ScrollViewOffset
+10. [ScrollView Offset | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/ScrollView_Offset)  Project: **ScrollViewOffset**
 
-11. [WhatsApp Hero Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/WhatsApp_Hero_Animation)  Project: WhatsAppHeroAnimation
+11. [WhatsApp Hero Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/WhatsApp_Hero_Animation)  Project: **WhatsAppHeroAnimation**
 
-12. [Dribble Loading Screen | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Dribbble_Loading_Screen)  Project: DribbleLoadingBall
+12. [Dribble Loading Screen | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Dribbble_Loading_Screen)  Project: **DribbleLoadingBall**
 
-13. [Custom ScrollView Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Custom_ScrollView_Animation)  Project: CustomScrollView
+13. [Custom ScrollView Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Custom_ScrollView_Animation)  Project: **CustomScrollView**
 
-14. [Animated Loading Screen | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Loading_Screen)  Project: AnimatedLoadingScreen
+14. [Animated Loading Screen | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Loading_Screen)  Project: **AnimatedLoadingScreen**
 
-15. [Marvel API | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Marvel_API) Project: MarvelAPI
+15. [Marvel API | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Marvel_API) Project: **MarvelAPI**
 
-16. [Animated Indicator | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Indicator)  Project: AnimatedIndicator
-
-    > It's not working on iOS 14.5 or higher
-
-17. [Custom Time Picker | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Custom_Time_Picker)  Project: CustomTimePicker
-
-18. [Liquid Swipe | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Liquid_Swipe)  Project: LiquidSwipe
-
-19. [Shoe Animation Challenge | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Shoe_Animation_Challenge)  Project: ShoeAnimationChallenge
-
-20. [Animated Curved Tab Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Curved_Tabbar)  Project: AnimatedTabBar
-
-21. [Multiple Image Viewer | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Multiple_Image_Viewer)  Project: MultipleImageViewer
-
-22. [Vertical Page Tab View | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Vertical_Page_TabView)  Project: VerticalPageTabView
+16. [Animated Indicator | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Indicator)  Project: **AnimatedIndicator**
 
     > It's not working on iOS 14.5 or higher
 
-23. [Walkthrought Screens | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/WalkThrough_Screens)  Project: WalkthroughScreens
+17. [Custom Time Picker | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Custom_Time_Picker)  Project: **CustomTimePicker**
 
-24. [Movie Booking App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Movie_Booking_App)  Project: MovieBookingAppUI
+18. [Liquid Swipe | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Liquid_Swipe)  Project: **LiquidSwipe**
 
-25. [Animated Header | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Header)  Project: AnimatedHeader
+19. [Shoe Animation Challenge | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Shoe_Animation_Challenge)  Project: **ShoeAnimationChallenge**
 
-26. [Signal Messenger Custom Image/Video Picker | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Signal_Image_Picker)  Project: SignalImagePicker
+20. [Animated Curved Tab Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Curved_Tabbar)  Project: **AnimatedTabBar**
 
-27. [Swipeable Instagram Layout | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Swipeable_Instagram_Layout)  Project: SwipeableInstagramLayout
+21. [Multiple Image Viewer | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Multiple_Image_Viewer)  Project: **MultipleImageViewer**
 
-28. [Scrollable Tab Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Scrollable_Tab_Bar)  Project: ScrollableTabBar
+22. [Vertical Page Tab View | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Vertical_Page_TabView)  Project: **VerticalPageTabView**
 
-29. [Medium Sticky Footer Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Medium_Sticky_Footer)  Project: MediumStickyFooterAnimation
+    > It's not working on iOS 14.5 or higher
 
-30. [Navigation Drawer | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Navigation_Drawer)  Project: NavigationDrawer
+23. [Walkthrought Screens | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/WalkThrough_Screens)  Project: **WalkthroughScreens**
 
-31. [Custom Timer App | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Timer)  Project: CustomTimerApp
+24. [Movie Booking App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Movie_Booking_App)  Project: **MovieBookingAppUI**
 
-32. [Square Web UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/SquareSpace)  Project: SquareWebUI
+25. [Animated Header | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Header)  Project: **AnimatedHeader**
 
-33. [Tag List View | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Chips)  Project: TagListView
+26. [Signal Messenger Custom Image/Video Picker | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Signal_Image_Picker)  Project: **SignalImagePicker**
 
-34. [Shared Tab Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Shared_TabBar)  Project: SharedTabBar
+27. [Swipeable Instagram Layout | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Swipeable_Instagram_Layout)  Project: **SwipeableInstagramLayout**
+
+28. [Scrollable Tab Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Scrollable_Tab_Bar)  Project: **ScrollableTabBar**
+
+29. [Medium Sticky Footer Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Medium_Sticky_Footer)  Project: **MediumStickyFooterAnimation**
+
+30. [Navigation Drawer | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Navigation_Drawer)  Project: **NavigationDrawer**
+
+31. [Custom Timer App | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Timer)  Project: **CustomTimerApp**
+
+32. [Square Web UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/SquareSpace)  Project: **SquareWebUI**
+
+33. [Tag List View | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Chips)  Project: **TagListView**
+
+34. [Shared Tab Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Shared_TabBar)  Project: **SharedTabBar**
 
     > Also support iPadOS and macOS.
 
     > `HiddenTitleBarWindowStyle` modifier is not working on macOS 11.5.2 or higher.
 
-35. [Drag & Drop API | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Grid_Reordering)  Project: DragAndDropAPI
+35. [Drag & Drop API | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Grid_Reordering)  Project: **DragAndDropAPI**
 
-36. [Snapchat Transition | kavsoft](https://kavsoft.dev/SwiftUI_2.0/Snapchat_Transition)  Project: SnapchatTransition
+36. [Snapchat Transition | kavsoft](https://kavsoft.dev/SwiftUI_2.0/Snapchat_Transition)  Project: **SnapchatTransition**
 
-37. [YouTube Mini Player | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/YouTube_Transition)  Project: YouTubeMiniPlayer
+37. [YouTube Mini Player | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/YouTube_Transition)  Project: **YouTubeMiniPlayer**
 
-38. [Animated Sticky Header | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Sticky_Header)  Project: AnimatedStickyHeader
+38. [Animated Sticky Header | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Sticky_Header)  Project: **AnimatedStickyHeader**
 
-39. [Realm DB | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Realm_DB)  Project: RealmDB
+39. [Realm DB | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Realm_DB)  Project: **RealmDB**
 
-40. [Advance MapKit Tutorials | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Advance_MapKit)  Project: AdvanceMapKitTutorial
+40. [Advance MapKit Tutorials | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Advance_MapKit)  Project: **AdvanceMapKitTutorial**
 
-41. [Compositional Layout | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Compositional_Layout)  Project: CompositionalLayout
+41. [Compositional Layout | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Compositional_Layout)  Project: **CompositionalLayout**
 
-42. [Text Shimmer | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Text_Shimmer)  Project: TextShimmer
+42. [Text Shimmer | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Text_Shimmer)  Project: **TextShimmer**
 
-43. [Hero Carousel Slider | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Hero_Carousel)  Project: HeroCarouselSlider
+43. [Hero Carousel Slider | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Hero_Carousel)  Project: **HeroCarouselSlider**
 
-44. [Bill Split App | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Bill_Split)  Project: BillSplitApp
+44. [Bill Split App | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Bill_Split)  Project: **BillSplitApp**
 
-45. [Composing Complex UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Complex_UI)  Project: ComposingComplexUI
+45. [Composing Complex UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Complex_UI)  Project: **ComposingComplexUI**
 
-46. [Animated Rating Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Rating_Bar)  Project: AnimatedRatingBar
+46. [Animated Rating Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Rating_Bar)  Project: **AnimatedRatingBar**
 
-47. [Parallax Carousel | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Parallax_Carousel)  Project: ParallaxCarousel
+47. [Parallax Carousel | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Parallax_Carousel)  Project: **ParallaxCarousel**
 
-48. [Navigation Search Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Navigation_SearchBar)  Project: NavigationSearchBar
+48. [Navigation Search Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Navigation_SearchBar)  Project: **NavigationSearchBar**
 
-49. [Complex App UI - Lamp UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Lamp_UI)  Project: LampUI
+49. [Complex App UI - Lamp UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Lamp_UI)  Project: **LampUI**
 
-50. [ECommerce App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/ECommerce)  Project: ECommerceAppUI
+50. [ECommerce App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/ECommerce)  Project: **ECommerceAppUI**
 
-51. [Honey Comb Grid View | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/HoneyComb_Grid)  Project: HoneyCombGridView
+51. [Honey Comb Grid View | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/HoneyComb_Grid)  Project: **HoneyCombGridView**
 
-52. [Apple Music Animations | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Apple_Music)  Project: AppleMusicAnimations
+52. [Apple Music Animations | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Apple_Music)  Project: **AppleMusicAnimations**
 
-53. [App Store Animations | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/App_Store)  Project: AppStoreAnimations
+53. [App Store Animations | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/App_Store)  Project: **AppStoreAnimations**
 
-54. [Salad App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Salad_App)  Project: SaladAppUI
+54. [Salad App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Salad_App)  Project: **SaladAppUI**
 
-55. [VPN App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/VPN_App)  Project: VPNAppUI
+55. [VPN App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/VPN_App)  Project: **VPNAppUI**
 
-56. [Pull To Refresh | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Pull_To_Refresh)  Project: PullToRefresh
+56. [Pull To Refresh | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Pull_To_Refresh)  Project: **PullToRefresh**
 
-57. [Custom NavBar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/FB_NavBar)  Project: CustomNavBar
+57. [Custom NavBar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/FB_NavBar)  Project: **CustomNavBar**
 
-58. [Curved TabBar | Kavsoft]()  Project: CurvedTabbar
+58. [Curved TabBar | Kavsoft]()  Project: **CurvedTabbar**
 
-59. [Login UI With Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Login_Animation)  Project: LoginUIWithAnimation
+59. [Login UI With Animation | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Login_Animation)  Project: **LoginUIWithAnimation**
 
-60. [Parallax Effect | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Parallax_Effect)  Project: ParallaxEffect
+60. [Parallax Effect | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Parallax_Effect)  Project: **ParallaxEffect**
 
-61. [Furniture App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Furnitures)  Project: FurnitureAppUI
+61. [Furniture App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Furnitures)  Project: **FurnitureAppUI**
 
-62. [Parallax With Sticky Header | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Parallax_Sticky)  Project: ParallaxWithStickyHeader
+62. [Parallax With Sticky Header | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Parallax_Sticky)  Project: **ParallaxWithStickyHeader**
 
-63. [FB Reaction Animations | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/FB_Reaction)  Project: FBReactionAnimations
+63. [FB Reaction Animations | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/FB_Reaction)  Project: **FBReactionAnimations**
 
-64. [Cart UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Cart_UI)  Project: CartUI
+64. [Cart UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Cart_UI)  Project: **CartUI**
+
+65. [Shop App UI | kavsoft](https://kavsoft.dev/SwiftUI_2.0/Shop_App)  Project: **ShopAppUI**
 
