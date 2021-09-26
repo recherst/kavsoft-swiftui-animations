@@ -74,7 +74,7 @@ struct DetailView: View {
             .zIndex(1)
 
             VStack {
-                ScrollView(isSmallDevice ? .vertical : .init(), showsIndicators: false, content: {
+                ScrollView(.vertical, showsIndicators: false, content: {
                     HStack {
                         VStack(alignment: .leading, spacing: 8) {
                             Text("Color")
@@ -101,7 +101,6 @@ struct DetailView: View {
                         })
                     }
                     .padding(.horizontal)
-                    .padding(.top, isSmallDevice ? 0 : -20)
 
                     Text("Whether you are heading to work or travelling, a trendy handbag or clutch will add as the perfect accessory with your outfit. Carry your daily essentials in style as you have a choice of shopping for bags.")
                         .foregroundColor(.gray)
