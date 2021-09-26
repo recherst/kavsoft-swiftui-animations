@@ -19,6 +19,7 @@ struct BagView: View {
                 Image(bagData.image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .frame(height: 180)
                     .padding(20)
                     .matchedGeometryEffect(id: bagData.image, in: animation)
             }
