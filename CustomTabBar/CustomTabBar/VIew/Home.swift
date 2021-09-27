@@ -19,7 +19,7 @@ struct Home: View {
             GeometryReader { _ in
                 ZStack {
                     // Tabs
-                    NavigationView {
+//                    NavigationView {
                         ScrollView {
                             ForEach(1...25, id: \.self) { i in
                                 NavigationLink(
@@ -36,7 +36,7 @@ struct Home: View {
                             .padding(.bottom)
                         }
                         .navigationBarHidden(true)
-                    }
+//                    }
                     .opacity(selectedTab == "house.fill" ? 1 : 0)
 
                     Text("Restaurants")
