@@ -36,7 +36,7 @@ Kindly welcome to become a patron to support them! ❤️
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/curved-tabbar.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/login-ui-with-animation.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/parallax-effect.gif) |
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/furniture-app-ui.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/parallax-with-sticky-header.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/fb-reaction-animations.gif) |
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/cart-ui.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/shop-app-ui.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/filter-core-image.gif) |
-| ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/circular-slider.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/custom-tab-bar.gif) |                                                              |
+| ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/circular-slider.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/custom-tab-bar.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/messaging-app.gif) |
 
 
 
@@ -183,4 +183,6 @@ Kindly welcome to become a patron to support them! ❤️
 67. [Circular Slider | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Circular_Slider)  Project: **Circular Slider**
 
 68. [Custom Tab Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Tab_Bar)  Project: **Custom Tab Bar**
+
+69. [Chat App UI - Messaging App | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Messaging_App)  Project: **MessagingApp**
 
