@@ -72,7 +72,7 @@ Kindly welcome to become a patron to support them! ❤️
 
 16. [Animated Indicator | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Animated_Indicator)  Project: **AnimatedIndicator**
 
-    > It's not working on iOS 14.5 or higher
+    > It's not working on iOS 14.5 or higher.
 
 17. [Custom Time Picker | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Custom_Time_Picker)  Project: **CustomTimePicker**
 
@@ -86,7 +86,7 @@ Kindly welcome to become a patron to support them! ❤️
 
 22. [Vertical Page Tab View | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Vertical_Page_TabView)  Project: **VerticalPageTabView**
 
-    > It's not working on iOS 14.5 or higher
+    > It's not working on iOS 14.5 or higher.
 
 23. [Walkthrought Screens | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/WalkThrough_Screens)  Project: **WalkthroughScreens**
 
