@@ -179,3 +179,4 @@ Kindly welcome to become a patron to support them! ❤️
 
 66. [Filter - Core Image | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Core_Image)  Project: **Filter**
 
+67. [Circular Slider](https://kavsoft.dev/SwiftUI_2.0/Circular_Slider)  Project: **Circular Slider**
