@@ -37,6 +37,7 @@ Kindly welcome to become a patron to support them! ❤️
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/furniture-app-ui.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/parallax-with-sticky-header.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/fb-reaction-animations.gif) |
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/cart-ui.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/shop-app-ui.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/filter-core-image.gif) |
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/circular-slider.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/custom-tab-bar.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/messaging-app.gif) |
+| ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/audio-visualizer.gif) |                                                              |                                                              |
 
 
 
@@ -185,4 +186,6 @@ Kindly welcome to become a patron to support them! ❤️
 68. [Custom Tab Bar | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Tab_Bar)  Project: **Custom Tab Bar**
 
 69. [Chat App UI - Messaging App | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Messaging_App)  Project: **MessagingApp**
+
+70. [Audio Visualizer | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Audio_Visualizer)  Project: **AudioVisualizer**
 
