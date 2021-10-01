@@ -38,7 +38,7 @@ Kindly welcome to become a patron to support them! ❤️
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/cart-ui.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/shop-app-ui.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/filter-core-image.gif) |
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/circular-slider.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/custom-tab-bar.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/messaging-app.gif) |
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/audio-visualizer.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/apple-music-header.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/app-lock.gif) |
-| ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/task-app.gif) |                                                              |                                                              |
+| ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/task-app.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/wheel-picker.gif) |                                                              |
 
 
 
@@ -195,4 +195,6 @@ Kindly welcome to become a patron to support them! ❤️
 72. [App Lock | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/App_Lock)  Project: **AppLock**
 
 73. [Tasks App | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Tasks_App)  Project: **TaskApp**
+
+74. [Wheel Picker | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Wheel_Picker)  Project: **WheelPicker**
 
