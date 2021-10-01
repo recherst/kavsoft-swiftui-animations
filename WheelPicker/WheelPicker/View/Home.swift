@@ -113,6 +113,15 @@ struct Home: View {
             }
             // Move view to bottom
             .offset(y: (height / 2) + 10)
+
+            if homeData.getName() != "" && homeData.popup {
+                Text(homeData.getName())
+                    .foregroundColor(.white)
+                    .padding(.vertical, 6)
+                    .padding(.horizontal, 15)
+                    .background(Color.black)
+                    .cornerRadius(6)
+            }
         }
         .ignoresSafeArea()
     }

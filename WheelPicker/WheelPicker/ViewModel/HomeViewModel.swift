@@ -10,6 +10,7 @@ import SwiftUI
 class HomeViewModel: ObservableObject {
     @Published var show = false
     @Published var current = 0
+    @Published var popup = false
 
     func onChanged(value: DragGesture.Value) {
         withAnimation(.linear) {
@@ -43,6 +44,25 @@ class HomeViewModel: ObservableObject {
     func onEnded(value: DragGesture.Value) {
         withAnimation(.linear) {
             show = false
+
+            popup = true
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                withAnimation(.spring()) {
+                    self.popup = false
+                }
+            }
+        }
+    }
+
+    func getName() -> String {
+        switch current {
+        case 1: return "Face beauty"
+        case 2: return "Timer"
+        case 3: return "Panoroma"
+        case 4: return "Torch"
+        case 5: return "Settings"
+        default: return ""
         }
     }
 }
