@@ -61,7 +61,7 @@ struct Home: View {
                     .padding(.top)
                 }
                 // Since bottom edge is ignored
-                .padding(.bottom, UIApplication.shared.windows.first?.safeAreaInsets.bottom)
+                .padding(.bottom, UIApplication.shared.windows.first!.safeAreaInsets.bottom == 0 ? 15 : UIApplication.shared.windows.first!.safeAreaInsets.bottom)
                 .background(Color.black.opacity(0.65))
                 // Background  dim effect
                 .overlay(Color.black.opacity(homeData.show ? 0.7 : 0))
