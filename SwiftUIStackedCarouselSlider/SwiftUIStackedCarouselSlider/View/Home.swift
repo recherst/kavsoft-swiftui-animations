@@ -85,6 +85,10 @@ struct Home: View {
                     )
                 }
             }
+            .frame(height: height)
+
+            PageViewController(total: books.count, current: $swiped)
+                .padding(.top, 25)
 
             Spacer(minLength: 0)
         }
