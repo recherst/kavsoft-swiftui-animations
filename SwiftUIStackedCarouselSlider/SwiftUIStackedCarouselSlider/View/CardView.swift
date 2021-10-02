@@ -22,7 +22,7 @@ struct CardView: View {
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                         .padding(.vertical, 5)
-                        .padding()
+                        .padding(.horizontal, 10)
                         .background(Color("purple"))
                         .clipShape(Capsule())
                 }

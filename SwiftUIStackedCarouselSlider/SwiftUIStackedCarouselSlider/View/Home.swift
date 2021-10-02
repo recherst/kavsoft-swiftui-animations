@@ -51,15 +51,15 @@ struct Home: View {
                         ZStack {
                             Image(book.image)
                                 .resizable()
-                                .aspectRatio(contentMode: .fill)
+                                .aspectRatio(contentMode: .fit)
                                 .frame(width: width, height: getHeight(index: book.id))
                                 .background(Color.black)
                                 .cornerRadius(25)
                                 .shadow(color: Color.black.opacity(0.1), radius: 5, x: 5)
 
                             // Read more button
-
                             CardView(card: book)
+                                .frame(width: width, height: getHeight(index: book.id))
                         }
 
                         Spacer(minLength: 0)
