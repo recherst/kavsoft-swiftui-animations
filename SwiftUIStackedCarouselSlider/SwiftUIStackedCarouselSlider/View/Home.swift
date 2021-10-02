@@ -57,7 +57,8 @@ struct Home: View {
                                 .shadow(color: Color.black.opacity(0.1), radius: 5, x: 5)
 
                             // Read more button
-                            
+
+                            CardView(card: book)
                         }
 
                         Spacer(minLength: 0)
@@ -66,6 +67,21 @@ struct Home: View {
                     .contentShape(Rectangle())
                     .padding(.horizontal, 20)
                     .offset(x: book.id < 3 ? CGFloat(book.id) * 30 : 60)
+                    .offset(x: book.offset)
+                    // Gesture
+                    .gesture(
+                        DragGesture()
+                            .onChanged({ value in
+                                withAnimation {
+                                    onScroll(value: value.translation.width, index: book.id)
+                                }
+                            })
+                            .onEnded({ value in
+                                withAnimation {
+                                    onEnd(value: value.translation.width, index: book.id)
+                                }
+                            })
+                    )
                 }
             }
 
@@ -79,6 +95,23 @@ struct Home: View {
         // Two card  = 80
         // All other are 80 at background
         return height - (index < 3 ? CGFloat(index) * 40 : 80)
+    }
+
+    func onScroll(value: CGFloat, index: Int) {
+        if value < 0 {
+            // Left swipe
+            if index != books.last!.id {
+                books[index].offset = value
+            }
+        }
+    }
+
+    func onEnd(value: CGFloat, index: Int) {
+        if value < 0 {
+            if -value > width / 2 && index != books.last!.id {
+                books[index].offset = -(width + 60)
+            }
+        }
     }
 }
 
