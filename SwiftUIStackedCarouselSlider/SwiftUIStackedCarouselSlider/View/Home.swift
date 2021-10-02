@@ -22,6 +22,7 @@ struct Home: View {
         Book(id: 4, image: "p5", title: "The Lovely Bones", anthor: "Alice Sebold", rating: 4, offset: 0),
         Book(id: 5, image: "p4", title: "Rebecca", anthor: "Daphne Du Maurier", rating: 4, offset: 0)
     ]
+    @State var swiped = 0
 
     var body: some View {
         VStack {
@@ -66,7 +67,7 @@ struct Home: View {
                     // Content shape for drag gesture
                     .contentShape(Rectangle())
                     .padding(.horizontal, 20)
-                    .offset(x: book.id < 3 ? CGFloat(book.id) * 30 : 60)
+                    .offset(x: book.id - swiped < 3 ? CGFloat(book.id - swiped) * 30 : 60)
                     .offset(x: book.offset)
                     // Gesture
                     .gesture(
@@ -94,7 +95,8 @@ struct Home: View {
     func getHeight(index: Int) -> CGFloat {
         // Two card  = 80
         // All other are 80 at background
-        return height - (index < 3 ? CGFloat(index) * 40 : 80)
+        // Automatic height and offset adjusting
+        return height - (index - swiped < 3 ? CGFloat(index - swiped) * 40 : 80)
     }
 
     func onScroll(value: CGFloat, index: Int) {
@@ -103,6 +105,12 @@ struct Home: View {
             if index != books.last!.id {
                 books[index].offset = value
             }
+        } else {
+            // Right Swipe
+            // Safe Check
+            if index > 0 {
+                books[index - 1].offset = -(width + 60) + value
+            }
         }
     }
 
@@ -110,6 +118,18 @@ struct Home: View {
         if value < 0 {
             if -value > width / 2 && index != books.last!.id {
                 books[index].offset = -(width + 60)
+                swiped += 1
+            } else {
+                books[index].offset = 0
+            }
+        } else {
+            if index > 0 {
+                if value > width / 2 {
+                    books[index - 1].offset = 0
+                    swiped -= 1
+                } else {
+                    books[index - 1].offset = -(width + 60)
+                }
             }
         }
     }
