@@ -56,11 +56,8 @@ struct Home: View {
                 .frame(width: width - (more ? 200 : 100))
                 .padding(.top, 25)
 
-            ZStack {
-                Color.white
-                    .clipShape(CustomShape())
-                    .shadow(color: Color.black.opacity(0.12), radius: 5, x: -5, y: -10)
-
+            // For smaller iPhones
+            ScrollView(UIScreen.main.bounds.height < 750 ? .vertical : .init(), showsIndicators: false, content: {
                 VStack {
                     HStack {
                         Text("Nike Air Huarache For Women")
@@ -154,8 +151,13 @@ struct Home: View {
                     })
                 }
                 .padding(.leading, 45)
-            }
+            })
+            .background(Color.white)
+            // it's asking something here I don't know maybe its bug
+            .shadow(radius: 0)
+            .clipShape(CustomShape())
             .padding(.top, 30)
+            .shadow(color: Color.black.opacity(0.12), radius: 5, x: -5, y: -10)
         }
         .background(Color("bg").ignoresSafeArea())
         .ignoresSafeArea(.all, edges: .bottom)
