@@ -39,6 +39,7 @@ Kindly welcome to become a patron to support them! ❤️
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/circular-slider.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/custom-tab-bar.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/messaging-app.gif) |
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/audio-visualizer.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/apple-music-header.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/app-lock.gif) |
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/task-app.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/wheel-picker.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/swiftui-stacked-carousel-slider.gif) |
+| ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/nike-app.gif) |                                                              |                                                              |
 
 ## Content List
 
@@ -199,4 +200,6 @@ Kindly welcome to become a patron to support them! ❤️
 74. [Wheel Picker | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Wheel_Picker)  Project: **WheelPicker**
 
 75. [Carousel Slider | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Stacked_Carousel)  Project: **SwiftUIStackedCarouselSlider**
+
+76. [Nike App | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Nike)  Project: **NikeApp**
 
