@@ -39,7 +39,7 @@ Kindly welcome to become a patron to support them! ❤️
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/circular-slider.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/custom-tab-bar.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/messaging-app.gif) |
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/audio-visualizer.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/apple-music-header.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/app-lock.gif) |
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/task-app.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/wheel-picker.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/swiftui-stacked-carousel-slider.gif) |
-| ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/nike-app.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/bottom-sheet.gif) |                                                              |
+| ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/nike-app.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/bottom-sheet.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/dashboard-ui.gif) |
 
 ## Content List
 
@@ -204,4 +204,6 @@ Kindly welcome to become a patron to support them! ❤️
 76. [Nike App | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Nike)  Project: **NikeApp**
 
 77. [Bottom Sheet | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Bottom_Sheet)  Project: **BottomSheet**
+
+78. [Dashboard UI | kavsoft](https://kavsoft.dev/SwiftUI_2.0/Dashboard_UI)  Project: **DashboardUI**
 
