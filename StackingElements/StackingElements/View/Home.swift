@@ -50,54 +50,10 @@ struct Home: View {
                 ZStack {
                     // ZStack will overlay on one another so revesing
                     ForEach(designTools.reversed()) { tool in
-                        VStack {
-                            Spacer(minLength: 0)
-
-                            VStack {
-                                Image(tool.image)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .padding(.top)
-                                    .padding(.horizontal, 25)
-
-                                HStack {
-                                    VStack(alignment: .leading, spacing: 12, content: {
-                                        Text(tool.name)
-                                            .font(.system(size: 40))
-                                            .fontWeight(.bold)
-                                            .foregroundColor(.black)
-
-                                        Text("Design tool")
-                                            .font(.system(size: 20))
-                                            .foregroundColor(.black)
-
-                                        Button(action: {}, label: {
-                                            Text("Know More >")
-                                                .font(.system(size: 20))
-                                                .fontWeight(.bold)
-                                                .foregroundColor(Color("orange"))
-                                        })
-                                        .padding(.top)
-                                    })
-
-                                    Spacer(minLength: 0)
-                                }
-                                .padding(.horizontal, 30)
-                                .padding(.bottom, 15)
-                                .padding(.top, 25)
-                            }
-                            .frame(height: reader.frame(in: .global).height - 120)
-                            .padding(.vertical, 10)
-                            .background(Color.white)
-                            .cornerRadius(25)
-                            .padding(.horizontal, 30 - (CGFloat(tool.id) * 20))
-                            .offset(y:tool.id <= 2 ? CGFloat(tool.id) * 25 : 50)
-
-                            Spacer(minLength: 0)
-                        }
-                        .contentShape(Rectangle())
+                        CardView(tool: tool, reader: reader)
                     }
                 }
+                .offset(y: -25)
             }
         }
         .background(
