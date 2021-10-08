@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct CardView: View {
-    var tool: Tools
+    var tool: Tool
     var reader: GeometryProxy
     @Binding var swiped: Int
+    @Binding var show: Bool
+    @Binding var selected: Tool
+    var name: Namespace.ID
+
     var body: some View {
         VStack {
             Spacer(minLength: 0)
@@ -20,6 +24,7 @@ struct CardView: View {
                     Image(tool.image)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
+                        .matchedGeometryEffect(id: tool.image, in: name)
                         .padding(.top)
                         .padding(.horizontal, 25)
 
@@ -34,7 +39,12 @@ struct CardView: View {
                                 .font(.system(size: 20))
                                 .foregroundColor(.black)
 
-                            Button(action: {}, label: {
+                            Button(action: {
+                                withAnimation(.spring()) {
+                                    selected = tool
+                                    show.toggle()
+                                }
+                            }, label: {
                                 Text("Know More >")
                                     .font(.system(size: 20))
                                     .fontWeight(.bold)

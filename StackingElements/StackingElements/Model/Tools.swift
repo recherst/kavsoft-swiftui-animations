@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Tools: Identifiable {
+struct Tool: Identifiable {
     var id: Int
     var image: String
     var name: String
