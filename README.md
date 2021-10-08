@@ -40,6 +40,7 @@ Kindly welcome to become a patron to support them! ❤️
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/audio-visualizer.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/apple-music-header.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/app-lock.gif) |
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/task-app.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/wheel-picker.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/swiftui-stacked-carousel-slider.gif) |
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/nike-app.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/bottom-sheet.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/dashboard-ui.gif) |
+| ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/stacking-elements.gif) |                                                              |                                                              |
 
 ## Content List
 
@@ -179,7 +180,7 @@ Kindly welcome to become a patron to support them! ❤️
 
 64. [Cart UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Cart_UI)  Project: **CartUI**
 
-65. [Shop App UI | kavsoft](https://kavsoft.dev/SwiftUI_2.0/Shop_App)  Project: **ShopAppUI**
+65. [Shop App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Shop_App)  Project: **ShopAppUI**
 
 66. [Filter - Core Image | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Core_Image)  Project: **Filter**
 
@@ -205,5 +206,7 @@ Kindly welcome to become a patron to support them! ❤️
 
 77. [Bottom Sheet | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Bottom_Sheet)  Project: **BottomSheet**
 
-78. [Dashboard UI | kavsoft](https://kavsoft.dev/SwiftUI_2.0/Dashboard_UI)  Project: **DashboardUI**
+78. [Dashboard UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Dashboard_UI)  Project: **DashboardUI**
+
+79. [Stacking Elements | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Stacking)  Project: **StackingElements**
 
