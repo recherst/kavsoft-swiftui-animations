@@ -10,6 +10,7 @@ import SwiftUI
 struct CardView: View {
     var tool: Tools
     var reader: GeometryProxy
+    @Binding var swiped: Int
     var body: some View {
         VStack {
             Spacer(minLength: 0)
@@ -67,8 +68,8 @@ struct CardView: View {
             .padding(.vertical, 10)
             .background(Color.white)
             .cornerRadius(25)
-            .padding(.horizontal, 30 + (CGFloat(tool.id) * 10))
-            .offset(y:tool.id <= 2 ? CGFloat(tool.id) * 25 : 50)
+            .padding(.horizontal, 30 + (CGFloat(tool.id - swiped) * 10))
+            .offset(y:tool.id - swiped <= 2 ? CGFloat(tool.id - swiped) * 25 : 50)
             .shadow(color: Color.black.opacity(0.12), radius: 5, x: 0, y: 5)
 
             Spacer(minLength: 0)

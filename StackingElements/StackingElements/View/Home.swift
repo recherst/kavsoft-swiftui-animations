@@ -50,7 +50,35 @@ struct Home: View {
                 ZStack {
                     // ZStack will overlay on one another so revesing
                     ForEach(designTools.reversed()) { tool in
-                        CardView(tool: tool, reader: reader)
+                        CardView(tool: tool, reader: reader, swiped: $swiped)
+                            .offset(x: tool.offset)
+                            .rotationEffect(.init(degrees: getRotation(offset: tool.offset)))
+                            .gesture(
+                                DragGesture()
+                                    .onChanged({ value in
+                                        // Update position
+                                        withAnimation {
+                                            // Only left swipe
+                                            if value.translation.width > 0 {
+                                                designTools[tool.id].offset = value.translation.width
+                                            }
+                                        }
+                                    })
+                                    .onEnded({ value in
+                                        withAnimation {
+                                            if value.translation.width > 150 {
+                                                designTools[tool.id].offset = 1000
+                                                // Update swipe id
+                                                // Since its starting from 0 
+                                                swiped = tool.id + 1
+
+                                                restoreCard(id: tool.id)
+                                            } else {
+                                                designTools[tool.id].offset = 0
+                                            }
+                                        }
+                                    })
+                            )
                     }
                 }
                 .offset(y: -25)
@@ -60,6 +88,35 @@ struct Home: View {
             LinearGradient(gradient: .init(colors: [Color("top"), Color("center"), Color("bottom")]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
         )
+    }
+
+    // Add card to list
+    func restoreCard(id: Int) {
+        var currentCard = designTools[id]
+        // append last
+        currentCard.id = designTools.count
+
+        designTools.append(currentCard)
+
+        // Go back effect
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            withAnimation {
+                // last one we append
+                designTools[designTools.count - 1].offset = 0
+            }
+        }
+    }
+
+    // Rotation
+    func getRotation(offset: CGFloat) -> Double {
+        let value = offset / 150
+
+        // You can give your own angle here
+        let angle: CGFloat = 10
+
+        let degree = Double(value * angle)
+
+        return degree
     }
 }
 
