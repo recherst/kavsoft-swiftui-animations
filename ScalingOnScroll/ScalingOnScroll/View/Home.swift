@@ -24,15 +24,21 @@ struct Home: View {
                 Color.white
                     .shadow(color: Color.black.opacity(0.18), radius: 5, x: 0, y: 5)
             )
+            .zIndex(0)
+            // Move view in stack for shadow effect
 
             ScrollView {
                 VStack(spacing: 15) {
                     // Set name as id
                     ForEach(albums, id: \.albumName) { album in
                         // Album View
+                        AlbumView(album: album)
                     }
                 }
+                .padding(.horizontal)
+                .padding(.top, 25)
             }
+            .zIndex(1)
         }
         .background(Color.black.opacity(0.06).edgesIgnoringSafeArea(.all))
         .edgesIgnoringSafeArea(.top)
