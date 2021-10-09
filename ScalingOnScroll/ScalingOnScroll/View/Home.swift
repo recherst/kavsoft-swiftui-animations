@@ -27,21 +27,48 @@ struct Home: View {
             .zIndex(0)
             // Move view in stack for shadow effect
 
-            ScrollView {
-                VStack(spacing: 15) {
-                    // Set name as id
-                    ForEach(albums, id: \.albumName) { album in
-                        // Album View
-                        AlbumView(album: album)
+            // Scaling effect
+            GeometryReader { mainView in
+                ScrollView {
+                    VStack(spacing: 15) {
+                        // Set name as id
+                        ForEach(albums, id: \.albumName) { album in
+                            // Album View
+                            GeometryReader { item in
+                                AlbumView(album: album)
+                                    // Scaling effect from bottom
+                                    .scaleEffect(scaleValue(mainFrame: mainView.frame(in: .global).minY, minY: item.frame(in: .global).minY), anchor: .bottom)
+                                    // Add opacity effect
+                                    .opacity(Double(scaleValue(mainFrame: mainView.frame(in: .global).minY, minY: item.frame(in: .global).minY)))
+
+                            }
+                            .frame(height: 100)
+                        }
                     }
+                    .padding(.horizontal)
+                    .padding(.top, 25)
                 }
-                .padding(.horizontal)
-                .padding(.top, 25)
+                .zIndex(1)
             }
-            .zIndex(1)
         }
         .background(Color.black.opacity(0.06).edgesIgnoringSafeArea(.all))
         .edgesIgnoringSafeArea(.top)
+    }
+
+    // Simple calculation for scaling effect
+    func scaleValue(mainFrame: CGFloat, minY: CGFloat) -> CGFloat {
+        // Add aniamtion
+        withAnimation(.easeOut) {
+            // Reduce top padding value
+            let scale = (minY - 25) / mainFrame
+
+            // Return scaling value to album view if its less than 1
+            if scale > 1 {
+                return 1
+            } else {
+                return scale
+            }
+        }
     }
 }
 
