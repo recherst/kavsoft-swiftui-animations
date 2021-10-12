@@ -60,6 +60,13 @@ struct Home: View {
                     }
                     .foregroundColor(.black)
                     .padding(.top, 25)
+
+                    LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 20), count: 2), spacing: 20, content: {
+                        ForEach(courses) { course in
+                            CourseCardView(course: course)
+                        }
+                    })
+                    .padding(.top)
                 }
                 .padding()
             })
