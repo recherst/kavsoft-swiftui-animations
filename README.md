@@ -41,6 +41,7 @@ Kindly welcome to become a patron to support them! ❤️
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/task-app.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/wheel-picker.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/swiftui-stacked-carousel-slider.gif) |
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/nike-app.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/bottom-sheet.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/dashboard-ui.gif) |
 | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/stacking-elements.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/scaling-on-scroll.gif) | ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/gradient-picker.gif) |
+| ![](https://raw.githubusercontent.com/recherst/image-host/main/imgs/course-app-ui.gif) |                                                              |                                                              |
 
 ## Content List
 
@@ -213,4 +214,6 @@ Kindly welcome to become a patron to support them! ❤️
 80. [Scaling On Scroll | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Scaling_Scroll)  Project: **ScalingOnScroll**
 
 81. [Gradient Picker | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Gradient_Picker)  Project: **GradientPicker**
+
+82. [Course App UI | Kavsoft](https://kavsoft.dev/SwiftUI_2.0/Courses)  Project: **CourseAppUI**
 
