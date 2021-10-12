@@ -65,7 +65,11 @@ struct Home: View {
 
                     LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 20), count: 2), spacing: 20, content: {
                         ForEach(courses) { course in
-                            CourseCardView(course: course)
+                            NavigationLink(
+                                destination: DetailView(course: course),
+                                label: {
+                                    CourseCardView(course: course)
+                                })
                         }
                     })
                     .padding(.top)
