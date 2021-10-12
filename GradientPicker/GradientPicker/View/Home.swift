@@ -12,6 +12,8 @@ struct Home: View {
     @State var search = ""
     @State var gradients = [Gradient]()
     @State var colums = Array(repeating: GridItem(.flexible(), spacing: 20), count: 2)
+    @State var filtered: [Gradient] = []
+
     var body: some View {
         VStack {
             HStack(spacing: 15) {
@@ -19,11 +21,23 @@ struct Home: View {
                     // Search bar
                     TextField("Search Gradient", text: $search)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                        // Search bar functionality
+                        .onChange(of: search) { value in
+                            if search != "" {
+                                searchColor()
+                            } else {
+                                // Clear all search results
+                                search = ""
+                                filtered = gradients
+                            }
+                        }
 
                     Button(action: {
                         withAnimation(.easeOut) {
                             // Clear search
                             search = ""
+                            // safe side
+                            filtered = gradients
                             show.toggle()
                         }
                     }, label: {
@@ -67,50 +81,64 @@ struct Home: View {
             .padding(.horizontal)
             .zIndex(1)
 
-            ScrollView(.vertical, showsIndicators: false, content: {
-                LazyVGrid(columns: colums, spacing: 20, content: {
-                    ForEach(gradients, id: \.name) { gradient in
-                        VStack(spacing: 15) {
-                            ZStack {
-                                LinearGradient(
-                                    gradient: .init(colors: HexToRGB(colors: gradient.colors)),
-                                    startPoint: .top,
-                                    endPoint: .bottom
-                                )
-                                .frame(height: 180)
-                                .clipShape(CShape())
-                                .cornerRadius(15)
-                                .contentShape(CShape())
-//                                .contextMenu {
-//                                    Button(action: {
-//                                        // Copy to clipboard
-//
-//                                    }, label: {
-//                                        Text("Copy")
-//                                    })
-//                                }
+            if gradients.isEmpty {
+                // Loading view
+                ProgressView()
+                    .padding(.top, 55)
 
-                                Text(gradient.name)
-                                    .fontWeight(.bold)
-                                    .foregroundColor(.white)
-                            }
+                Spacer()
+            } else {
+                ScrollView(.vertical, showsIndicators: false, content: {
+                    LazyVGrid(columns: colums, spacing: 20, content: {
+                        ForEach(filtered, id: \.name) { gradient in
+                            VStack(spacing: 15) {
+                                ZStack {
+                                    LinearGradient(
+                                        gradient: .init(colors: HexToRGB(colors: gradient.colors)),
+                                        startPoint: .top,
+                                        endPoint: .bottom
+                                    )
+                                    .frame(height: 180)
+                                    .clipShape(CShape())
+                                    .cornerRadius(15)
+                                    .contentShape(CShape())
+                                    .contextMenu {
+                                        Button(action: {
+                                            // Copy to clipboard
+                                            var colorCode = ""
+                                            for color in gradient.colors {
+                                                colorCode += color + "\n"
+                                            }
+                                            UIPasteboard.general.string = colorCode
+                                        }, label: {
+                                            Text("Copy")
+                                        })
+                                    }
 
-                            if colums.count == 1 {
-                                HStack(spacing: 15) {
-                                    ForEach(gradient.colors, id: \.self) { color in
-                                        Text(color)
-                                            .fontWeight(.bold)
-                                            .foregroundColor(.white)
+                                    Text(gradient.name)
+                                        .fontWeight(.bold)
+                                        .multilineTextAlignment(.center)
+                                        .foregroundColor(.white)
+                                        .padding(.horizontal)
+                                }
+
+                                if colums.count == 1 {
+                                    HStack(spacing: 15) {
+                                        ForEach(gradient.colors, id: \.self) { color in
+                                            Text(color)
+                                                .fontWeight(.bold)
+                                                .foregroundColor(.white)
+                                        }
                                     }
                                 }
                             }
                         }
-                    }
+                    })
+                    .padding(.horizontal)
+                    .padding(.bottom)
                 })
-                .padding(.horizontal)
-                .padding(.bottom)
-            })
-            .zIndex(0)
+                .zIndex(0)
+            }
         }
         .onAppear(perform: {
             getColors()
@@ -126,6 +154,7 @@ struct Home: View {
             do {
                 let colors = try JSONDecoder().decode([Gradient].self, from: jsonData)
                 self.gradients = colors
+                self.filtered = colors
             }
             catch {
                 print(error)
@@ -153,6 +182,20 @@ struct Home: View {
         }
 
         return colors1
+    }
+
+    func searchColor() {
+        let query = search.lowercased()
+        // Use bg thread to reduce main ui usage
+        DispatchQueue.global(qos: .background).async {
+            let filter = gradients.filter { $0.name.lowercased().contains(query) }
+
+            DispatchQueue.main.async {
+                withAnimation(.spring()) {
+                    self.filtered = filter
+                }
+            }
+        }
     }
 }
 
