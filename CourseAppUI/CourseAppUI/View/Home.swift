@@ -9,6 +9,8 @@ import SwiftUI
 
 struct Home: View {
     @State var text = ""
+    var edge = UIApplication.shared.windows.first?.safeAreaInsets
+
     var body: some View {
         VStack {
             HStack {
@@ -69,13 +71,9 @@ struct Home: View {
                     .padding(.top)
                 }
                 .padding()
+                .padding(.bottom, edge!.bottom + 70)
             })
         }
-        .background(
-            Color.black
-                .opacity(0.05)
-                .ignoresSafeArea()
-        )
     }
 }
 
